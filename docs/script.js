@@ -1,15 +1,16 @@
 // Initializes with jQuery
-$('.grid').packery({
-  // options
-  itemSelector: '.grid-item',
-  gutter: 10
-});
+// $('.grid').packery({
+//   // options
+//   itemSelector: '.grid-item',
+//   gutter: 10
+// });
 
 // initialize Packery
 var $grid = $('.grid').packery({
   itemSelector: '.grid-item',
+  gutter: 10,
   // columnWidth helps with drop positioning
-  columnWidth: 100
+  columnWidth: 260
 });
 
 // make all grid-items draggable
