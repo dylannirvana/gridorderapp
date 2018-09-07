@@ -22,3 +22,15 @@ $gridp.find('.grid-item').each( function( i, gridItem ) {
   // bind drag events to Packery
   $gridp.packery( 'bindDraggabillyEvents', draggie );
 });
+
+// Isotope sort and filter
+var $gridi = $('.gridi').isotope({
+  getSortData: {
+    name: '.name', // text from querySelector
+    category: '[data-category]', // value of attribute
+    // weight: function( itemElem ) { // function
+    //   var weight = $( itemElem ).find('.weight').text();
+    //   return parseFloat( weight.replace( /[\(\)]/g, '') );
+    // }
+  }
+})
