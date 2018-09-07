@@ -45,16 +45,17 @@ footer p {
 
 /* ---- grid ---- */
 
-.grid {
+.gridp {
   background: #DDD;
   padding-top: 12px;
-  max-width: 1000px;
+  max-width: 720px;
+  margin: auto;
   /* display: flex;
   justify-content: center !important; */
 }
 
 /* clear fix */
-.grid:after {
+.gridp:after {
   /* margin: 0 auto !important;  */
   /* content: '';
   display: block; */
