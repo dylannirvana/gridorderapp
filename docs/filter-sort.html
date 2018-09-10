@@ -59,12 +59,22 @@
       <!-- JUMBOTRON  -->
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">DraggaBilly Example</h1>
-          <p class="lead text-muted">Drag n' drop is the essential functionality that makes this work. Easily rearrange items in any category. Intuitive, easy to use and clear what's going on.</p>
+          <h1 class="jumbotron-heading">Filtering example</h1>
+          <p class="lead text-muted">Filter and Sort provides the business logic. It is the heart of the application. Here we have the first of which. Filtering. Hide and show items according to rules and taxonomy.</p>
           <p>
             <a href="index.html" class="btn btn-secondary my-2">Draggabilly</a>
             <a href="filter-sort.html" class="btn btn-primary my-2">Business Logic</a>
           </p>
+
+<!-- FILTER BUTTONS -->
+          <div class="button-group filter-button-group">
+            <button class="btn btn-secondary " data-filter="*">show all</button>
+            <button class="btn btn-secondary " data-filter=".modern">modern</button>
+            <button class="btn btn-secondary " data-filter=".modern:not(.mid-century)">modern not mid century modern</button>
+            <button class="btn btn-secondary " data-filter=".mid-century">mid century</button>
+            <button class="btn btn-secondary " data-filter=".traditional">traditional</button>
+          </div>
+
         </div>
       </section>
       <!-- END jumbotron -->
@@ -114,7 +124,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6 grid-item">
+            <div class="col-md-4 col-sm-6 grid-item modern mid-century">
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <div class="card-body">
@@ -130,7 +140,7 @@
               </div>
             </div>
 
-            <div class="col-md-4 col-sm-6 grid-item">
+            <div class="col-md-4 col-sm-6 grid-item traditional">
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <div class="card-body">
@@ -145,7 +155,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6 grid-item">
+            <div class="col-md-4 col-sm-6 grid-item traditional">
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <div class="card-body">

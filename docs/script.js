@@ -23,14 +23,25 @@ $gridp.find('.grid-item').each( function( i, gridItem ) {
   $gridp.packery( 'bindDraggabillyEvents', draggie );
 });
 
-// Isotope sort and filter
-var $gridi = $('.gridi').isotope({
-  getSortData: {
-    name: '.name', // text from querySelector
-    category: '[data-category]', // value of attribute
-    // weight: function( itemElem ) { // function
-    //   var weight = $( itemElem ).find('.weight').text();
-    //   return parseFloat( weight.replace( /[\(\)]/g, '') );
-    // }
-  }
-})
+// FILTER
+// // Isotope sort and filter
+// var $gridi = $('.gridi').isotope({
+//   getSortData: {
+//     name: '.name', // text from querySelector
+//     category: '[data-category]', // value of attribute
+//     // weight: function( itemElem ) { // function
+//     //   var weight = $( itemElem ).find('.weight').text();
+//     //   return parseFloat( weight.replace( /[\(\)]/g, '') );
+//     // }
+//   }
+// })
+
+// // init Isotope
+// var $gridi = $('.gridi').isotope({
+//   // options
+// });
+// // filter items on button click
+// $('.filter-button-group').on( 'click', 'button', function() {
+//   var filterValue = $(this).attr('data-filter');
+//   $gridi.isotope({ filter: filterValue });
+// });
