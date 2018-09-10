@@ -37,11 +37,11 @@ $gridp.find('.grid-item').each( function( i, gridItem ) {
 // })
 
 // // init Isotope
-// var $gridi = $('.gridi').isotope({
-//   // options
-// });
-// // filter items on button click
-// $('.filter-button-group').on( 'click', 'button', function() {
-//   var filterValue = $(this).attr('data-filter');
-//   $gridi.isotope({ filter: filterValue });
-// });
+var $gridi = $('.gridi').isotope({
+  // options
+});
+// filter items on button click
+$('.filter-button-group').on( 'click', 'button', function() {
+  var filterValue = $(this).attr('data-filter');
+  $gridi.isotope({ filter: filterValue });
+});
