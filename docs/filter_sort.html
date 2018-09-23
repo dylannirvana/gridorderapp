@@ -59,21 +59,34 @@
       <!-- JUMBOTRON  -->
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Filtering example</h1>
+          <h1 class="jumbotron-heading">Filter Sort example</h1>
           <p class="lead text-muted">Filter and Sort provides the business logic. It is the heart of the application. Here we have the first of which. Filtering. Hide and show items according to rules and taxonomy.</p>
           <p>
             <a href="index.html" class="btn btn-secondary my-2">Draggabilly</a>
-            <a href="filter-sort.html" class="btn btn-primary my-2">Business Logic</a>
+            <a href="filter.html" class="btn btn-secondary my-2">Filter</a>
+            <a href="sort.html" class="btn btn-secondary my-2">Sort</a>
+            <a href="filter_sort.html" class="btn btn-primary my-2">Filter Sort</a>
           </p>
 
-<!-- FILTER BUTTONS -->
-          <div class="button-group filter-button-group">
-            <button class="btn btn-secondary " data-filter="*">show all</button>
-            <button class="btn btn-secondary " data-filter=".modern">modern</button>
-            <button class="btn btn-secondary " data-filter=".modern:not(.mid-century)">modern not mid century modern</button>
-            <button class="btn btn-secondary " data-filter=".mid-century">mid century</button>
-            <button class="btn btn-secondary " data-filter=".traditional">traditional</button>
+          <!-- FILTER BUTTONS -->
+                    <div class="button-group filter-button-group">
+                      <button class="btn btn-secondary " data-filter="*">show all</button>
+                      <button class="btn btn-secondary " data-filter=".modern">modern</button>
+                      <button class="btn btn-secondary " data-filter=".modern:not(.mid-century)">modern not mid century modern</button>
+                      <button class="btn btn-secondary " data-filter=".mid-century">mid century</button>
+                      <button class="btn btn-secondary " data-filter=".traditional">traditional</button>
+                    </div>
+
+<!-- SORT BUTTONS -->
+          <div class="button-group sort-by-button-group">
+            <button class="btn btn-secondary " data-sort-by="name">name</button>
+            <button class="btn btn-secondary " data-sort-by="category">category</button>
           </div>
+
+          <!-- <div class="button-group filter-button-group">
+            <button class="btn btn-secondary " data-filter="category">category</button>
+            <button class="btn btn-secondary " data-filter="name">name</button>
+          </div> -->
 
         </div>
       </section>
@@ -92,141 +105,126 @@
           </div> -->
 
 <!-- BOOTSTRAP -->
-          <div class="row gridp gridi">
-            <div class="col-md-4 col-sm-6 grid-item modern">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Modern" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Fam</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Style</button>
-                    </div>
-                    <small class="text-muted">modern</small>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="row gridp gridi gridt">
 
-            <div class="col-md-4 col-sm-6 grid-item modern">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Modern" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Fam</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Style</button>
-                    </div>
-                    <small class="text-muted">modern</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 grid-item modern mid-century">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Modern Mid Century" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Fam</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Style</button>
-                    </div>
-                    <small class="text-muted">modern mid century</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 grid-item traditional">
+            <div class="col-md-4 col-sm-6 grid-item traditional" data-category="Traditional">
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Traditional" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Fam</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Style</button>
                     </div>
-                    <small class="text-muted">traditional</small>
+                    <small class="text-muted name">traditional</small>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6 grid-item traditional">
+
+            <div class="col-md-4 col-sm-6 grid-item modern" data-category="transition">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Transition" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    </div>
+                    <small class="text-muted name">modern</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 grid-item modern" data-category="transition">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Transition" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    </div>
+                    <small class="text-muted name">modern</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 grid-item modern mid-century" data-category="metal">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Metal" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    </div>
+                    <small class="text-muted name">modern mid century</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 grid-item traditional" data-category="metal">
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Traditional" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Fam</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Style</button>
                     </div>
-                    <small class="text-muted">traditional</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 grid-item">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Fam</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Style</button>
-                    </div>
-                    <small class="text-muted">category</small>
+                    <small class="text-muted name">traditional</small>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-4 col-sm-6 grid-item">
+            <div class="col-md-4 col-sm-6 grid-item" data-category="something-else">
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Fam</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Style</button>
                     </div>
-                    <small class="text-muted">category</small>
+                    <small class="text-muted name">category</small>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6 grid-item">
+
+            <div class="col-md-4 col-sm-6 grid-item" data-category="something-else">
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Fam</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Style</button>
                     </div>
-                    <small class="text-muted">category</small>
+                    <small class="text-muted name">category</small>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6 grid-item">
+            <div class="col-md-4 col-sm-6 grid-item" data-category="something-else">
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Fam</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Style</button>
                     </div>
-                    <small class="text-muted">category</small>
+                    <small class="text-muted name">category</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 grid-item" data-category="something-else">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    </div>
+                    <small class="text-muted name">category</small>
                   </div>
                 </div>
               </div>

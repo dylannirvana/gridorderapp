@@ -36,12 +36,37 @@ $gridp.find('.grid-item').each( function( i, gridItem ) {
 //   }
 // })
 
-// // init Isotope
-var $gridi = $('.gridi').isotope({
-  // options
+// init Isotope
+// var $gridi = $('.gridi').isotope({
+//   // options
+// });
+// // filter items on button click
+// $('.filter-button-group').on( 'click', 'button', function() {
+//   var filterValue = $(this).attr('data-filter');
+//   $gridi.isotope({ filter: filterValue });
+// });
+
+
+
+// SORT
+var $gridt = $('.gridt').isotope({
+  getSortData: {
+    name: '.name', // text from querySelector
+    category: '[data-category]' // value of attribute
+  }
 });
-// filter items on button click
+
+// filter
 $('.filter-button-group').on( 'click', 'button', function() {
   var filterValue = $(this).attr('data-filter');
-  $gridi.isotope({ filter: filterValue });
+  $gridt.isotope({ filter: filterValue });
+});
+
+// $gridt.isotope({ sortBy : 'category' });
+
+// sort items on button click
+$('.sort-by-button-group').on( 'click', 'button', function() {
+  var sortByValue = $(this).attr('data-sort-by');
+  $gridt.isotope({ sortBy: sortByValue });
+  console.log("hey now!");
 });
