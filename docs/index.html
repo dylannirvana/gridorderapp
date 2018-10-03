@@ -59,17 +59,43 @@
       <!-- JUMBOTRON  -->
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">DraggaBilly Example</h1>
-          <p class="lead text-muted">Drag n' drop is the essential functionality that makes this work. Easily rearrange items in any category. Intuitive, easy to use and clear what's going on.</p>
+          <h1 class="jumbotron-heading">Filter Sort example</h1>
+          <p class="lead text-muted">Filter and Sort provides the business logic. It is the heart of the application. Here we have the first of which. Filtering. Hide and show items according to rules and taxonomy.</p>
           <p>
-            <a href="index.html" class="btn btn-primary my-2">Draggabilly</a>
+            <a href="index.html" class="btn btn-secondary my-2">Draggabilly</a>
             <a href="filter.html" class="btn btn-secondary my-2">Filter</a>
             <a href="sort.html" class="btn btn-secondary my-2">Sort</a>
-            <a href="filter_sort.html" class="btn btn-secondary my-2">Filter Sort</a>
+            <a href="filter_sort.html" class="btn btn-primary my-2">Filter Sort</a>
           </p>
+
+          <!-- FILTER BUTTONS -->
+                    <div class="button-group filter-button-group">
+                      <button class="btn btn-secondary " data-filter="*">Ceiling</button>
+                      <button class="btn btn-secondary " data-filter=".modern">Wall</button>
+                      <button class="btn btn-secondary " data-filter=".modern:not(.mid-century)">modern not mid century modern</button>
+                      <button class="btn btn-secondary " data-filter=".mid-century">Floor</button>
+                      <button class="btn btn-secondary " data-filter=".traditional">Outside</button>
+                    </div>
+
+<!-- SORT BUTTONS -->
+          <div class="button-group sort-by-button-group">
+            <button class="btn btn-secondary " data-sort-by="name">Chandelier</button>
+            <button class="btn btn-secondary " data-sort-by="category">Lamp</button>
+          </div>
+
+          <!-- <div class="button-group filter-button-group">
+            <button class="btn btn-secondary " data-filter="category">category</button>
+            <button class="btn btn-secondary " data-filter="name">name</button>
+          </div> -->
+
+          <div class="button-group group">
+            <button class="btn btn-primary " >save your beautiful list</button>
+          </div>
+
         </div>
       </section>
       <!-- END jumbotron -->
+
 
 <!-- CARD CONTAINER -->
       <div class="album py-5 bg-light">
@@ -83,131 +109,232 @@
             <div class="grid-item"></div>
           </div> -->
 
+<!--
+category > highest level of taxonomy floor ceiling etc
+function > subcategory chandelier sconce
+
+
+(shortdescription) NAME
+(basecode)
+grid order number > set by vc
+
+Composition
+relative > move one move all if more than one function present
+
+
+
+-->
+
+
+
 <!-- BOOTSTRAP -->
-          <div class="row gridp gripi">
-            <div class="col-md-4 col-sm-6 grid-item modern">
+          <div class="row gridp gridi gridt">
+
+            <div class="col-md-4 col-sm-6 grid-item traditional" data-category="Traditional">
               <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" src="https://previews.123rf.com/images/iimages/iimages1210/iimages121001042/15864418-illustration-of-a-flower-on-white-background.jpg" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                  <h6 class="card-text"> shortdescription</h6>
+                  <p class="card-text">basecode</p>
+                  <p class="card-text">category | function</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
+                     <p class="card-text">designer</p>
                     </div>
-                    <small class="text-muted">category</small>
+                    <small class="text-muted name">grid #</small>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-4 col-sm-6 grid-item modern">
+            <div class="col-md-4 col-sm-6 grid-item traditional" data-category="Traditional">
               <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" src="https://previews.123rf.com/images/iimages/iimages1210/iimages121001042/15864418-illustration-of-a-flower-on-white-background.jpg" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                  <h6 class="card-text"> shortdescription</h6>
+                  <p class="card-text">basecode</p>
+                  <p class="card-text">category | function</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
+                     <p class="card-text">designer</p>
                     </div>
-                    <small class="text-muted">category</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 grid-item">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                    </div>
-                    <small class="text-muted">category</small>
+                    <small class="text-muted name">grid #</small>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-4 col-sm-6 grid-item">
+            <div class="col-md-4 col-sm-6 grid-item traditional" data-category="Traditional">
               <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" src="https://previews.123rf.com/images/iimages/iimages1210/iimages121001042/15864418-illustration-of-a-flower-on-white-background.jpg" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                  <h6 class="card-text"> shortdescription</h6>
+                  <p class="card-text">basecode</p>
+                  <p class="card-text">category | function</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
+                     <p class="card-text">designer</p>
                     </div>
-                    <small class="text-muted">category</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 grid-item">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                    </div>
-                    <small class="text-muted">category</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 grid-item">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                    </div>
-                    <small class="text-muted">category</small>
+                    <small class="text-muted name">grid #</small>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-4 col-sm-6 grid-item">
+            <div class="col-md-4 col-sm-6 grid-item traditional" data-category="Traditional">
               <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" src="https://previews.123rf.com/images/iimages/iimages1210/iimages121001042/15864418-illustration-of-a-flower-on-white-background.jpg" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                  <h6 class="card-text"> shortdescription</h6>
+                  <p class="card-text">basecode</p>
+                  <p class="card-text">category | function</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
+                     <p class="card-text">designer</p>
                     </div>
-                    <small class="text-muted">category</small>
+                    <small class="text-muted name">grid #</small>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6 grid-item">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                    </div>
-                    <small class="text-muted">category</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 grid-item">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                    </div>
-                    <small class="text-muted">category</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- row -->
 
+            <div class="col-md-4 col-sm-6 grid-item traditional" data-category="Traditional">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="https://previews.123rf.com/images/iimages/iimages1210/iimages121001042/15864418-illustration-of-a-flower-on-white-background.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h6 class="card-text"> shortdescription</h6>
+                  <p class="card-text">basecode</p>
+                  <p class="card-text">category | function</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                     <p class="card-text">designer</p>
+                    </div>
+                    <small class="text-muted name">grid #</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 grid-item traditional" data-category="Traditional">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="https://previews.123rf.com/images/iimages/iimages1210/iimages121001042/15864418-illustration-of-a-flower-on-white-background.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h6 class="card-text"> shortdescription</h6>
+                  <p class="card-text">basecode</p>
+                  <p class="card-text">category | function</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                     <p class="card-text">designer</p>
+                    </div>
+                    <small class="text-muted name">grid #</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 grid-item traditional" data-category="Traditional">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="https://previews.123rf.com/images/iimages/iimages1210/iimages121001042/15864418-illustration-of-a-flower-on-white-background.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h6 class="card-text"> shortdescription</h6>
+                  <p class="card-text">basecode</p>
+                  <p class="card-text">category | function</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                     <p class="card-text">designer</p>
+                    </div>
+                    <small class="text-muted name">grid #</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 grid-item traditional" data-category="Traditional">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="https://previews.123rf.com/images/iimages/iimages1210/iimages121001042/15864418-illustration-of-a-flower-on-white-background.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h6 class="card-text"> shortdescription</h6>
+                  <p class="card-text">basecode</p>
+                  <p class="card-text">category | function</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                     <p class="card-text">designer</p>
+                    </div>
+                    <small class="text-muted name">grid #</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 grid-item traditional" data-category="Traditional">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="https://previews.123rf.com/images/iimages/iimages1210/iimages121001042/15864418-illustration-of-a-flower-on-white-background.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h6 class="card-text"> shortdescription</h6>
+                  <p class="card-text">basecode</p>
+                  <p class="card-text">category | function</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                     <p class="card-text">designer</p>
+                    </div>
+                    <small class="text-muted name">grid #</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 grid-item traditional" data-category="Traditional">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="https://previews.123rf.com/images/iimages/iimages1210/iimages121001042/15864418-illustration-of-a-flower-on-white-background.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h6 class="card-text"> shortdescription</h6>
+                  <p class="card-text">basecode</p>
+                  <p class="card-text">category | function</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                     <p class="card-text">designer</p>
+                    </div>
+                    <small class="text-muted name">grid #</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 grid-item traditional" data-category="Traditional">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="https://previews.123rf.com/images/iimages/iimages1210/iimages121001042/15864418-illustration-of-a-flower-on-white-background.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h6 class="card-text"> shortdescription</h6>
+                  <p class="card-text">basecode</p>
+                  <p class="card-text">category | function</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                     <p class="card-text">designer</p>
+                    </div>
+                    <small class="text-muted name">grid #</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 grid-item traditional" data-category="Traditional">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="https://previews.123rf.com/images/iimages/iimages1210/iimages121001042/15864418-illustration-of-a-flower-on-white-background.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h6 class="card-text"> shortdescription</h6>
+                  <p class="card-text">basecode</p>
+                  <p class="card-text">category | function</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                     <p class="card-text">designer</p>
+                    </div>
+                    <small class="text-muted name">grid #</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>   <!-- row -->
         </div>
       </div>
 

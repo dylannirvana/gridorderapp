@@ -47,7 +47,6 @@ $gridp.find('.grid-item').each( function( i, gridItem ) {
 // });
 
 
-
 // SORT
 var $gridt = $('.gridt').isotope({
   getSortData: {

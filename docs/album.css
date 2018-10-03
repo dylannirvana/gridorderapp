@@ -27,6 +27,25 @@
   max-width: 40rem;
 }
 
+/* CARDS */
+.card {
+  align-items: center;
+}
+.card-img-top {
+  height: 225px;
+  width: 150px;
+}
+.card-body {
+  text-align: center;
+}
+ .card-text {
+   margin-bottom: 1px;
+ }
+ .btn-group {
+   font-style: oblique;
+   /* padding-top: 2px; */
+ }
+
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
