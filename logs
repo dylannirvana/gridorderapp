@@ -1,0 +1,704 @@
+Navigated to https://www.circalighting.com/
+circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:565 JQMIGRATE: Logging is active
+circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:585 JQMIGRATE: jQuery.fn.andSelf() replaced by jQuery.fn.addBack()
+migrateWarn @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:585
+jQuery.fn.andSelf @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:875
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1087
+e @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+dispatch @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+r.handle @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+trigger @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+jQuery.event.trigger @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1037
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+trigger @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+e.trigger @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+e.prepare @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+e @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+e.replace @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+e.initialize @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+e @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+a.fn.owlCarousel @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1084
+j @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+fireWith @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+ready @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+J @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:587 console.trace
+migrateWarn @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:587
+jQuery.fn.andSelf @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:875
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1087
+e @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+dispatch @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+r.handle @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+trigger @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+jQuery.event.trigger @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1037
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+trigger @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+e.trigger @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+e.prepare @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+e @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+e.replace @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+e.initialize @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+e @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+a.fn.owlCarousel @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1084
+j @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+fireWith @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+ready @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+J @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1 [Facebook Pixel] - Unable to parse JSON-LD tag. Malformed JSON found: '// <![CDATA[
+{
+"@context": "http://www.schema.org",
+"@type": "Organization",
+"name": "Circalighting",
+"url": "https://www.circalighting.com/",
+"sameAs" : [ "http://www.facebook.com/circalighting",
+"https://www.twitter.com/circalighting",
+"https://www.linkedin.com/company/circa-lighting",
+"https://www.houzz.com/pro/circa/circa-lighting",
+"https://www.pinterest.com/circalighting",
+"https://www.instagram.com/circalighting",
+"https://plus.google.com/+CircaLightingLights"],
+"logo": "https://www.circalighting.com/skin/frontend/enterprise/circalighting/images/circa-new-logo.png",
+"image": "https://www.circalighting.com/media/wysiwyg/homepage/cl2017_homepage-min.png",
+"description": "Circa Lighting offers a vast array of light fixtures including pendant lighting and chandeliers. Premier resource of designer lighting for Visual Comfort. Free standard shipping!",
+"address":
+{ "@type": "PostalAddress", "streetAddress": "513 W. Jones Street", "addressLocality": "Savannah", "addressRegion": "Georgia", "postalCode": "31401", "addressCountry": "United States" }
+,
+"contactPoint":
+{ "@type": "ContactPoint", "telephone": "+1 877 762 2323", "contactType": "Customer Service" }
+}
+// ]]>'.
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+p @ VM10048 fbevents.js:25
+v @ VM10048 fbevents.js:25
+v @ VM10054 1483523841954713:23
+z @ VM10054 1483523841954713:23
+(anonymous) @ VM10054 1483523841954713:23
+setTimeout (async)
+(anonymous) @ VM10054 1483523841954713:23
+(anonymous) @ VM10048 fbevents.js:25
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+collect @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+value @ VM10048 fbevents.js:25
+trigger @ VM10048 fbevents.js:25
+t @ VM10048 fbevents.js:25
+Z @ VM10048 fbevents.js:25
+W @ VM10048 fbevents.js:25
+fa @ VM10048 fbevents.js:25
+S @ VM10048 fbevents.js:25
+ha @ VM10048 fbevents.js:25
+(anonymous) @ VM10048 fbevents.js:25
+(anonymous) @ VM10048 fbevents.js:25
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+collect @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+u @ VM10048 fbevents.js:25
+each @ VM10048 fbevents.js:25
+value @ VM10048 fbevents.js:25
+value @ VM10048 fbevents.js:25
+value @ VM10048 fbevents.js:25
+plugin @ VM10054 1483523841954713:35
+ja @ VM10048 fbevents.js:25
+(anonymous) @ VM10054 1483523841954713:26
+Navigated to https://www.circalighting.com/ceiling/chandelier/
+251488353be204ffe45fe62435741c31.js:1380 JQMIGRATE: Logging is active
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.browser is deprecated
+migrateWarn @ VM10037 251488353be204ffe45fe62435741c31.js:1400
+get @ VM10037 251488353be204ffe45fe62435741c31.js:1417
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ VM10037 251488353be204ffe45fe62435741c31.js:1402
+get @ VM10037 251488353be204ffe45fe62435741c31.js:1417
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.fn.live() is deprecated
+migrateWarn @ VM10037 251488353be204ffe45fe62435741c31.js:1400
+jQuery.fn.live @ VM10037 251488353be204ffe45fe62435741c31.js:1830
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2273
+j @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+fireWith @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+ready @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+J @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ VM10037 251488353be204ffe45fe62435741c31.js:1402
+jQuery.fn.live @ VM10037 251488353be204ffe45fe62435741c31.js:1830
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2273
+j @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+fireWith @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+ready @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+J @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+DevTools failed to parse SourceMap: https://circaskin.circalighting.com/skin/frontend/enterprise/circalighting/js/corra/quickview-bundle.min.js.map
+Navigated to https://www.circalighting.com/ceiling/chandelier/
+251488353be204ffe45fe62435741c31.js:1380 JQMIGRATE: Logging is active
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.browser is deprecated
+migrateWarn @ VM10037 251488353be204ffe45fe62435741c31.js:1400
+get @ VM10037 251488353be204ffe45fe62435741c31.js:1417
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ VM10037 251488353be204ffe45fe62435741c31.js:1402
+get @ VM10037 251488353be204ffe45fe62435741c31.js:1417
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.fn.live() is deprecated
+migrateWarn @ VM10037 251488353be204ffe45fe62435741c31.js:1400
+jQuery.fn.live @ VM10037 251488353be204ffe45fe62435741c31.js:1830
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2273
+j @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+fireWith @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+ready @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+J @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ VM10037 251488353be204ffe45fe62435741c31.js:1402
+jQuery.fn.live @ VM10037 251488353be204ffe45fe62435741c31.js:1830
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2273
+j @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+fireWith @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+ready @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+J @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+DevTools failed to parse SourceMap: https://circaskin.circalighting.com/skin/frontend/enterprise/circalighting/js/corra/quickview-bundle.min.js.map
+Navigated to https://www.circalighting.com/
+circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:565 JQMIGRATE: Logging is active
+circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:585 JQMIGRATE: jQuery.fn.andSelf() replaced by jQuery.fn.addBack()
+migrateWarn @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:585
+jQuery.fn.andSelf @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:875
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1087
+e @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+dispatch @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+r.handle @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+trigger @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+jQuery.event.trigger @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1037
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+trigger @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+e.trigger @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+e.prepare @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+e @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+e.replace @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+e.initialize @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+e @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+a.fn.owlCarousel @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1084
+j @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+fireWith @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+ready @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+J @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:587 console.trace
+migrateWarn @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:587
+jQuery.fn.andSelf @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:875
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1087
+e @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+dispatch @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+r.handle @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+trigger @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+jQuery.event.trigger @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1037
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+trigger @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:513
+e.trigger @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+e.prepare @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+e @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+e.replace @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+e.initialize @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+e @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+a.fn.owlCarousel @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1086
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1084
+j @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+fireWith @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+ready @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+J @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:511
+circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1 [Facebook Pixel] - Unable to parse JSON-LD tag. Malformed JSON found: '// <![CDATA[
+{
+"@context": "http://www.schema.org",
+"@type": "Organization",
+"name": "Circalighting",
+"url": "https://www.circalighting.com/",
+"sameAs" : [ "http://www.facebook.com/circalighting",
+"https://www.twitter.com/circalighting",
+"https://www.linkedin.com/company/circa-lighting",
+"https://www.houzz.com/pro/circa/circa-lighting",
+"https://www.pinterest.com/circalighting",
+"https://www.instagram.com/circalighting",
+"https://plus.google.com/+CircaLightingLights"],
+"logo": "https://www.circalighting.com/skin/frontend/enterprise/circalighting/images/circa-new-logo.png",
+"image": "https://www.circalighting.com/media/wysiwyg/homepage/cl2017_homepage-min.png",
+"description": "Circa Lighting offers a vast array of light fixtures including pendant lighting and chandeliers. Premier resource of designer lighting for Visual Comfort. Free standard shipping!",
+"address":
+{ "@type": "PostalAddress", "streetAddress": "513 W. Jones Street", "addressLocality": "Savannah", "addressRegion": "Georgia", "postalCode": "31401", "addressCountry": "United States" }
+,
+"contactPoint":
+{ "@type": "ContactPoint", "telephone": "+1 877 762 2323", "contactType": "Customer Service" }
+}
+// ]]>'.
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+p @ VM10048 fbevents.js:25
+v @ VM10048 fbevents.js:25
+v @ VM10054 1483523841954713:23
+z @ VM10054 1483523841954713:23
+(anonymous) @ VM10054 1483523841954713:23
+setTimeout (async)
+(anonymous) @ VM10054 1483523841954713:23
+(anonymous) @ VM10048 fbevents.js:25
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+collect @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+value @ VM10048 fbevents.js:25
+trigger @ VM10048 fbevents.js:25
+t @ VM10048 fbevents.js:25
+Z @ VM10048 fbevents.js:25
+W @ VM10048 fbevents.js:25
+fa @ VM10048 fbevents.js:25
+S @ VM10048 fbevents.js:25
+ha @ VM10048 fbevents.js:25
+(anonymous) @ VM10048 fbevents.js:25
+(anonymous) @ VM10048 fbevents.js:25
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+(anonymous) @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+each @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+collect @ circaskin.circalighting.com/media/js/12b1a624190694f95347b7a2b4f1158f.js?q=v1.0:1
+u @ VM10048 fbevents.js:25
+each @ VM10048 fbevents.js:25
+value @ VM10048 fbevents.js:25
+value @ VM10048 fbevents.js:25
+value @ VM10048 fbevents.js:25
+plugin @ VM10054 1483523841954713:35
+ja @ VM10048 fbevents.js:25
+(anonymous) @ VM10054 1483523841954713:26
+Navigated to https://www.circalighting.com/ceiling/chandelier/
+251488353be204ffe45fe62435741c31.js:1380 JQMIGRATE: Logging is active
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.browser is deprecated
+migrateWarn @ VM10037 251488353be204ffe45fe62435741c31.js:1400
+get @ VM10037 251488353be204ffe45fe62435741c31.js:1417
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ VM10037 251488353be204ffe45fe62435741c31.js:1402
+get @ VM10037 251488353be204ffe45fe62435741c31.js:1417
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.fn.live() is deprecated
+migrateWarn @ VM10037 251488353be204ffe45fe62435741c31.js:1400
+jQuery.fn.live @ VM10037 251488353be204ffe45fe62435741c31.js:1830
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2273
+j @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+fireWith @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+ready @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+J @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ VM10037 251488353be204ffe45fe62435741c31.js:1402
+jQuery.fn.live @ VM10037 251488353be204ffe45fe62435741c31.js:1830
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2273
+j @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+fireWith @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+ready @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+J @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+DevTools failed to parse SourceMap: https://circaskin.circalighting.com/skin/frontend/enterprise/circalighting/js/corra/quickview-bundle.min.js.map
+Navigated to https://www.circalighting.com/ceiling/flush-mount/
+VM10037 251488353be204ffe45fe62435741c31.js:1380 JQMIGRATE: Logging is active
+VM10037 251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.browser is deprecated
+migrateWarn @ VM10037 251488353be204ffe45fe62435741c31.js:1400
+get @ VM10037 251488353be204ffe45fe62435741c31.js:1417
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+VM10037 251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ VM10037 251488353be204ffe45fe62435741c31.js:1402
+get @ VM10037 251488353be204ffe45fe62435741c31.js:1417
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2241
+VM10037 251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.fn.live() is deprecated
+migrateWarn @ VM10037 251488353be204ffe45fe62435741c31.js:1400
+jQuery.fn.live @ VM10037 251488353be204ffe45fe62435741c31.js:1830
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2273
+j @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+fireWith @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+ready @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+J @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+VM10037 251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ VM10037 251488353be204ffe45fe62435741c31.js:1402
+jQuery.fn.live @ VM10037 251488353be204ffe45fe62435741c31.js:1830
+(anonymous) @ VM10037 251488353be204ffe45fe62435741c31.js:2273
+j @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+fireWith @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+ready @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+J @ VM10037 251488353be204ffe45fe62435741c31.js:1326
+DevTools failed to parse SourceMap: https://circaskin.circalighting.com/skin/frontend/enterprise/circalighting/js/corra/quickview-bundle.min.js.map
+Navigated to https://www.circalighting.com/ceiling/flush-mount/
+VM11725 251488353be204ffe45fe62435741c31.js:1380 JQMIGRATE: Logging is active
+VM11725 251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.browser is deprecated
+migrateWarn @ VM11725 251488353be204ffe45fe62435741c31.js:1400
+get @ VM11725 251488353be204ffe45fe62435741c31.js:1417
+(anonymous) @ VM11725 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM11725 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM11725 251488353be204ffe45fe62435741c31.js:2241
+VM11725 251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ VM11725 251488353be204ffe45fe62435741c31.js:1402
+get @ VM11725 251488353be204ffe45fe62435741c31.js:1417
+(anonymous) @ VM11725 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM11725 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM11725 251488353be204ffe45fe62435741c31.js:2241
+VM11725 251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.fn.live() is deprecated
+migrateWarn @ VM11725 251488353be204ffe45fe62435741c31.js:1400
+jQuery.fn.live @ VM11725 251488353be204ffe45fe62435741c31.js:1830
+(anonymous) @ VM11725 251488353be204ffe45fe62435741c31.js:2273
+j @ VM11725 251488353be204ffe45fe62435741c31.js:1326
+fireWith @ VM11725 251488353be204ffe45fe62435741c31.js:1326
+ready @ VM11725 251488353be204ffe45fe62435741c31.js:1326
+J @ VM11725 251488353be204ffe45fe62435741c31.js:1326
+VM11725 251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ VM11725 251488353be204ffe45fe62435741c31.js:1402
+jQuery.fn.live @ VM11725 251488353be204ffe45fe62435741c31.js:1830
+(anonymous) @ VM11725 251488353be204ffe45fe62435741c31.js:2273
+j @ VM11725 251488353be204ffe45fe62435741c31.js:1326
+fireWith @ VM11725 251488353be204ffe45fe62435741c31.js:1326
+ready @ VM11725 251488353be204ffe45fe62435741c31.js:1326
+J @ VM11725 251488353be204ffe45fe62435741c31.js:1326
+DevTools failed to parse SourceMap: https://circaskin.circalighting.com/skin/frontend/enterprise/circalighting/js/corra/quickview-bundle.min.js.map
+VM11788 content.js:8 bugherdScreenshotDataURIResponse {id: 0.1375288362496916, name: "bugherdScreenshotDataURIResponse", detail: "{"extension":"jpeg","quality":85,"domainURL":"http…AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH/9k="}"}
+Navigated to https://www.circalighting.com/ceiling/view-all/
+VM11890 251488353be204ffe45fe62435741c31.js:1380 JQMIGRATE: Logging is active
+VM11890 251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.browser is deprecated
+migrateWarn @ VM11890 251488353be204ffe45fe62435741c31.js:1400
+get @ VM11890 251488353be204ffe45fe62435741c31.js:1417
+(anonymous) @ VM11890 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM11890 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM11890 251488353be204ffe45fe62435741c31.js:2241
+VM11890 251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ VM11890 251488353be204ffe45fe62435741c31.js:1402
+get @ VM11890 251488353be204ffe45fe62435741c31.js:1417
+(anonymous) @ VM11890 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM11890 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM11890 251488353be204ffe45fe62435741c31.js:2241
+VM11890 251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.fn.live() is deprecated
+migrateWarn @ VM11890 251488353be204ffe45fe62435741c31.js:1400
+jQuery.fn.live @ VM11890 251488353be204ffe45fe62435741c31.js:1830
+(anonymous) @ VM11890 251488353be204ffe45fe62435741c31.js:2273
+j @ VM11890 251488353be204ffe45fe62435741c31.js:1326
+fireWith @ VM11890 251488353be204ffe45fe62435741c31.js:1326
+ready @ VM11890 251488353be204ffe45fe62435741c31.js:1326
+J @ VM11890 251488353be204ffe45fe62435741c31.js:1326
+VM11890 251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ VM11890 251488353be204ffe45fe62435741c31.js:1402
+jQuery.fn.live @ VM11890 251488353be204ffe45fe62435741c31.js:1830
+(anonymous) @ VM11890 251488353be204ffe45fe62435741c31.js:2273
+j @ VM11890 251488353be204ffe45fe62435741c31.js:1326
+fireWith @ VM11890 251488353be204ffe45fe62435741c31.js:1326
+ready @ VM11890 251488353be204ffe45fe62435741c31.js:1326
+J @ VM11890 251488353be204ffe45fe62435741c31.js:1326
+DevTools failed to parse SourceMap: https://circaskin.circalighting.com/skin/frontend/enterprise/circalighting/js/corra/quickview-bundle.min.js.map
+Navigated to https://www.circalighting.com/ceiling/view-all/
+VM12033 251488353be204ffe45fe62435741c31.js:1380 JQMIGRATE: Logging is active
+VM12033 251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.browser is deprecated
+migrateWarn @ VM12033 251488353be204ffe45fe62435741c31.js:1400
+get @ VM12033 251488353be204ffe45fe62435741c31.js:1417
+(anonymous) @ VM12033 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM12033 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM12033 251488353be204ffe45fe62435741c31.js:2241
+VM12033 251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ VM12033 251488353be204ffe45fe62435741c31.js:1402
+get @ VM12033 251488353be204ffe45fe62435741c31.js:1417
+(anonymous) @ VM12033 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM12033 251488353be204ffe45fe62435741c31.js:2241
+(anonymous) @ VM12033 251488353be204ffe45fe62435741c31.js:2241
+VM12033 251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.fn.live() is deprecated
+migrateWarn @ VM12033 251488353be204ffe45fe62435741c31.js:1400
+jQuery.fn.live @ VM12033 251488353be204ffe45fe62435741c31.js:1830
+(anonymous) @ VM12033 251488353be204ffe45fe62435741c31.js:2273
+j @ VM12033 251488353be204ffe45fe62435741c31.js:1326
+fireWith @ VM12033 251488353be204ffe45fe62435741c31.js:1326
+ready @ VM12033 251488353be204ffe45fe62435741c31.js:1326
+J @ VM12033 251488353be204ffe45fe62435741c31.js:1326
+VM12033 251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ VM12033 251488353be204ffe45fe62435741c31.js:1402
+jQuery.fn.live @ VM12033 251488353be204ffe45fe62435741c31.js:1830
+(anonymous) @ VM12033 251488353be204ffe45fe62435741c31.js:2273
+j @ VM12033 251488353be204ffe45fe62435741c31.js:1326
+fireWith @ VM12033 251488353be204ffe45fe62435741c31.js:1326
+ready @ VM12033 251488353be204ffe45fe62435741c31.js:1326
+J @ VM12033 251488353be204ffe45fe62435741c31.js:1326
+DevTools failed to parse SourceMap: https://circaskin.circalighting.com/skin/frontend/enterprise/circalighting/js/corra/quickview-bundle.min.js.map
+VM12095 content.js:8 bugherdScreenshotDataURIResponse {id: 0.7205205984583722, name: "bugherdScreenshotDataURIResponse", detail: "{"extension":"jpeg","quality":85,"domainURL":"http…1MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf/Z"}"}
+Navigated to https://www.circalighting.com/ceiling/view-all/
+251488353be204ffe45fe62435741c31.js:1380 JQMIGRATE: Logging is active
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.browser is deprecated
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1400
+get @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1417
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1402
+get @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1417
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.fn.live() is deprecated
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1400
+jQuery.fn.live @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1830
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2273
+j @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+fireWith @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+ready @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+J @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1402
+jQuery.fn.live @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1830
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2273
+j @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+fireWith @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+ready @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+J @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+DevTools failed to parse SourceMap: https://circaskin.circalighting.com/skin/frontend/enterprise/circalighting/js/corra/quickview-bundle.min.js.map
+Navigated to https://www.circalighting.com/ceiling/view-all/
+251488353be204ffe45fe62435741c31.js:1380 JQMIGRATE: Logging is active
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.browser is deprecated
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1400
+get @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1417
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1402
+get @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1417
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.fn.live() is deprecated
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1400
+jQuery.fn.live @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1830
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2273
+j @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+fireWith @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+ready @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+J @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1402
+jQuery.fn.live @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1830
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2273
+j @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+fireWith @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+ready @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+J @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+DevTools failed to parse SourceMap: https://circaskin.circalighting.com/skin/frontend/enterprise/circalighting/js/corra/quickview-bundle.min.js.map
+Navigated to https://www.circalighting.com/ceiling/view-all/
+251488353be204ffe45fe62435741c31.js:1380 JQMIGRATE: Logging is active
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.browser is deprecated
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1400
+get @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1417
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1402
+get @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1417
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.fn.live() is deprecated
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1400
+jQuery.fn.live @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1830
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2273
+j @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+fireWith @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+ready @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+J @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1402
+jQuery.fn.live @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1830
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2273
+j @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+fireWith @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+ready @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+J @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+DevTools failed to parse SourceMap: https://circaskin.circalighting.com/skin/frontend/enterprise/circalighting/js/corra/quickview-bundle.min.js.map
+Navigated to https://www.circalighting.com/ceiling/view-all/
+251488353be204ffe45fe62435741c31.js:1380 JQMIGRATE: Logging is active
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.browser is deprecated
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1400
+get @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1417
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1402
+get @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1417
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.fn.live() is deprecated
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1400
+jQuery.fn.live @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1830
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2273
+j @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+fireWith @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+ready @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+J @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1402
+jQuery.fn.live @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1830
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2273
+j @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+fireWith @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+ready @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+J @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+DevTools failed to parse SourceMap: https://circaskin.circalighting.com/skin/frontend/enterprise/circalighting/js/corra/quickview-bundle.min.js.map
+Navigated to https://www.circalighting.com/ceiling/view-all/
+251488353be204ffe45fe62435741c31.js:1380 JQMIGRATE: Logging is active
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.browser is deprecated
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1400
+get @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1417
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1402
+get @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1417
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.fn.live() is deprecated
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1400
+jQuery.fn.live @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1830
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2273
+j @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+fireWith @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+ready @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+J @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1402
+jQuery.fn.live @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1830
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2273
+j @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+fireWith @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+ready @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+J @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+DevTools failed to parse SourceMap: https://circaskin.circalighting.com/skin/frontend/enterprise/circalighting/js/corra/quickview-bundle.min.js.map
+Navigated to https://www.circalighting.com/ceiling/view-all/
+251488353be204ffe45fe62435741c31.js:1380 JQMIGRATE: Logging is active
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.browser is deprecated
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1400
+get @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1417
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1402
+get @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1417
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+251488353be204ffe45fe62435741c31.js:1400 JQMIGRATE: jQuery.fn.live() is deprecated
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1400
+jQuery.fn.live @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1830
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2273
+j @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+fireWith @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+ready @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+J @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+251488353be204ffe45fe62435741c31.js:1402 console.trace
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1402
+jQuery.fn.live @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1830
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2273
+j @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+fireWith @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+ready @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+J @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+DevTools failed to parse SourceMap: https://circaskin.circalighting.com/skin/frontend/enterprise/circalighting/js/corra/quickview-bundle.min.js.map
+Navigated to https://www.circalighting.com/ceiling/view-all/
+251488353be204ffe45fe62435741c31.js?q=v1.0:1380 JQMIGRATE: Logging is active
+251488353be204ffe45fe62435741c31.js?q=v1.0:1400 JQMIGRATE: jQuery.browser is deprecated
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1400
+get @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1417
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+251488353be204ffe45fe62435741c31.js?q=v1.0:1402 console.trace
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1402
+get @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1417
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2241
+251488353be204ffe45fe62435741c31.js?q=v1.0:1400 JQMIGRATE: jQuery.fn.live() is deprecated
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1400
+jQuery.fn.live @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1830
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2273
+j @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+fireWith @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+ready @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+J @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+251488353be204ffe45fe62435741c31.js?q=v1.0:1402 console.trace
+migrateWarn @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1402
+jQuery.fn.live @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1830
+(anonymous) @ 251488353be204ffe45fe62435741c31.js?q=v1.0:2273
+j @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+fireWith @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+ready @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+J @ 251488353be204ffe45fe62435741c31.js?q=v1.0:1326
+DevTools failed to parse SourceMap: https://circaskin.circalighting.com/skin/frontend/enterprise/circalighting/js/corra/quickview-bundle.min.js.map
+sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:8 Pusher : Error : {"type":"WebSocketError","error":{"type":"PusherError","data":{"code":1006}}}
+t.warn @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:8
+(anonymous) @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:8
+i.emit @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:8
+error @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:9
+i.emit @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:8
+e.handleCloseEvent @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:9
+r @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:9
+i.emit @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:8
+i.changeState @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:9
+i.onClose @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:9
+socket.onclose @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:9
+sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:8 Pusher : Error : {"type":"WebSocketError","error":{"type":"PusherError","data":{"code":1006}}}
+t.warn @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:8
+(anonymous) @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:8
+i.emit @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:8
+error @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:9
+i.emit @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:8
+e.handleCloseEvent @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:9
+r @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:9
+i.emit @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:8
+i.changeState @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:9
+i.onClose @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:9
+socket.onclose @ sidebar-314d421b1eb4b194a7bdc22f0798a6d90e590d07010ac749139f3f07a5eca6a9.js:9

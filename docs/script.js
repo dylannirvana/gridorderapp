@@ -24,17 +24,17 @@ $gridp.find('.grid-item').each( function( i, gridItem ) {
 });
 
 // FILTER
-// // Isotope sort and filter
-// var $gridi = $('.gridi').isotope({
-//   getSortData: {
-//     name: '.name', // text from querySelector
-//     category: '[data-category]', // value of attribute
-//     // weight: function( itemElem ) { // function
-//     //   var weight = $( itemElem ).find('.weight').text();
-//     //   return parseFloat( weight.replace( /[\(\)]/g, '') );
-//     // }
-//   }
-// })
+// Isotope sort and filter
+var $gridi = $('.gridi').isotope({
+  getSortData: {
+    name: '.name', // text from querySelector
+    category: '[data-category]', // value of attribute
+    // weight: function( itemElem ) { // function
+    //   var weight = $( itemElem ).find('.weight').text();
+    //   return parseFloat( weight.replace( /[\(\)]/g, '') );
+    // }
+  }
+})
 
 // init Isotope
 // var $gridi = $('.gridi').isotope({
@@ -55,17 +55,20 @@ var $gridt = $('.gridt').isotope({
   }
 });
 
-// filter
+$gridt.isotope({ filter: ':not(.bbb)' });
+
+// FILTER
 $('.filter-button-group').on( 'click', 'button', function() {
   var filterValue = $(this).attr('data-filter');
   $gridt.isotope({ filter: filterValue });
+  // console.log(filterValue);
+  // $('div' + filterValue).css("display", "block");
 });
 
-// $gridt.isotope({ sortBy : 'category' });
+$gridt.isotope({ sortBy : 'category' });
 
 // sort items on button click
 $('.sort-by-button-group').on( 'click', 'button', function() {
   var sortByValue = $(this).attr('data-sort-by');
   $gridt.isotope({ sortBy: sortByValue });
-  console.log("hey now!");
 });
