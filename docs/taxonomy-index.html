@@ -62,70 +62,62 @@
         <h1 class="jumbotron-heading">Filter Sort example</h1>
         <p class="lead text-muted">Filter and Sort provides the business logic. It is the heart of the application. Here we have the first of which. Filtering. Hide and show items according to rules and taxonomy.</p>
 
+
+
+
+        <!-- BUTTON GROUPS -->
       <!-- CATEGORY -->
         <h3>Category</h3>
-        <p>Select Category to re-sort Category from existing grid order</p>
+        <!-- Selecting btn filters associated sub-categories -->
         <div class="button-group filter-button-group">
-
-        <!-- FUNCTIONS -->
-        <button class="btn btn-secondary " data-filter=".ceiling">Ceiling</button>
-        <button class="btn btn-secondary " data-filter=".wall">Wall</button>
-        <button class="btn btn-secondary " data-filter=".table">Table</button>
-        <button class="btn btn-secondary " data-filter=".floor">Floor</button>
-        <button class="btn btn-secondary " data-filter=".outdoor">Outdoor</button>
-      </div>
-
-      <!-- FUNCTION -->
-      <h3>Function</h3>
-      <p>Select Function to re-sort Family/Designer from existing grid order</p>
-      <div class="button-group sort-by-button-group gridt">
-
-        <!-- CEILING -->
-        <!-- Shows only if ceiling is selected -->
-        <div class="bbb ceiling ">
-          <button class="btn btn-secondary " data-sort-by="chandelier">Chandelier</button>
-          <button class="btn btn-secondary " data-sort-by="flush">Flush</button>
-          <button class="btn btn-secondary " data-sort-by="pendant">Pendant</button>
-          <button class="btn btn-secondary " data-sort-by="lantern">Lantern</button>
-          <button class="btn btn-secondary " data-sort-by="shade">Shade</button>
-          <button class="btn btn-secondary " data-sort-by="linear">Linear</button>
+          <button class="btn btn-secondary " data-filter=".ceiling">Ceiling</button>
+          <button class="btn btn-secondary " data-filter=".wall">Wall</button>
+          <button class="btn btn-secondary " data-filter=".table">Table</button>
+          <button class="btn btn-secondary " data-filter=".floor">Floor</button>
+          <button class="btn btn-secondary " data-filter=".outdoor">Outdoor</button>
         </div>
 
+      <!-- FUNCTION -->
+        <h3>Function</h3>
+        <div class="button-group sort-by-button-group">
+        <!-- CEILING -->
+        <div class="ceiling chandelier flush pendant lantern shade linear">
+          <button class="btn btn-secondary " data-filter=".chandelier">Chandelier</button>
+          <button class="btn btn-secondary " data-filter=".flush">Flush</button>
+          <button class="btn btn-secondary " data-filter=".pendant">Pendant</button>
+          <button class="btn btn-secondary " data-filter=".lantern">Lantern</button>
+          <button class="btn btn-secondary " data-filter=".shade">Shade</button>
+          <button class="btn btn-secondary " data-filter=".linear">Linear</button>
+        </div>
         <!-- WALL -->
-        <!-- Shows only if wall is selected, etc. -->
-        <div class="bbb wall">
+        <div class="wall">
           <button class="btn btn-secondary " data-sort-by="decorative">Decorative</button>
           <button class="btn btn-secondary " data-sort-by="bath">Bath</button>
           <button class="btn btn-secondary " data-sort-by="task">Task</button>
           <button class="btn btn-secondary " data-sort-by="picture">Picture</button>
         </div>
-
         <!-- TABLE -->
-        <div class="bbb table">
+        <div class="table">
           <button class="btn btn-secondary " data-sort-by="decorative">Decorative</button>
           <button class="btn btn-secondary " data-sort-by="task">Task</button>
         </div>
-
         <!-- FLOOR -->
-        <div class="bbb floor">
+        <div class="floor">
           <button class="btn btn-secondary " data-sort-by="decorative">Decorative</button>
           <button class="btn btn-secondary " data-sort-by="task">Task</button>
         </div>
-
         <!-- OUTDOOR -->
-        <div class="bbb outdoor">
+        <div class="outdoor">
           <button class="btn btn-secondary " data-sort-by="wall">Wall</button>
           <button class="btn btn-secondary " data-sort-by="ceiling">Ceiling</button>
           <button class="btn btn-secondary " data-sort-by="post">Post</button>
           <button class="btn btn-secondary " data-sort-by="bollard">Bollard</button>
         </div>
-
       </div>
 
       <!-- FAMILY/DESIGNER -->
-      <!-- <div class="button-group sort-by-button-group bye">
-        <h3>Family/Designer</h3>
-        <p>The Family/Designers that show will depend on what Category is selected above </p>
+      <h3>Family/Designer</h3>
+      <div class="ccc button-group sort-by-button-group ">
         <button class="btn btn-secondary " data-sort-by="">Aerin</button>
         <button class="btn btn-secondary " data-sort-by="">Barry</button>
         <button class="btn btn-secondary " data-sort-by="">Bristol</button>
@@ -149,7 +141,7 @@
         <button class="btn btn-secondary " data-sort-by="">TL Studio</button>
         <button class="btn btn-secondary " data-sort-by="">Wearstler</button>
         <button class="btn btn-secondary " data-sort-by="">Weeks</button>
-      </div> -->
+      </div>
 
 <p>The HTML sketches out the rules. I will be building out the data model next in order to test the logic</p>
 
@@ -164,16 +156,16 @@
 
 
 <!-- BOOTSTRAP -->
-<div class="row gridp gridi gridt">
+<div class="row gridp gridi gridt card-group">
 
-  <div class="col-md-4 col-sm-6 grid-item ceiling" data-category="chandelier">
+  <div class="col-md-4 col-sm-6 grid-item ceiling chandelier" data-category="">
     <div class="card mb-4 shadow-sm">
       <img class="card-img-top" src="https://previews.123rf.com/images/iimages/iimages1210/iimages121001042/15864418-illustration-of-a-flower-on-white-background.jpg" alt="Card image cap">
       <div class="card-body">
         <h6 class="card-text"> ceiling</h6>
         <div class="d-flex justify-content-between align-items-center">
           <div class="btn-group">
-            <p class="card-text">designer</p>
+            <p class="card-text">chandelier</p>
           </div>
           <small class="text-muted name">apples #</small>
         </div>
@@ -181,14 +173,14 @@
     </div>
   </div>
 
-  <div class="col-md-4 col-sm-6 grid-item ceiling" data-category="flush">
+  <div class="col-md-4 col-sm-6 grid-item ceiling chandelier " data-category="">
     <div class="card mb-4 shadow-sm">
       <img class="card-img-top" src="https://previews.123rf.com/images/iimages/iimages1210/iimages121001042/15864418-illustration-of-a-flower-on-white-background.jpg" alt="Card image cap">
       <div class="card-body">
         <h6 class="card-text"> ceiling</h6>
         <div class="d-flex justify-content-between align-items-center">
           <div class="btn-group">
-            <p class="card-text">designer</p>
+            <p class="card-text">chandelier</p>
           </div>
           <small class="text-muted name">bananas #</small>
         </div>
@@ -196,14 +188,14 @@
     </div>
   </div>
 
-  <div class="col-md-4 col-sm-6 grid-item ceiling" data-category="chandelier">
+  <div class="col-md-4 col-sm-6 grid-item ceiling flush" data-category="">
     <div class="card mb-4 shadow-sm">
       <img class="card-img-top" src="https://previews.123rf.com/images/iimages/iimages1210/iimages121001042/15864418-illustration-of-a-flower-on-white-background.jpg" alt="Card image cap">
       <div class="card-body">
         <h6 class="card-text"> ceiling</h6>
         <div class="d-flex justify-content-between align-items-center">
           <div class="btn-group">
-            <p class="card-text">designer</p>
+            <p class="card-text">flush</p>
           </div>
           <small class="text-muted name">grid #</small>
         </div>
@@ -211,7 +203,7 @@
     </div>
   </div>
 
-  <div class="col-md-4 col-sm-6 grid-item wall" data-category="Traditional">
+  <div class="col-md-4 col-sm-6 grid-item wall" data-category="">
     <div class="card mb-4 shadow-sm">
       <img class="card-img-top" src="https://previews.123rf.com/images/iimages/iimages1210/iimages121001042/15864418-illustration-of-a-flower-on-white-background.jpg" alt="Card image cap">
       <div class="card-body">

@@ -1,0 +1,57 @@
+/* DRAGGABILLY */
+
+* { box-sizing: border-box; }
+
+/* body { font-family: sans-serif; } */
+
+/* ---- grid ---- */
+
+.grid {
+  /* background: #DDD; */
+  /* padding-top: 12px; */
+  /* max-width: 720px; */
+  /* margin: auto; */
+  /* display: flex;
+  justify-content: center !important; */
+}
+
+/* clear fix */
+.grid:after {
+  /* margin: 0 auto !important;  */
+  /* content: '';
+  display: block; */
+  /* clear: both; */
+  /* justify-content: center; */
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+  /* float: left; */
+  /* left: auto; */
+  width: 240px;
+  height: 400px;
+  /* background: #C09;
+  border: 2px solid hsla(0, 0%, 0%, 0.5); */
+}
+
+/* .grid-item--width2 { width: 200px; }
+.grid-item--height2 { height: 200px; } */
+
+.grid-item:hover {
+  border-color: hsla(0, 0%, 100%, 0.5);
+  cursor: move;
+}
+
+.grid-item.is-dragging,
+.grid-item.is-positioning-post-drag {
+  background: #C90;
+  z-index: 2;
+}
+
+.packery-drop-placeholder {
+  outline: 3px dashed hsla(0, 0%, 0%, 0.5);
+  outline-offset: -6px;
+  -webkit-transition: -webkit-transform 0.2s;
+          transition: transform 0.2s;
+}
