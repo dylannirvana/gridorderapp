@@ -1604,7 +1604,7 @@ you can use the generic selector below, but it's slower:
 
 /* element-item
 ------------------------- */
-
+/* 
 .element-item {
   position: relative;
   float: left;
@@ -1652,7 +1652,7 @@ you can use the generic selector below, but it's slower:
   left: 10px;
   top: 76px;
   font-size: 0.8em;
-}
+} */
 
 .element-item.alkali          { background: #F00; background: hsl(   0, 100%, 50%); }
 .element-item.alkaline-earth  { background: #F80; background: hsl(  36, 100%, 50%); }
@@ -1727,7 +1727,7 @@ you can use the generic selector below, but it's slower:
   fill: #222;
 }
 
-/* 
+/*
 ------------------------- */
 
 .duo--legal__plain {
@@ -2440,7 +2440,7 @@ you can use the generic selector below, but it's slower:
   .site-nav__item__link {
     padding: 7px 20px;
   }
-  
+
 }
 
 /* sub-nav
@@ -2493,7 +2493,7 @@ you can use the generic selector below, but it's slower:
   .sub-nav__item {
     font-size: 1.0rem;
   }
-  
+
 
 }
 
@@ -2551,19 +2551,19 @@ you can use the generic selector below, but it's slower:
   margin: 5px;
   float: left;
 }
- 
+
 .color-shape.round {
   border-radius: 35px;
 }
- 
+
 .color-shape.big.round {
   border-radius: 75px;
 }
- 
+
 .color-shape.red { background: red; }
 .color-shape.blue { background: blue; }
 .color-shape.yellow { background: yellow; }
- 
+
 .color-shape.wide, .color-shape.big { width: 150px; }
 .color-shape.tall, .color-shape.big { height: 150px; }
 
