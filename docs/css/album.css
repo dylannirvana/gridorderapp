@@ -46,7 +46,9 @@
    font-style: oblique;
    /* padding-top: 2px; */
  }
-
+small.text-muted {
+  margin-left: 120px;
+}
  /* FUNCTIONS */
 /* .sort-by-button-group {
   display: none;
