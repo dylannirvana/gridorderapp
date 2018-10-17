@@ -38,17 +38,33 @@
 }
 .card-body {
   text-align: center;
+  padding: 1.1rem;
+}
+.card-title {
+  font-size: .9rem;
+  margin-bottom: .1rem;
 }
  .card-text {
-   margin-bottom: 1px;
+   font-size: .9rem;
+   margin-bottom: .2rem;
+   line-height: 1rem;
  }
  .btn-group {
    font-style: oblique;
    /* padding-top: 2px; */
  }
-small.text-muted {
+small {
+  margin-left: 0;
+}
+small.name {
   margin-left: 120px;
 }
+
+.btn-secondary {
+    color: #343a40;
+    background-color: #fff;
+    border-color: #6c757d;
+  }
  /* FUNCTIONS */
 /* .sort-by-button-group {
   display: none;

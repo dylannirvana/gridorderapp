@@ -24,13 +24,34 @@ $grid.find('.grid-item').each( function( i, gridItem ) {
 // HIDE AND SHOW
 // When document is loaded, only category buttons are visible
 $( document ).ready(function() {
-  $('.sub, .fam').hide();
+  $('.sub, .fam, .des').hide();
 });
 
 // Click a category button, and the sub-category buttons show
-$('.cat').on( 'click', 'button', function() {
-  $('.sub').show(500);
+// $('.cat').on( 'click', 'button', function() {
+//   $('.sub').show(500);
+// });
+
+$('.ceiling-btn').on( 'click', function() {
+  $('.ceiling-btn-group').show(500);
 });
+
+$('.wall-btn').on( 'click', function() {
+  $('.wall-btn-group').show(500);
+});
+
+$('.table-btn').on( 'click', function() {
+  $('.table-btn-group').show(500);
+});
+
+$('.floor-btn').on( 'click', function() {
+  $('.floor-btn-group').show(500);
+});
+
+$('.outdoor-btn').on( 'click', function() {
+  $('.outdoor-btn-group').show(500);
+});
+
 
 // Click sub-category button, the family buttons show
 $('.sub').on( 'click', 'button', function() {
