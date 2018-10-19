@@ -66,25 +66,25 @@ $('.outdoor-btn').on( 'click', function() {
 
 
 // selectively show families
-// $('.ceiling-family-btn').on( 'click', function() {
-//   $('.ceiling-family-btn-group').show(500);
-// });
-//
-// $('.wall-family-btn').on( 'click', function() {
-//   $('.wall-family-btn-group').show(500);
-//   console.log('yo!')
-// });
-// $('.table-family-btn').on( 'click', function() {
-//   $('.table-family-btn-group').show(500);
-// });
-//
-// $('.floor-family-btn').on( 'click', function() {
-//   $('.floor-family-btn-group').show(500);
-// });
-//
-// $('.outdoor-family-btn').on( 'click', function() {
-//   $('.outdoor-family-btn-group').show(500);
-// });
+$('.ceiling-family-btn').on( 'click', function() {
+  $('.ceiling-family-btn-group').show(500);
+});
+
+$('.wall-family-btn').on( 'click', function() {
+  $('.wall-family-btn-group').show(500);
+  console.log('yo!')
+});
+$('.table-family-btn').on( 'click', function() {
+  $('.table-family-btn-group').show(500);
+});
+
+$('.floor-family-btn').on( 'click', function() {
+  $('.floor-family-btn-group').show(500);
+});
+
+$('.outdoor-family-btn').on( 'click', function() {
+  $('.outdoor-family-btn-group').show(500);
+});
 
 // $('.function-filter').on( 'click', 'button', function() {
 //   var filterValue = $(this).attr('data-filter'); // eg ceiling selected
