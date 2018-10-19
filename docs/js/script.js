@@ -34,45 +34,62 @@ $( document ).ready(function() {
 
 // selectively show functions
 $('.ceiling-btn').on( 'click', function() {
+  $('.sub').hide();
   $('.ceiling-btn-group').show(500);
 });
 
 $('.wall-btn').on( 'click', function() {
+  $('.sub').hide();
   $('.wall-btn-group').show(500);
 });
 
 $('.table-btn').on( 'click', function() {
+  $('.sub').hide();
   $('.table-btn-group').show(500);
 });
 
 $('.floor-btn').on( 'click', function() {
+  $('.sub').hide();
   $('.floor-btn-group').show(500);
 });
 
 $('.outdoor-btn').on( 'click', function() {
+  $('.sub').hide();
   $('.outdoor-btn-group').show(500);
 });
 
+// $('.category-filter').on( 'click', 'button', function() {
+//   var filterValue = $(this).attr('data-filter'); // eg ceiling selected
+//   $('.sub').hide();
+//   $(filterValue).show(500);
+// });
+
+
 // selectively show families
-$('.ceiling-family-btn').on( 'click', function() {
-  $('.ceiling-family-btn-group').show(500);
-});
+// $('.ceiling-family-btn').on( 'click', function() {
+//   $('.ceiling-family-btn-group').show(500);
+// });
+//
+// $('.wall-family-btn').on( 'click', function() {
+//   $('.wall-family-btn-group').show(500);
+//   console.log('yo!')
+// });
+// $('.table-family-btn').on( 'click', function() {
+//   $('.table-family-btn-group').show(500);
+// });
+//
+// $('.floor-family-btn').on( 'click', function() {
+//   $('.floor-family-btn-group').show(500);
+// });
+//
+// $('.outdoor-family-btn').on( 'click', function() {
+//   $('.outdoor-family-btn-group').show(500);
+// });
 
-$('.wall-family-btn').on( 'click', function() {
-  $('.wall-family-btn-group').show(500);
-});
-$('.table-family-btn').on( 'click', function() {
-  $('.table-family-btn-group').show(500);
-});
-
-$('.floor-family-btn').on( 'click', function() {
-  $('.floor-family-btn-group').show(500);
-});
-
-$('.outdoor-family-btn').on( 'click', function() {
-  $('.outdoor-family-btn-group').show(500);
-});
-
+// $('.function-filter').on( 'click', 'button', function() {
+//   var filterValue = $(this).attr('data-filter'); // eg ceiling selected
+//   $(filterValue).show(500);
+// });
 
 
 // FILTER CATEGORY
@@ -117,13 +134,14 @@ function orderItems() {
   $( itemElems ).each( function( i, itemElem ) {
     $( itemElem ).text( i + 1 );
   });
-  console.log(itemElems);
+  // console.log(itemElems);
 }
 
 $('.save-btn').on( 'click', 'button', function() {
   $grid.on( 'layoutComplete', orderItems );
   $grid.on( 'dragItemPositioned', orderItems );
-
+  var elems = $grid.isotope('getItemElements')
+  console.log(elems);
 });
 
 
