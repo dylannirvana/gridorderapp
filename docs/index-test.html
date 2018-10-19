@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Grid Order App">
+  <meta name="author" content="Dylan Nirvana">
+  <title>Grid Order App</title>
+  <!-- Isotope does not require any CSS files -->
+  <!-- NOTE: get rid of this stylesheet once layout is up -->
+  <link rel="stylesheet" href="css/isotope-docs.css?6" media="screen">
+  <!-- BOOTSTRAP -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/album.css" rel="stylesheet">
+  <link href="css/drag.css" rel="stylesheet">
+</head>
+
+<!-- BODY -->
+<body class="page--index">
+
+<!- HEADER -->
+  <header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">About this tool</h4>
+            <p class="text-muted">Add some information about how the Grid Order tool works. We should be able to explain it in terms that are easy to understand. We encourage you to use it.</p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Questions?</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Contact the Developer</a></li>
+              <li><a href="#" class="text-white">Merchandising</a></li>
+              <li><a href="#" class="text-white">Suggestions welcome!</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!- NAVBAR -->
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+          <strong>Grid Order App</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+    <!-- END navbar -->
+  </header>
+
+<!- JUMBOTRON -->
+  <section class="jumbotron text-center">
+  <!-- <div class="hero"> -->
+    <div class="container">
+      <h1 class="jumbotron-heading">Grid Order App</h1>
+      <p class="lead text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<!- BUTTONS -->
+      <div class="big-demo" data-js="hero-demo">
+
+        <div class="ui-group">
+          <h3 class="ui-group__title">Function</h3>
+          <div class="filters button-group js-radio-button-group sub ceiling-btn-group ceiling-filter ceiling-family-btn">
+            <button class="btn btn-secondary" data-filter=".chandelier">chandelier</button>
+            <button class="btn btn-secondary" data-filter=".flush">flush</button>
+            <button class="btn btn-secondary" data-filter=".pendant">pendant</button>
+            <button class="btn btn-secondary" data-filter=".lantern">lantern</button>
+            <button class="btn btn-secondary" data-filter=".shade">shade</button>
+            <button class="btn btn-secondary" data-filter=".linear">linear</button>
+          </div>
+        </div>
+
+        <div class="ui-group">
+          <h3 class="ui-group__title ">Family</h3>
+          <div class="sort-by button-group js-radio-button-group fam ceiling-family-btn-group">
+            <button class="btn btn-secondary" data-sort-by="name">adele</button>
+            <button class="btn btn-secondary sortIt" data-sort-by="symbol">bellvale</button>
+            <button class="btn btn-secondary" data-sort-by="number">heather</button>
+          </div>
+        </div>
+
+
+
+<!- GRID -->
+        <div class="grid ">
+
+          <div class="element-item transition metal " data-category="transition">
+            <h5 class="name">Mercury</h5>
+            <p class="symbol">Hg</p>
+            <p class="number">80</p>
+            <p class="weight">200.59</p>
+          </div>
+          <div class="element-item metalloid " data-category="metalloid">
+            <h5 class="name">Tellurium</h5>
+            <p class="symbol">Te</p>
+            <p class="number">52</p>
+            <p class="weight">127.6</p>
+          </div>
+          <div class="element-item post-transition metal " data-category="post-transition">
+            <h5 class="name">Bismuth</h5>
+            <p class="symbol">Bi</p>
+            <p class="number">83</p>
+            <p class="weight">208.980</p>
+          </div>
+          <div class="element-item post-transition metal " data-category="post-transition">
+            <h5 class="name">Lead</h5>
+            <p class="symbol">Pb</p>
+            <p class="number">82</p>
+            <p class="weight">207.2</p>
+          </div>
+
+
+        </div> <!-- END grid -->
+      </div> <!-- END big-demo -->
+    </div> <!-- END container -->
+  <!-- </div> END hero -->
+</section> <!-- END jumbotron -->
+
+
+  <!-- Isotope does NOT require jQuery. But it does make things easier -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+  <script src="js/isotope-docs.js"></script>
+  <!-- <script src="js/isotope.pkgd.min.js"></script> -->
+  <script src="js/packery.js"></script>
+  <script src="js/draggabilly.pkgd.js"></script>
+
+  <!-- BOOTSTRAP -->
+  <script src="dist/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+
+
+
+</body>
+</html>

@@ -1,5 +1,4 @@
-// DRAGGABILLY
-// INITIALIZE PACKER
+// INITIALIZE PACKERY
 var $grid = $('.grid').packery({
   itemSelector: '.grid-item',
   // gutter: 10,
@@ -7,31 +6,33 @@ var $grid = $('.grid').packery({
   columnWidth: 240
 });
 
+// // INITIALIZE ISOTOPE
+// var $grid = $('.grid').isotope({
+// $grid.isotope({
+//   getSortData: {
+//     name: '.name', // text from querySelector
+//     category2: '.category2',
+//     function2: '.function2',
+//     family: '.family'
+//     // category: '[data-category]' // value of attribute
+//   }
+// });
 
-// NOTE: There is a sizing issue with the column
-
-
-
-// Make all grid-items draggable
+// DRAGGABILLY
 $grid.find('.grid-item').each( function( i, gridItem ) {
   var draggie = new Draggabilly( gridItem );
   // bind drag events to Packery
   $grid.packery( 'bindDraggabillyEvents', draggie );
 });
-// END Draggabilly
 
+// NOTE: There is a sizing issue with the column
 
-// HIDE AND SHOW
-// When document is loaded, only category buttons are visible
+// // HIDE AND SHOW BUTTONS
 $( document ).ready(function() {
   $('.sub, .fam, .des').hide();
 });
 
-// Click a category button, and the sub-category buttons show
-// $('.cat').on( 'click', 'button', function() {
-//   $('.sub').show(500);
-// });
-
+// selectively show functions
 $('.ceiling-btn').on( 'click', function() {
   $('.ceiling-btn-group').show(500);
 });
@@ -52,39 +53,131 @@ $('.outdoor-btn').on( 'click', function() {
   $('.outdoor-btn-group').show(500);
 });
 
+// selectively show families
+$('.ceiling-family-btn').on( 'click', function() {
+  $('.ceiling-family-btn-group').show(500);
+});
 
-// Click sub-category button, the family buttons show
-$('.sub').on( 'click', 'button', function() {
-  $('.fam').show(500);
+$('.wall-family-btn').on( 'click', function() {
+  $('.wall-family-btn-group').show(500);
+});
+$('.table-family-btn').on( 'click', function() {
+  $('.table-family-btn-group').show(500);
+});
+
+$('.floor-family-btn').on( 'click', function() {
+  $('.floor-family-btn-group').show(500);
+});
+
+$('.outdoor-family-btn').on( 'click', function() {
+  $('.outdoor-family-btn-group').show(500);
 });
 
 
 
-// // INITIALIZE ISOTOPE
-// var $gridt = $('.gridt').isotope({
-//   getSortData: {
-//     name: '.name', // text from querySelector
-//     category: '[data-category]' // value of attribute
-//   }
-// });
-
-
-// // FILTER CATEGORY
-$('.cat').on( 'click', 'button', function() {
+// FILTER CATEGORY
+$('.category-filter').on( 'click', 'button', function() {
   var filterValue = $(this).attr('data-filter'); // eg ceiling selected
   $grid.isotope({ filter: filterValue }); // eg show ceiling in cards
 });
 
-// // // // FILTER FUNCTION
-// $('.sort-by-button-group').on( 'click', 'button', function() {
-//   var filterValue = $(this).attr('data-filter');
-//   $gridt.isotope({ filter: filterValue });
+// $('.ceiling-filter').on( 'click', 'button', function() {
+//   var filterValue = $(this).attr('data-filter'); // eg ceiling selected
+//   $grid.isotope({ filter: filterValue }); // eg show ceiling in cards
+// });
+//
+// $('.wall-filter').on( 'click', 'button', function() {
+//   var filterValue = $(this).attr('data-filter'); // eg ceiling selected
+//   $grid.isotope({ filter: filterValue }); // eg show ceiling in cards
+// });
+//
+// $('.floor-filter').on( 'click', 'button', function() {
+//   var filterValue = $(this).attr('data-filter'); // eg ceiling selected
+//   $grid.isotope({ filter: filterValue }); // eg show ceiling in cards
+// });
+//
+// $('.outdoor-filter').on( 'click', 'button', function() {
+//   var filterValue = $(this).attr('data-filter'); // eg ceiling selected
+//   $grid.isotope({ filter: filterValue }); // eg show ceiling in cards
 // });
 
-// // // $gridt.isotope({ sortBy : 'category' });
-// //
+$('.function-filter').on( 'click', 'button', function() {
+  var filterValue = $(this).attr('data-filter'); // eg ceiling selected
+  $grid.isotope({ filter: filterValue }); // eg show ceiling in cards
+});
+
+$('.family-filter').on( 'click', 'button', function() {
+  var filterValue = $(this).attr('data-filter'); // eg ceiling selected
+  $grid.isotope({ filter: filterValue }); // eg show ceiling in cards
+});
+
+// show item order after layout
+function orderItems() {
+  var itemElems = $grid.packery('getItemElements');
+  $( itemElems ).each( function( i, itemElem ) {
+    $( itemElem ).text( i + 1 );
+  });
+}
+
+$grid.on( 'layoutComplete', orderItems );
+$grid.on( 'dragItemPositioned', orderItems );
+
+// $('.family-filter').on( 'click', 'button', function() {
+//   var filterValue = $(this).attr('data-filter'); // eg ceiling selected
+//   $grid.isotope({ filter: filterValue }); // eg show ceiling in cards
+// });
+
+// $grid.isotope({
+//   getSortData: {
+//     adele: '.adele',
+//     bellvale: '.bellvale',
+//     heather: '.heather'
+//   }
+// });
+
+// filter metal, sort by number, and layout
+// $grid.isotope({
+//   filter: '.family',
+//   sortBy: 'adele'
+// });
+// // triggering method without options will
+// // re-apply filtering, sorting, and layout
+// $grid.isotope();
+
+//
 // // sort items on button click
 // $('.sort-by-button-group').on( 'click', 'button', function() {
 //   var sortByValue = $(this).attr('data-sort-by');
-//   $gridt.isotope({ sortBy: sortByValue });
+//   $grid.isotope({ sortBy: sortByValue });
+// });
+
+// SORT
+// $('.ceiling-family-btn-group').on( 'click', 'button', function() {
+//   var sortByValue = $(this).attr('data-sort-by'); // eg ceiling selected
+//   $grid.isotope({ sortBy: sortByValue }); // eg show ceiling in cards
+//   console.log(sortByValue);
+// });
+
+
+// $('.sortIt').on('click', function() {
+//   // var sortByValue = $(this).attr('data-sort-by');
+//   // $grid.isotope({ sortBy: sortByValue });
+//   $grid.isotope({ sortBy : 'bellvale' });
+//   console.log('ouch!')
+// });
+
+// sort items on button click
+// $('.sort-by-button-group').on( 'click', 'button', function() {
+//   // var sortByValue = $(this).attr('data-sort-by');
+//   // $grid.isotope({ sortBy: sortByValue });
+//   // $grid.isotope({ sortBy : 'random' });
+//   $grid.isotope({ sortBy : 'name' });
+// });
+
+
+//
+// // sort items on button click
+// $('.sort-by-button-group').on( 'click', 'button', function() {
+//   var sortByValue = $(this).attr('data-sort-by');
+//   $grid.isotope({ sortBy: sortByValue });
 // });

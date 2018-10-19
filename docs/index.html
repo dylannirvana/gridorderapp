@@ -68,7 +68,7 @@
         <!-- CATEGORY -->
         <div class="">
           <h3 class="ui-group__title">Category</h3>
-          <div class="filter button-group js-radio-button-group  ">
+          <div class="filter button-group js-radio-button-group category-filter ">
             <button class="btn btn-secondary ceiling-btn" data-filter=".ceiling">ceiling</button>
             <button class="btn btn-secondary wall-btn" data-filter=".wall">wall</button>
             <button class="btn btn-secondary table-btn" data-filter=".table">table</button>
@@ -77,54 +77,79 @@
           </div>
         </div>
         <!-- FUNCTION -->
-        <div class="">
-          <h3 class="ui-group__title">Function</h3>
+        <div class="function-filter">
+          <h3 class="ui-group__title ">Function</h3>
           <!-- CEILING -->
-          <div class="filters button-group js-radio-button-group sub ceiling-btn-group">
+          <div class="filters button-group js-radio-button-group sub ceiling-btn-group ceiling-filter ceiling-family-btn">
             <button class="btn btn-secondary" data-filter=".chandelier">chandelier</button>
             <button class="btn btn-secondary" data-filter=".flush">flush</button>
             <button class="btn btn-secondary" data-filter=".pendant">pendant</button>
-            <button class="btn btn-secondary" data-filter=".lantern">flush</button>
+            <button class="btn btn-secondary" data-filter=".lantern">lantern</button>
+            <button class="btn btn-secondary" data-filter=".shade">shade</button>
+            <button class="btn btn-secondary" data-filter=".linear">linear</button>
           </div>
           <!-- WALL -->
-          <div class="wall sub wall-btn-group">
-            <button class="btn btn-secondary " data-sort-by="decorative">Decorative</button>
-            <button class="btn btn-secondary " data-sort-by="bath">Bath</button>
-            <button class="btn btn-secondary " data-sort-by="task">Task</button>
-            <button class="btn btn-secondary " data-sort-by="picture">Picture</button>
+          <div class="wall sub wall-btn-group wall-filter wall-family-btn">
+            <button class="btn btn-secondary " data-filter=".decorative">Decorative</button>
+            <button class="btn btn-secondary " data-filter=".bath">Bath</button>
+            <button class="btn btn-secondary " data-filter=".task">Task</button>
+            <button class="btn btn-secondary " data-filter=".picture">Picture</button>
           </div>
           <!-- TABLE -->
-          <div class="table sub table-btn-group">
-            <button class="btn btn-secondary " data-sort-by="decorative">Decorative</button>
-            <button class="btn btn-secondary " data-sort-by="task">Task</button>
+          <div class="table sub table-btn-group table-filter table-family-btn">
+            <button class="btn btn-secondary " data-filter=".decorative">Decorative</button>
+            <button class="btn btn-secondary " data-filter=".task">Task</button>
           </div>
           <!-- FLOOR -->
-          <div class="floor sub floor-btn-group">
-            <button class="btn btn-secondary " data-sort-by="decorative">Decorative</button>
-            <button class="btn btn-secondary " data-sort-by="task">Task</button>
+          <div class="floor sub floor-btn-group floor-filter floor-family-btn">
+            <button class="btn btn-secondary " data-filter=".decorative">Decorative</button>
+            <button class="btn btn-secondary " data-filter=".task">Task</button>
           </div>
           <!-- OUTDOOR -->
-          <div class="outdoor sub outdoor-btn-group">
-            <button class="btn btn-secondary " data-sort-by="wall">Wall</button>
-            <button class="btn btn-secondary " data-sort-by="ceiling">Ceiling</button>
-            <button class="btn btn-secondary " data-sort-by="post">Post</button>
-            <button class="btn btn-secondary " data-sort-by="bollard">Bollard</button>
+          <div class="outdoor sub outdoor-btn-group outdoor-filter outdoor-family-btn">
+            <button class="btn btn-secondary " data-filter=".wall">Wall</button>
+            <button class="btn btn-secondary " data-filter=".ceiling">Ceiling</button>
+            <button class="btn btn-secondary " data-filter=".post">Post</button>
+            <button class="btn btn-secondary " data-filter=".bollard">Bollard</button>
           </div>
         </div>
 
         <!-- SORT -->
         <!-- FAMILY -->
-        <!-- <div class="">
-          <h3 class="ui-group__title">Family</h3>
-          <div class="sort-by button-group js-radio-button-group  fam">
-            <button class="btn btn-secondary is-checked" data-sort-by="original-order">original order</button>
-            <button class="btn btn-secondary" data-sort-by="name">name</button>
-            <button class="btn btn-secondary" data-sort-by="symbol">symbol</button>
-            <button class="btn btn-secondary" data-sort-by="number">number</button>
-          </div> -->
+        <div class="family-filter">
+          <h3 class="ui-group__title ">Family</h3>
+          <div class="sort-by-button-group family js-radio-button-group fam ceiling-family-btn-group ">
+            <button class="btn btn-secondary" data-filter=".adele">adele</button>
+            <button class="btn btn-secondary sortIt" data-filter=".bellvale">bellvale</button>
+            <button class="btn btn-secondary" data-filter=".heather">heather</button>
+          </div>
+
+          <div class="sort-by button-group js-radio-button-group fam wall-family-btn-group">
+            <button class="btn btn-secondary" data-filter=".bianca">bianca</button>
+            <button class="btn btn-secondary" data-filter=".trillion">trillion</button>
+            <button class="btn btn-secondary" data-filter=".alborg">alborg</button>
+          </div>
+
+          <div class="sort-by button-group js-radio-button-group fam table-family-btn-group">
+            <button class="btn btn-secondary" data-filter=".name">table</button>
+            <button class="btn btn-secondary" data-filter=".symbol">symbol</button>
+            <button class="btn btn-secondary" data-filter=".number">number</button>
+          </div>
+
+          <div class="sort-by button-group js-radio-button-group fam floor-family-btn-group">
+            <button class="btn btn-secondary" data-filter=".name">floor</button>
+            <button class="btn btn-secondary" data-filter=".symbol">symbol</button>
+            <button class="btn btn-secondary" data-filter=".number">number</button>
+          </div>
+
+          <div class="sort-by button-group js-radio-button-group fam outdoor-family-btn-group">
+            <button class="btn btn-secondary" data-filter=".name">outdoor</button>
+            <button class="btn btn-secondary" data-filter=".symbol">symbol</button>
+            <button class="btn btn-secondary" data-filter=".number">number</button>
+          </div>
 
           <!-- FAMILY/DESIGNER -->
-          <h3 class="ui-group__title">Designer</h3>
+          <!-- <h3 class="ui-group__title">Designer</h3>
           <div class="ccc button-group sort-by-button-group des">
             <button class="btn btn-secondary " data-sort-by="">Aerin</button>
             <button class="btn btn-secondary " data-sort-by="">Barry</button>
@@ -149,7 +174,7 @@
             <button class="btn btn-secondary " data-sort-by="">TL Studio</button>
             <button class="btn btn-secondary " data-sort-by="">Wearstler</button>
             <button class="btn btn-secondary " data-sort-by="">Weeks</button>
-          </div>
+          </div> -->
 
         </div>
 
@@ -163,10 +188,30 @@
         })</code></pre> -->
 
 <!- GRID -->
-        <div class="grid">
+        <div class="grid ">
       <!-- CARDS -->
 
-          <div class=" grid-item element-item ceiling chandelier" data-category="">
+<!-- CEILING -->
+
+          <div class=" grid-item element-item ceiling chandelier adele" data-category="">
+            <div class="card mb-4 shadow-sm ">
+              <p class="card-title">Adele Large Wide Drum</p>
+              <small class="text-muted ">SK5421</small>
+              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/s/k/sk5421habca_1.png" alt="Card image cap">
+              <div class="card-body">
+                <h6 class="card-text ">Ceiling</h6>
+                <p class="card-text">Chandelier</p>
+                <p class="card-text">Adele</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  </div>
+                  <small class="text-muted name">VC</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" grid-item element-item ceiling chandelier adele" data-category="">
             <div class="card mb-4 shadow-sm ">
               <p class="card-title">Adele Four Tier Waterfall</p>
               <small class="text-muted ">SK5423</small>
@@ -184,7 +229,7 @@
             </div>
           </div>
 
-          <div class=" grid-item element-item ceiling chandelier " data-category="">
+          <div class=" grid-item element-item ceiling chandelier bellvale" data-category="">
             <div class="card mb-4 shadow-sm">
               <p class="card-title">Bellvale Small</p>
               <small class="text-muted ">ARN5122</small>
@@ -210,25 +255,7 @@
               <div class="card-body">
                 <h6 class="card-text ">Ceiling</h6>
                 <p class="card-text">Chandelier</p>
-                <p class="card-text">Heather</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                  </div>
-                  <small class="text-muted name">VC</small>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class=" grid-item element-item ceiling chandelier" data-category="">
-            <div class="card mb-4 shadow-sm ">
-              <p class="card-title">Adele Large Wide Drum</p>
-              <small class="text-muted ">ARN 5106HAB</small>
-              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/s/k/sk5421habca_1.png" alt="Card image cap">
-              <div class="card-body">
-                <h6 class="card-text ">Ceiling</h6>
-                <p class="card-text">Chandelier</p>
-                <p class="card-text">Adele</p>
+                <p class="card-text ">Heather</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                   </div>
@@ -274,41 +301,6 @@
             </div>
           </div>
 
-          <div class=" grid-item element-item wall sconce" data-category="">
-            <div class="card mb-4 shadow-sm ">
-              <p class="card-title">Camille</p>
-              <small class="text-muted ">SN4001</small>
-              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/s/k/sk2016pnnp_5.png" alt="Card image cap">
-              <div class="card-body">
-                <h6 class="card-text ">Wall</h6>
-                <p class="card-text">Sconce</p>
-                <p class="card-text">Camille</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                  </div>
-                  <small class="text-muted name">VC</small>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class=" grid-item element-item wall sconce" data-category="">
-            <div class="card mb-4 shadow-sm ">
-              <p class="card-title">Moreau</p>
-              <small class="text-muted ">TOB2916</small>
-              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/t/o/tob2916habcgpl_1.png" alt="Card image cap">
-              <div class="card-body">
-                <h6 class="card-text ">Wall</h6>
-                <p class="card-text">Sconce</p>
-                <p class="card-text">Moreau</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                  </div>
-                  <small class="text-muted name">VC</small>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <div class=" grid-item element-item ceiling pendant" data-category="">
             <div class="card mb-4 shadow-sm ">
@@ -346,14 +338,88 @@
             </div>
           </div>
 
-          <div class=" grid-item element-item wall sconce" data-category="">
+          <div class=" grid-item element-item ceiling lantern" data-category="">
             <div class="card mb-4 shadow-sm ">
-              <p class="card-title">Moreau Large</p>
+              <p class="card-title">Darlana Medium Tall </p>
+              <small class="text-muted ">CHC2185</small>
+              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/c/h/chc2185gi_1.png" alt="Card image cap">
+              <div class="card-body">
+                <h6 class="card-text ">Ceiling</h6>
+                <p class="card-text">Lantern</p>
+                <p class="card-text">Darlana</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  </div>
+                  <small class="text-muted name">VC</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" grid-item element-item ceiling shade" data-category="">
+            <div class="card mb-4 shadow-sm ">
+              <p class="card-title">Crystal Stacked Ball Hanging </p>
+              <small class="text-muted ">CHC1526</small>
+              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/c/h/chc1526pnnp_8.png" alt="Card image cap">
+              <div class="card-body">
+                <h6 class="card-text ">Ceiling</h6>
+                <p class="card-text">Shade</p>
+                <p class="card-text">Crystal</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  </div>
+                  <small class="text-muted name">VC</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" grid-item element-item ceiling linear" data-category="">
+            <div class="card mb-4 shadow-sm ">
+              <p class="card-title">Halcyon Linear </p>
+              <small class="text-muted ">KW 5098AB-Q</small>
+              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/k/w/kw5098abq_6.png" alt="Card image cap">
+              <div class="card-body">
+                <h6 class="card-text ">Ceiling</h6>
+                <p class="card-text">Linear</p>
+                <p class="card-text">Halcyon</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  </div>
+                  <small class="text-muted name">VC</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WALL -->
+
+          <div class=" grid-item element-item wall decorative" data-category="">
+            <div class="card mb-4 shadow-sm ">
+              <p class="card-title">Camille</p>
+              <small class="text-muted ">SN4001</small>
+              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/s/k/sk2016pnnp_5.png" alt="Card image cap">
+              <div class="card-body">
+                <h6 class="card-text ">Wall</h6>
+                <p class="card-text">Decorative</p>
+                <p class="card-text">Camille</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  </div>
+                  <small class="text-muted name">VC</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" grid-item element-item wall decorative" data-category="">
+            <div class="card mb-4 shadow-sm ">
+              <p class="card-title">Moreau</p>
               <small class="text-muted ">TOB2916</small>
               <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/t/o/tob2916habcgpl_1.png" alt="Card image cap">
               <div class="card-body">
                 <h6 class="card-text ">Wall</h6>
-                <p class="card-text">Sconce</p>
+                <p class="card-text">Decorative</p>
                 <p class="card-text">Moreau</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -364,14 +430,32 @@
             </div>
           </div>
 
-          <div class=" grid-item element-item wall sconce" data-category="">
+          <div class=" grid-item element-item wall decorative" data-category="">
+            <div class="card mb-4 shadow-sm ">
+              <p class="card-title">Moreau Large</p>
+              <small class="text-muted ">TOB2916</small>
+              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/t/o/tob2916habcgpl_1.png" alt="Card image cap">
+              <div class="card-body">
+                <h6 class="card-text ">Wall</h6>
+                <p class="card-text">decorative</p>
+                <p class="card-text">Moreau</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  </div>
+                  <small class="text-muted name">VC</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" grid-item element-item wall decorative" data-category="">
             <div class="card mb-4 shadow-sm ">
               <p class="card-title">Stacked Ball</p>
               <small class="text-muted ">CHD1525</small>
               <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/c/h/chd1525ab_12.png" alt="Card image cap">
               <div class="card-body">
                 <h6 class="card-text ">Wall</h6>
-                <p class="card-text">Sconce</p>
+                <p class="card-text">decorative</p>
                 <p class="card-text">Stacked</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -381,6 +465,171 @@
               </div>
             </div>
           </div>
+
+          <div class=" grid-item element-item wall bath" data-category="">
+            <div class="card mb-4 shadow-sm ">
+              <p class="card-title">Alpine Single</p>
+              <small class="text-muted ">ARN2310</small>
+              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/a/r/arn2310habcg_1.png" alt="Card image cap">
+              <div class="card-body">
+                <h6 class="card-text ">Wall</h6>
+                <p class="card-text">Bath</p>
+                <p class="card-text">Alpine</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  </div>
+                  <small class="text-muted name">VC</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" grid-item element-item wall task" data-category="">
+            <div class="card mb-4 shadow-sm ">
+              <p class="card-title">Boston Swing Arm</p>
+              <small class="text-muted ">ARN2310</small>
+              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/s/l/sl2920habl_9.png" alt="Card image cap">
+              <div class="card-body">
+                <h6 class="card-text ">Wall</h6>
+                <p class="card-text">Task</p>
+                <p class="card-text">Boston</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  </div>
+                  <small class="text-muted name">VC</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" grid-item element-item wall picture" data-category="">
+            <div class="card mb-4 shadow-sm ">
+              <p class="card-title">Dean 9" Picture</p>
+              <small class="text-muted ">ARN2310</small>
+              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/a/h/ah2700nb_1.png" alt="Card image cap">
+              <div class="card-body">
+                <h6 class="card-text ">Wall</h6>
+                <p class="card-text">Picture</p>
+                <p class="card-text">Dean</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  </div>
+                  <small class="text-muted name">VC</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" grid-item element-item table decorative" data-category="">
+            <div class="card mb-4 shadow-sm ">
+              <p class="card-title">Octagonal Spire Medium</p>
+              <small class="text-muted ">8950CG-NP</small>
+              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/c/h/cha8950cgnp_5.png" alt="Card image cap">
+              <div class="card-body">
+                <h6 class="card-text ">Table</h6>
+                <p class="card-text">Decorative</p>
+                <p class="card-text">Spire</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  </div>
+                  <small class="text-muted name">VC</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" grid-item element-item table task" data-category="">
+            <div class="card mb-4 shadow-sm ">
+              <p class="card-title">Cleo Table Lamp</p>
+              <small class="text-muted ">KW3410</small>
+              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/c/h/cha8950cgnp_5.png" alt="Card image cap">
+              <div class="card-body">
+                <h6 class="card-text ">Table</h6>
+                <p class="card-text">Task</p>
+                <p class="card-text">Cleo</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  </div>
+                  <small class="text-muted name">VC</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" grid-item element-item floor decorative" data-category="">
+            <div class="card mb-4 shadow-sm ">
+              <p class="card-title">Dover Floor Lamp</p>
+              <small class="text-muted ">ARN1002</small>
+              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/a/r/arn1002gl_5.png" alt="Card image cap">
+              <div class="card-body">
+                <h6 class="card-text ">Floor</h6>
+                <p class="card-text">Decorative</p>
+                <p class="card-text">Dover</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  </div>
+                  <small class="text-muted name">VC</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" grid-item element-item floor task" data-category="">
+            <div class="card mb-4 shadow-sm ">
+              <p class="card-title">Cleo Floor Lamp</p>
+              <small class="text-muted ">ARN1002</small>
+              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/k/w/kw1088bzab_5.png" alt="Card image cap">
+              <div class="card-body">
+                <h6 class="card-text ">Floor</h6>
+                <p class="card-text">task</p>
+                <p class="card-text">Cleo</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  </div>
+                  <small class="text-muted name">VC</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- OUTDOOR -->
+
+          <div class=" grid-item element-item outdoor decorative" data-category="">
+            <div class="card mb-4 shadow-sm ">
+              <p class="card-title">Suffolk Small 3/4 Lantern</p>
+              <small class="text-muted ">CHO 2060NC</small>
+              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/c/h/cho2060nc_5.png" alt="Card image cap">
+              <div class="card-body">
+                <h6 class="card-text ">Outdoor</h6>
+                <p class="card-text">Decorative</p>
+                <p class="card-text">Suffolk</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  </div>
+                  <small class="text-muted name">VC</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" grid-item element-item outdoor bollard" data-category="">
+            <div class="card mb-4 shadow-sm ">
+              <p class="card-title">Zur 42 Bollard</p>
+              <small class="text-muted ">700OBZUR</small>
+              <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/7/0/700obzur82742zunva_1.png" alt="Card image cap">
+              <div class="card-body">
+                <h6 class="card-text ">Outdoor</h6>
+                <p class="card-text">Bollard</p>
+                <p class="card-text">Zur</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  </div>
+                  <small class="text-muted name">GL</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
 
 
@@ -394,7 +643,8 @@
   <!-- Isotope does NOT require jQuery. But it does make things easier -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
-  <script src="js/isotope-docs.min.js?6"></script>
+  <script src="js/isotope-docs.js"></script>
+  <!-- <script src="js/isotope.pkgd.min.js"></script> -->
   <script src="js/packery.js"></script>
   <script src="js/draggabilly.pkgd.js"></script>
 

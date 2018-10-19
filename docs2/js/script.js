@@ -17,12 +17,12 @@ $gridp.find('.grid-item').each( function( i, gridItem ) {
 
 
 // // INITIALIZE ISOTOPE
-// var $gridt = $('.gridt').isotope({
-//   getSortData: {
-//     name: '.name', // text from querySelector
-//     category: '[data-category]' // value of attribute
-//   }
-// });
+var $gridt = $('.gridt').isotope({
+  getSortData: {
+    name: '.name', // text from querySelector
+    category: '[data-category]' // value of attribute
+  }
+});
 //
 // // HIDE AND SHOW BUTTONS
 // // This is a hide/show of buttons using isotope. Maybe write separate function for this.
@@ -53,7 +53,7 @@ $gridp.find('.grid-item').each( function( i, gridItem ) {
 // // // $gridt.isotope({ sortBy : 'category' });
 // //
 // // sort items on button click
-// $('.sort-by-button-group').on( 'click', 'button', function() {
-//   var sortByValue = $(this).attr('data-sort-by');
-//   $gridt.isotope({ sortBy: sortByValue });
-// });
+$('.sort-by-button-group').on( 'click', 'button', function() {
+  var sortByValue = $(this).attr('data-sort-by');
+  $gridt.isotope({ sortBy: sortByValue });
+});

@@ -62,7 +62,8 @@ small.name {
 
 .btn-secondary {
     color: #343a40;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: #ddd;
     border-color: #6c757d;
   }
  /* FUNCTIONS */
