@@ -117,10 +117,15 @@ function orderItems() {
   $( itemElems ).each( function( i, itemElem ) {
     $( itemElem ).text( i + 1 );
   });
+  console.log(itemElems);
 }
 
-$grid.on( 'layoutComplete', orderItems );
-$grid.on( 'dragItemPositioned', orderItems );
+$('.save-btn').on( 'click', 'button', function() {
+  $grid.on( 'layoutComplete', orderItems );
+  $grid.on( 'dragItemPositioned', orderItems );
+
+});
+
 
 // $('.family-filter').on( 'click', 'button', function() {
 //   var filterValue = $(this).attr('data-filter'); // eg ceiling selected
