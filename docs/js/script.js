@@ -18,6 +18,9 @@ var $grid = $('.grid').packery({
 //   }
 // });
 
+
+
+
 // DRAGGABILLY
 $grid.find('.grid-item').each( function( i, gridItem ) {
   var draggie = new Draggabilly( gridItem );
@@ -34,27 +37,27 @@ $( document ).ready(function() {
 
 // selectively show functions
 $('.ceiling-btn').on( 'click', function() {
-  $('.sub').hide();
+  // $('.sub').hide();
   $('.ceiling-btn-group').show(500);
 });
 
 $('.wall-btn').on( 'click', function() {
-  $('.sub').hide();
+  // $('.sub').hide();
   $('.wall-btn-group').show(500);
 });
 
 $('.table-btn').on( 'click', function() {
-  $('.sub').hide();
+  // $('.sub').hide();
   $('.table-btn-group').show(500);
 });
 
 $('.floor-btn').on( 'click', function() {
-  $('.sub').hide();
+  // $('.sub').hide();
   $('.floor-btn-group').show(500);
 });
 
 $('.outdoor-btn').on( 'click', function() {
-  $('.sub').hide();
+  // $('.sub').hide();
   $('.outdoor-btn-group').show(500);
 });
 
