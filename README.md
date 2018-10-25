@@ -19,6 +19,16 @@ ES6 and front-end frameworks that enjoy its superpowers like React and Vue, are 
 
 Finally, by developing the GO App in this way, as a kind of discovery (hey I never built one before), it may actually lead to some unexpected places.
 
+Very grateful to Ryan Glover for the Meteor implementation. Please see https://www.papaparse.com/ for Papa Parse.
+
+To run Meteor https://www.meteor.com/
+`curl https://install.meteor.com/ | sh`
+
+Then install these dependencies
+`meteor add harrison:papa-parse`
+`meteor add themeteorchef:bert`
+`meteor add reactive-var`
+`meteor add fortawesome:fontawesome`
 
 
 This open source software for the View is produced under the <a href='https://www.gnu.org/licenses/gpl-3.0.html'>GNU GPL license v3 </a>. See https://www.gnu.org/licenses/gpl-3.0.html for more information.
