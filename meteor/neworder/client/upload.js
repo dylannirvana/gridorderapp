@@ -1,6 +1,7 @@
 // import { Template } from 'meteor/templating';
 // import './main.html';
 //
+// // I DONT KNOW HOW TO LINK THESE FILES. I TRIED AND FAILED
 //
 // Template.upload.onCreated( () => {
 //   Template.instance().uploading = new ReactiveVar( false );

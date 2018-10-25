@@ -5,6 +5,7 @@ Meteor.startup(() => {
   // code to run on server at startup
 });
 
+// DOES THIS GO HERE I WONDER?
   Meteor.methods({
   parseUpload( data ) {
     check( data, Array );
