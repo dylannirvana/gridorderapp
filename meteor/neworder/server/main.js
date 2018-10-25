@@ -8,7 +8,7 @@ Meteor.startup(() => {
 // DOES THIS GO HERE I WONDER?
 // I NEED TO USE MY REAL DATA . OY!
 // WHERE DO I GRAB THE COLUMNS THAT I WANT AND DITCH THE REST?
-// I AM USING PRODUCTS-DELTA-CLARKSON-101618-232720 AS REAL TEST Data
+// I AM USING realTestDelta.csv AS REAL TEST Data
 
   Meteor.methods({
   parseUpload( data ) {
