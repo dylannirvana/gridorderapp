@@ -15,6 +15,7 @@
 
 import { Template } from 'meteor/templating';
 import './main.html';
+// where is the import for papa?
 
 Template.upload.onCreated( () => {
   Template.instance().uploading = new ReactiveVar( false );
@@ -27,8 +28,10 @@ Template.upload.helpers({
 });
 
 Template.upload.events({
+
   'change [name="uploadCSV"]' ( event, template ) {
-    console.log("This is the event from the handler " + event);
+    console.log('Here is the event handler' + event)
+    // [object Object]
     // We'll handle the conversion and upload here.
       Papa.parse( event.target.files[0], {
       header: true,
@@ -38,7 +41,7 @@ Template.upload.events({
 
 // TRYING TO CHUNK THIS OUT AND FOLLOW THE DATA PATH. I GET [ object Object ] RHS typeErrors
 
-        // console.log("This is results.data "+ results.data)
+        console.log("This is results.data "+ results.data)
         // Handle the upload here.
        //  Meteor.call( 'parseUpload', results.data, ( error, response ) => {
        //   if ( error ) {
