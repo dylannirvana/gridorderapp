@@ -1,0 +1,19 @@
+<head>
+  <title>vanilla</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> upload}}
+</body>
+
+<template name="upload">
+  <h4>Upload a csv file</h4>
+
+  {{#unless uploading}}
+  <input type="file" name="uploadCSV" >
+  {{else}}
+  <p><i class="fa fa-spin fa-refresh"></i>Uploading your file...</p>
+  {{/unless}}
+</template>
