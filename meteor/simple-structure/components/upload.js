@@ -28,17 +28,20 @@ Template.upload.events({
     Papa.parse(fileInput.files[0], {
     	complete: function(results) {
         let dataArray = results.data;
+        console.log(dataArray[3]);
+        // return dataArray;
         // This returns the array
         // for (var result in dataArray) {
         //   console.log(result);
         // }
-        console.log(dataArray);
         // return dataArray;
       //   results.forEach(function(result) {
       //   console.log(result);
       // });
     	}
     });
+    // this statement does not have access to the variable
+    // console.log('Hullo from outside the calling function  ' + dataArray)
   }
 })
 // dataArray.forEach()

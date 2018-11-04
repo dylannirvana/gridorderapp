@@ -26,14 +26,19 @@ Template.upload.events({
 
     // Parse local CSV file
     Papa.parse(fileInput.files[0], {
+      header: true,
     	complete: function(results) {
-    		console.log(results);
+    		// console.log(results);
+        let itemData = results.data;
+        itemData.forEach(function(item) {
+          console.log(item)
+          // return item;
+        })
+
     	}
     });
 
-// NOTE: Here is the full data as arrays
-// TODO: See if it can handle the full BASECODES
-// TODO: Grab the data points I need and dump the rest
+// TODO: Write into separate functions
 // TODO: Build them into the card template
 // NOTE: You may want to go over the Meteor manpages here
 // NOTE: Meteor implementation
@@ -42,7 +47,7 @@ Template.upload.events({
 // TODO: Integration into Magento
 
 /*
-Ok, I want to take each griditem 
+Ok, I want to take each griditem
 
 */
     // Papa.parse ( event.target.files[0], {
