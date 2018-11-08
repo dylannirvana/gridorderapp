@@ -1,69 +1,83 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
+// // if using db as linker
 // import { Mongo } from 'meteor/mongo';
+
 import './main.html';
+// import '../server/main.js';
 
-export const Grid = new Mongo.Collection('grid');
+// // collection can be set up as linker essentially
+// export const Grid = new Mongo.Collection('items');
 
-Template.upload.onCreated( () => {
-  Template.instance().uploading = new ReactiveVar( false )
-})
+// Template.upload.onCreated( () => {
+//   Template.instance().uploading = new ReactiveVar( false )
+// })
+//
+// Template.grid.helpers({
+//   grid() {
+//     return Template.instance().grid.get();
+//   }
+// })
 
-Template.upload.helpers({
-  uploading() {
-    return Template.instance().uploading.get()
-  },
-  grid() {
-    return Grid.find({});
-  }
-})
-
+////////////////////////////////////////////////////////////////////
+// NOTE: trying to figure out how to pass event object to template
 Template.upload.events({
   'change [name="uploadCSV"]' ( event, template ) {
-    // Handle the conversion and upload
+    // template.reactiveData.set('New Value') // ?????
 
-    var fileInput = document.querySelector('input');
+  // Handles the conversion and upload
+    var fileInput = document.querySelector('[name="uploadCSV"]');
 
     // Parse local CSV file
     Papa.parse(fileInput.files[0], {
       header: true,
     	complete: function(results) {
-    		// console.log(results);
+    		// console.log(results); // includes data, error, and misc
+
+// NOTE: This is the data object to send to the template
         let itemData = results.data;
+        console.log(itemData) // here is the data object
+
+        // This test correctly iterates over the object, but should be done in the template
         itemData.forEach(function(item) {
           console.log(item)
-          // return item;
-        })
+          // console.log(item['itemcode'])
+        });
 
-    	}
-    });
+// HELP! How do I send the object itemData to the template?
 
-// TODO: Write into separate functions
-// TODO: Build them into the card template
-// NOTE: You may want to go over the Meteor manpages here
-// NOTE: Meteor implementation
-// TODO: Data cards with Isotope Packery
-// TODO: Output CSV
-// TODO: Integration into Magento
+        // grid() {
+        //   return Template.instance().grid.set(itemData); // ????
+        // }
 
-/*
-Ok, I want to take each griditem
+        // return Template.instance().grid.set(itemData); // ?????
 
-*/
-    // Papa.parse ( event.target.files[0], {
-    //   header: true,
-    //   complete( results, file ) {
-    //     // Handle upload
-    //     Meteor.call( 'parseUpload', results.data, ( error, response ) => {
-    //       if ( error ) {
-    //         Bert.alert( error.reason, 'warning' )
-    //       } else {
-    //         // Handle success
-    //         template.uploading.set( false )
-    //         Bert.alert( 'Upload complete! ', 'success', 'growl-top-right' )
-    //       }
-    //     })
-    //   }
-    // })
-  }
-})
+        // ReactiveVar.set('result', result); // ???
+        // template.grid.set(itemData);
+
+    	} // END complete
+    }); // END parse
+
+
+  } // END change
+}) // END events
+
+////////////////////////////////////////////////////////////////////
+
+// // This is the event template with Bert and error handling using collection.
+// // It would replace the event handler above. This is NOT un-commentable to run.
+//     Papa.parse ( event.target.files[0], {
+//       header: true,
+//       complete( results, file ) {
+//         // Handle upload
+//         Meteor.call( 'parseUpload', results.data, ( error, response ) => {
+//           if ( error ) {
+//             Bert.alert( error.reason, 'warning' )
+//           } else {
+//             // Handle success
+//             template.uploading.set( false )
+//             Bert.alert( 'Upload complete! ', 'success', 'growl-top-right' )
+//           }
+//         })
+//       }
+//     }) // END verbose papa parse

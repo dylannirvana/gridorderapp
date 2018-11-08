@@ -3,17 +3,26 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>GO App!</h1>
 
   {{> upload}}
+  {{> grid}}
 </body>
 
 <template name="upload">
-  <h4>Upload a csv file</h4>
+  <h4>upload template yo</h4>
 
-  {{#unless uploading}}
+  <!-- {{#unless uploading}} -->
   <input type="file" name="uploadCSV" >
-  {{else}}
-  <p><i class="fa fa-spin fa-refresh"></i>Uploading your file...</p>
-  {{/unless}}
+  <!-- {{else}} -->
+  <!-- <p><i class="fa fa-spin fa-refresh"></i>Uploading your file...</p> -->
+  <!-- {{/unless}} -->
+</template>
+
+<template name="grid">
+    <h1>Hey from items template</h1>
+  <ul>
+<!-- TODO: get the event object. Build Bootstrap Card template -->
+  </ul>
+
 </template>

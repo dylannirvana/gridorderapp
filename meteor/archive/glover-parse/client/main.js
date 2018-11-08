@@ -1,8 +1,6 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
-import './upload.js';
-import './card.html';
 
-Template.card.helpers({
-
-})
+import './main.html';
+// import './upload.js';
+import './upload.html';

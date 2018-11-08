@@ -2,6 +2,7 @@ import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 // import { Mongo } from 'meteor/mongo';
 import './upload.html';
+import './card.html';
 
 export const Grid = new Mongo.Collection('grid');
 
@@ -26,19 +27,19 @@ Template.upload.events({
 
     // Parse local CSV file
     Papa.parse(fileInput.files[0], {
-    	complete: function(results) {
-        let dataArray = results.data;
-        console.log(dataArray[3]);
-        // return dataArray;
-        // This returns the array
-        // for (var result in dataArray) {
-        //   console.log(result);
-        // }
-        // return dataArray;
-      //   results.forEach(function(result) {
-      //   console.log(result);
-      // });
-    	}
+      header: true,
+      complete: function(results) {
+        // console.log(results);
+        // return results; // doesn't exist outside of function
+        // refactor into its own function?
+        let items = results.data;
+        return Template.card.helpers({
+          items:items
+        })
+        // itemData.forEach(function(item) {
+        //   console.log(item) // this returns the json fine
+        // }); // this works
+      }
     });
     // this statement does not have access to the variable
     // console.log('Hullo from outside the calling function  ' + dataArray)
