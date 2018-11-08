@@ -6,18 +6,23 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import './main.html';
 // import '../server/main.js';
 
-// // collection can be set up as linker essentially
+// collection can be set up as linker essentially
 // export const Grid = new Mongo.Collection('items');
 
-// Template.upload.onCreated( () => {
-//   Template.instance().uploading = new ReactiveVar( false )
-// })
-//
-// Template.grid.helpers({
-//   grid() {
-//     return Template.instance().grid.get();
-//   }
-// })
+Template.upload.onCreated( () => {
+  // Template.instance().uploading = new ReactiveVar( false )
+
+  // create new ReactiveVar to hold the object
+  this.grid = new ReactiveVar();
+  // same as
+  // Template.instance().grid = new ReactiveVar();
+})
+
+Template.grid.helpers({
+  // grid() {
+  //   return Template.instance().grid.get();
+  // }
+})
 
 ////////////////////////////////////////////////////////////////////
 // NOTE: trying to figure out how to pass event object to template
@@ -38,11 +43,15 @@ Template.upload.events({
         let itemData = results.data;
         console.log(itemData) // here is the data object
 
-        // This test correctly iterates over the object, but should be done in the template
-        itemData.forEach(function(item) {
-          console.log(item)
-          // console.log(item['itemcode'])
-        });
+        return template.grid.set(itemData);
+        // same as
+        // Template.instance().grid.set(itemData);
+
+        // // This test correctly iterates over the object, but should be done in the template
+        // itemData.forEach(function(item) {
+        //   console.log(item)
+        //   // console.log(item['itemcode'])
+        // });
 
 // HELP! How do I send the object itemData to the template?
 
