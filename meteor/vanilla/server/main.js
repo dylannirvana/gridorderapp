@@ -1,3 +1,5 @@
+import '../imports/api/grid.js';
+
 // import { Meteor } from 'meteor/meteor';
 // import { Mongo } from 'meteor/mongo';
 //
@@ -8,18 +10,10 @@
 // });
 //
 // Meteor.methods({
-//   parseUpload( data ) {
-//     check( data, Array );
-//
-//     for (let i = 0; i < data.length; i++) {
-//       let item = data[ i ],
-//       exists = Grid.findOne({ itemcode: item.itemcode })
-//
-//       if ( !exists ) {
+//   parseUpload( itemData ) {
+//     for (let i = 0; i < itemData.length; i++) {
+//       let item = itemData[ i ];
 //         Grid.insert ( item )
-//       } else {
-//         console.warn( 'Rejected. This item already exists Jack!')
-//       }
 //     }
 //   }
 // })
