@@ -10,7 +10,7 @@ Template.grid.onCreated( () => {
 Template.grid.helpers({
   grid() {
     // return Template.instance().grid.get();
-    return Grid.find({})
+    // return Grid.find({})
   },
 })
 
@@ -25,9 +25,10 @@ Template.grid.events({
         let itemData = results.data;
         console.log(itemData);
 
-        Grid.insert({
-          itemData,
-        })
+        Template.instance().grid.set(itemData)
+        // Grid.insert({
+        //   itemData,
+        // })
 
     	} // END complete
     }); // END parse

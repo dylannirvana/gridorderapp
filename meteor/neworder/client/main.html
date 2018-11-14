@@ -1,0 +1,103 @@
+<head>
+  <title>neworder</title>
+</head>
+
+<body>
+  <h1>Welcome to Hell!</h1>
+
+  <!-- {{> hello}}
+  {{> info}} -->
+  {{> grid}}
+</body>
+
+<!-- <template name="hello">
+  <button>dont click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="info">
+  <h2>Learn punk!</h2>
+  <ul>
+    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
+    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
+    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
+    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+  </ul>
+</template> -->
+
+<template name="grid">
+  <h4>upload template yo</h4>
+  <input type="file" name="uploadCSV" >
+    <h1>Data goes here</h1>
+    {{#each item in items}}
+    <div class="jumbotron text-center">
+
+    <div class="container">
+      <!-- {{item.basecode}} -->
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class=" grid-item element-item ceiling chandelier adele" data-category="">
+          <div class="card mb-4 shadow-sm ">
+            <p class="card-title">Adele Four Tier Waterfall</p>
+            <small class="text-muted neworder">SK5423</small>
+            <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/s/k/sk5424habca_5.png" alt="Card image cap">
+            <div class="card-body">
+              <h6 class="card-text ">Ceiling</h6>
+              <p class="card-text">Chandelier</p>
+              <p class="card-text">Adele</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
+                <small class="text-muted name">VC</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class=" grid-item element-item ceiling chandelier adele" data-category="">
+          <div class="card mb-4 shadow-sm ">
+            <p class="card-title">Adele Four Tier Waterfall</p>
+            <small class="text-muted neworder">SK5423</small>
+            <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/s/k/sk5424habca_5.png" alt="Card image cap">
+            <div class="card-body">
+              <h6 class="card-text ">Ceiling</h6>
+              <p class="card-text">Chandelier</p>
+              <p class="card-text">Adele</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
+                <small class="text-muted name">VC</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class=" grid-item element-item ceiling chandelier adele" data-category="">
+          <div class="card mb-4 shadow-sm ">
+            <p class="card-title">Adele Four Tier Waterfall</p>
+            <small class="text-muted neworder">SK5423</small>
+            <img class="card-img-top" src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/s/k/sk5424habca_5.png" alt="Card image cap">
+            <div class="card-body">
+              <h6 class="card-text ">Ceiling</h6>
+              <p class="card-text">Chandelier</p>
+              <p class="card-text">Adele</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
+                <small class="text-muted name">VC</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </div>
+
+    {{/each}}
+</template>
