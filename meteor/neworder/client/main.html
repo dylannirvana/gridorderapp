@@ -8,8 +8,9 @@
   <!-- {{> hello}}
   {{> info}} -->
   {{> grid}}
-  <script src="./script.js"></script>
-  <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+  <!-- <script src="./script.js"></script> -->
+  <!-- <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+  <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script> -->
 
 </body>
 
@@ -24,7 +25,7 @@
     <div class="row grid">
       {{#each item in items}}
 
-      <div class="col-md-4 col-sm-6 grid-item">
+      <div class="col-md-4 col-sm-6 grid-item draggable">
         <div class=" grid-item element-item ceiling chandelier adele" data-category="">
           <div class="card mb-4 shadow-sm ">
             <p class="card-title">{{item.name}}</p>

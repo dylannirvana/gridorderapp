@@ -1,18 +1,28 @@
 // INITIALIZE PACKERY
 var $grid = $('.grid').packery({
   itemSelector: '.grid-item',
-  // gutter: 10,
-  // columnWidth helps with drop positioning
-  columnWidth: 240
+  columnWidth: 80
 });
+//
+//
+// // DRAGGABILLY
+
+// $grid.packery('bindDraggabillyEvents', draggie)
+// // $grid.find('.grid-item').each( function( gridItem ) {
+// //   var draggie = new Draggabilly( gridItem );
+// //   // bind drag events to Packery
+// //   $grid.packery( 'bindDraggabillyEvents', draggie );
+// // });
+// //
+// // // var $draggable = $('.draggable')draggabilly({
+// // //
+// // // })
+// //
 
 
-// DRAGGABILLY
-$grid.find('.grid-item').each( function( i, gridItem ) {
-  var draggie = new Draggabilly( gridItem );
-  // bind drag events to Packery
-  $grid.packery( 'bindDraggabillyEvents', draggie );
-});
+
+
+
 
 // // NOTE: There is a sizing issue with the column
 //

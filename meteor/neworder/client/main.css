@@ -2,3 +2,8 @@ body {
   padding: 10px;
   font-family: sans-serif;
 }
+
+.grid-item:hover {
+  border-color: hsla(0, 0%, 100%, 0.5);
+  cursor: move;
+}
