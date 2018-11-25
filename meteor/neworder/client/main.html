@@ -9,46 +9,8 @@
   {{> info}} -->
   {{> grid}}
   <!-- <script src="./script.js"></script> -->
-  <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
-  <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script>
+  <!-- <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+  <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script> -->
 
 </body>
 
-<template name="grid">
-  <h4>upload template yo</h4>
-  <input type="file" name="uploadCSV" />
-    <h1>Data goes here</h1>
-    <div class="container">
-    <div class="jumbotron text-center">
-
-      <!-- {{item.basecode}} -->
-    <div class="row grid">
-      {{#each item in items}}
-
-      <div class="col-md-4 col-sm-6 grid-item draggable">
-        <div class=" grid-item element-item ceiling chandelier adele" data-category="">
-          <div class="card mb-4 shadow-sm ">
-            <p class="card-title">{{item.name}}</p>
-            <small class="text-muted neworder">{{item.sku}}</small>
-            <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
-            <div class="card-body">
-              <h6 class="card-text ">{{item.category}}</h6>
-              <p class="card-text">{{item.function}}</p>
-              <p class="card-text">{{item.relatives}}</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group"></div>
-                <small class="text-muted name">{{item.designer}}</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {{/each}}
-
-    </div>
-
-    </div>
-  </div>
-
-</template>

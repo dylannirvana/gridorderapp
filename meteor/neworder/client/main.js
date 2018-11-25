@@ -1,7 +1,7 @@
-var packery = require('packery');
+// import Meteor from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
-// import { Packery } from 'packery';
+import Packery from 'packery';
 // console.log("Packery contructor is " + Packery + ". Why?")
 // console.log("However, packery is a " + packery + ".")
 
@@ -10,6 +10,7 @@ import { ReactiveVar } from 'meteor/reactive-var';
 // // console.log("However, draggabilly is a " + draggabilly + ".")
 
 import './main.html';
+import './grid.html';
 
 
 Template.grid.onCreated(function gridOnCreated() {
@@ -18,23 +19,34 @@ Template.grid.onCreated(function gridOnCreated() {
 });
 
 Template.grid.helpers({
-
+// elems() {
+//   return document.querySelector.apply('.grid')
+// }, 
+packery() {
+  const $grid = $('.grid').packery({
+    itemSelector: '.grid-item'
+  })
+  
+},
   items() {
     return Template.instance().items.get(false);
   },
 });
 
 Template.grid.onRendered(function() {
-  var elem = document.querySelector('.grid');
-    var pckry = new Packery(elem, {
-        itemSelector: '.grid-item',
-        gutter: 10
-    });
 
-    pckry.getItemElements().forEach(function(itemElem) {
-        var draggie = new Draggabilly(itemElem);
-        pckry.bindDraggabillyEvents(draggie);
-    });
+  // var elem = document.querySelector('.grid');
+  //   var pckry = new Packery(elem, {
+  //       itemSelector: '.grid-item',
+  //       gutter: 10
+  //   });
+
+  //   pckry.getItemElements().forEach(function(itemElem) {
+  //       var draggie = new Draggabilly(itemElem);
+  //       pckry.bindDraggabillyEvents(draggie);
+  //   });
+
+
 })
 
 Template.grid.events({
@@ -46,7 +58,7 @@ Template.grid.events({
       	complete: function(results) {
 
           let items = results.data;
-          template.items.set(items);
+          template.items.set(items); // setter
 
       	} // END complete
       }); // END parse

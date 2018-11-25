@@ -11,8 +11,8 @@ import {
     Row,
     Col,
     Jumbotron,
-    Button
 } from 'reactstrap';
+import ProductFeed from './components/ProductFeed';
 
 class App extends Component {
     constructor(props) {
@@ -49,23 +49,8 @@ class App extends Component {
                     <Container>
                         <Row>
                             <Col>
-                                <h1>Welcome to GO App</h1>
-
-                                // TODO: refer to parse component here
-                                // TODO: build grid component to populate
-                                // TODO: packery draggabilly and isotope functions
-                                // TODO: export neworder
-                                <p>
-                                    <Button
-                                        tag="a"
-                                        color="danger"
-                                        size="large"
-                                        href="http://reactstrap.github.io"
-                                        target="_blank"
-                                    >
-                                        Import the feed
-                                    </Button>
-                                </p>
+                                <h1>Welcome to GO App</h1>                    
+                                  <ProductFeed />                              
                             </Col>
                         </Row>
                     </Container>
