@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Items } from '../ProductFeed';
 
 // TODO: Iterate over data in Bootstrap .row .col-md 
 // TODO: Make sure that Packery, Draggabilly have access .grid .grid-item 
@@ -6,11 +7,10 @@ import React, { Component } from 'react';
 
 class Grid extends Component {
     render() {
-        const { itemList } = this.props;
 
         return (
             <div className="row grid">
-
+                <Items />
             </div>
         );
     }
@@ -35,4 +35,9 @@ class Grid extends Component {
 //     }
 // }
 // console.log('Hey there ' + items.itemcode)
-// export default Grid;
+
+
+export default Grid;
+
+
+

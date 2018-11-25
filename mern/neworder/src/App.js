@@ -13,6 +13,7 @@ import {
     Jumbotron,
 } from 'reactstrap';
 import ProductFeed from './components/ProductFeed';
+import Grid from './components/Grid';
 
 class App extends Component {
     constructor(props) {
@@ -51,6 +52,23 @@ class App extends Component {
                             <Col>
                                 <h1>Welcome to GO App</h1>                    
                                   <ProductFeed />                              
+                            </Col>
+                        </Row>
+                    </Container>
+                </Jumbotron>
+            </div>
+        );
+    }
+
+    render() {
+        return (
+            <div>
+                <Jumbotron>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <h1>Welcome to GO App</h1>                    
+                                  <Grid />                              
                             </Col>
                         </Row>
                     </Container>

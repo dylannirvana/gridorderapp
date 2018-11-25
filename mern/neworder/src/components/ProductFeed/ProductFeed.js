@@ -25,14 +25,17 @@ function uploadHandler(event) {
     complete: function(results) { // Object with data. Err, meta to be handled later
       console.log(results)
 
-      let items = results.data; // Data to be passed to Grid, iterated over, and used by Packery, Draggabilly, and Isotope
-      console.log(items)
-            
+      // let items = results.data; // Data to be passed to Grid, iterated over, and used by Packery, Draggabilly, and Isotope
+      // console.log(items)
+      
+      const Items = results.data;
+      console.log(Items)
     }
   })
 }
 
-export default ProductFeed;
+
+export Items, default ProductFeed;
 
 // // INITIALIZE PACKERY
 // var $grid = $('.grid').packery({
