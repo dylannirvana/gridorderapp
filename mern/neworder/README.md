@@ -14,9 +14,13 @@ You will also see any lint errors in the console.
 
 ## TODO:
 
-Render items object from uploadHandler in Grid
-Iterate over object in Bootstrap .row .col-md-4
-Make sure that Packery and Draggabilly have access to .grid .grid-item
+App.js basically holds the layout. ProductFeed input passes event.target to the uploadHandler, parses the CSV into JSON. _item_ is the array object that needs to be  rendered in Bootstrap Grid and interated through, and accessible to Packery <br>
+
+Props and state needs to be added to do the following. Please refer to Issue #38. <br>
+
+1. Render items object from uploadHandler in Grid 
+2. Iterate over object in Bootstrap .row .col-md-4 
+3. Make sure that Packery and Draggabilly have access to .grid .grid-item 
 
 ## Learn More
 
