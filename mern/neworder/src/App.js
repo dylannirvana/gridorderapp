@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
     Collapse,
     Navbar,
@@ -7,29 +7,49 @@ import {
     Nav,
     NavItem,
     NavLink,
+    Input,
+    InputGroup,
     Container,
     Row,
     Col,
     Jumbotron,
+    InputGroup,
 } from 'reactstrap';
-import ProductFeed from './components/ProductFeed';
+import Papa from 'papaparse';
 
-class App extends Component {
-    constructor(props) {
-        super(props);
 
-        this.toggle = this.toggle.bind(this);
-        this.state = {
-            isOpen: false
-        };
+const productImport = () => (
+    <div>
+        <InputGroup>
+            <Input type="file" name="inputCSV" onChange={uploadHandler}/>
+        </InputGroup>
+    </div>
+)
+
+const Grid = (props) => (
+    <div>
+        {props.someValue}
+    </div>
+)
+
+class ProductFeed extends React.Component {
+    state = {
+        itemList: []
     }
-    toggle() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
-    }
+
+    uploadHandler = (event) => {
+        const inventory = event.target.files[0];
     
-// TODO: Render the Grid in Bootstrap cards. Obviously, first get the object
+        Papa.parse(inventory, {
+            header: true,
+            complete: function(results) {
+                const items = results.data;
+                console.log(items) // works!
+                this.setState({ itemList: items })
+            }
+        })
+    }
+
     render() {
         return (
             <div>
@@ -51,15 +71,16 @@ class App extends Component {
                     <Container>
                         <Row>
                             <Col>
-                                <h1>Product Feed</h1>                    
-                                  <ProductFeed />                              
+                                <h1>Upload Product Feed</h1>                    
+                                    <ProductImport />                              
                             </Col>
                         </Row>
+                    </Container>
+                    <Container>
                         <Row>
                             <Col>
-                                <h1>The Grid</h1>  
-                                <p>I want to render the Bootstrap grid here</p>                  
-                                  {/* <Grid />                               */}
+                                <h1>Here is the Grid</h1>                    
+                                {/* {itemList.map(item => <Grid someValue={item} />)}                               */}
                             </Col>
                         </Row>
                     </Container>
