@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
     Collapse,
     Navbar,
@@ -7,49 +7,29 @@ import {
     Nav,
     NavItem,
     NavLink,
-    Input,
-    InputGroup,
     Container,
     Row,
     Col,
     Jumbotron,
-    InputGroup,
 } from 'reactstrap';
-import Papa from 'papaparse';
+import ProductFeed from './components/ProductFeed';
 
+class App extends Component {
+    constructor(props) {
+        super(props);
 
-const productImport = () => (
-    <div>
-        <InputGroup>
-            <Input type="file" name="inputCSV" onChange={uploadHandler}/>
-        </InputGroup>
-    </div>
-)
-
-const Grid = (props) => (
-    <div>
-        {props.someValue}
-    </div>
-)
-
-class ProductFeed extends React.Component {
-    state = {
-        itemList: []
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+            isOpen: false
+        };
     }
-
-    uploadHandler = (event) => {
-        const inventory = event.target.files[0];
+    toggle() {
+        this.setState({
+            isOpen: !this.state.isOpen
+        });
+    }
     
-        Papa.parse(inventory, {
-            header: true,
-            complete: function(results) {
-                const items = results.data;
-                console.log(items) // works!
-                this.setState({ itemList: items })
-            }
-        })
-    }
-
+// this is just the layout really, nav, input. Needs grid    
     render() {
         return (
             <div>
@@ -71,16 +51,14 @@ class ProductFeed extends React.Component {
                     <Container>
                         <Row>
                             <Col>
-                                <h1>Upload Product Feed</h1>                    
-                                    <ProductImport />                              
+                                <h1>Product Feed</h1>                    
+                                  <ProductFeed />                              
                             </Col>
                         </Row>
-                    </Container>
-                    <Container>
                         <Row>
                             <Col>
-                                <h1>Here is the Grid</h1>                    
-                                {/* {itemList.map(item => <Grid someValue={item} />)}                               */}
+                                <h1>The Grid</h1>                    
+                                  {/* <Grid />                               */}
                             </Col>
                         </Row>
                     </Container>
