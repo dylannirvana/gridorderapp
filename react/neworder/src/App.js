@@ -12,7 +12,7 @@ import {
     Col,
     Jumbotron,
 } from 'reactstrap';
-import ProductImport from './components/ProductImport';
+import ProductFeed from './components/ProductFeed';
 
 class App extends Component {
     constructor(props) {
