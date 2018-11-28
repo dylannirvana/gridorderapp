@@ -1,7 +1,7 @@
-##GO App##
+##GO App
 GO App - Grid Order Application, is a tool that allows Circa to easily change its product grid order. This will function in a more manageable way than was done previously. By not requiring the user to deal with the entire grid order (thousands of products), they can focus on the catagories that concern them at the time. 
 
-###Philosophy###
+###Philosophy
 Agile. Declarative. Decoupled. <br>
 
 The tool provides:
@@ -13,8 +13,8 @@ Looking at the app from the top, it takes a Delta CSV, parses to JSON. The new o
 
 ES6 and front-end frameworks that enjoy superpowers provided by React or Vue, use a virtual DOM. They are interested in pure (predictable) functions, declarative style, and better UX. 
 
-###npm Packages###
+###npm Packages
 React. Bootstrap. Papaparse. Packery, Masonry, Draggabilly, Isotope.
 
-###License###
+###License
 This open source software for the View is produced under the <a href='https://www.gnu.org/licenses/gpl-3.0.html'>GNU GPL license v3 </a>. See https://www.gnu.org/licenses/gpl-3.0.html for more information.
