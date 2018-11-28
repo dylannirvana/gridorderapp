@@ -1,34 +1,20 @@
-##Grid Order Application##
+##GO App##
+GO App - Grid Order Application, is a tool that allows Circa to easily change its product grid order. This will function in a more manageable way than was done previously. By not requiring the user to deal with the entire grid order (thousands of products), they can focus on the catagories that concern them at the time. 
 
-The Grid Order App is a responsive, tablet friendly cloud application, that will show
+###Philosophy###
+Agile. Declarative. Decoupled. <br>
+
+The tool provides:
 1) Easy draggability
-2) Filter and sort business logic
-3) Use a Data model that will allow it to take in a delta file, and communicate with the production server, via .csv files
+2) Conveniently filter and sort 
+3) Ability to take in a delta file, and communicate with the production server, via CSV files
 
-Looking at the app from a MVC (Model View Controller) actually helps talk about it. (Though it is not strictly MVC!)
+Looking at the app from the top, it takes a Delta CSV, parses to JSON. The new order will actually be asserted in the UI (Courtesy of the Isotope/Packery packages). That data object will then be parsed back to CSV and sent to a unique column in Magento called _neworder_. Only basecodes that have _neworder_ will ignore existing _gridorder_. Pseudocode: `if (neworder) ? neworder : gridorder`. Therefore, the data model is modular, maintainable and nondestructive.
 
-The View has the UI and logic of the application. Because the new order will actually be asserted in the UI (Courtesy of the Isotope/Packery packages), it will be persistent. Hence, the View sits (inside a templating engine) inside a Meteor implementation. That gives it access to its own Mini Mongo client-side database, independent of browser or local storage.
+ES6 and front-end frameworks that enjoy superpowers provided by React or Vue, use a virtual DOM. They are interested in pure (predictable) functions, declarative style, and better UX. 
 
-Because its a Meteor implementation, the Model is contained within it as well. Though, its pretty easy; it is basically a Vanilla conversion of CSV 2 JSON, via Papa Parse.
+###npm Packages###
+React. Bootstrap. Papaparse. Packery, Masonry, Draggabilly, Isotope.
 
-This makes the Meteor the "traffic" controller, between the Model and the View. Going back to the templating engine, right now its Blaze, because its native to Meteor. But because Meteor is agnostic, it will be easy enough to move it over to React or to Vue, once I am sure it all works.
-
-The last point, is the confusion caused by using jQuery: developers often lose the line between the two. The other problem, worse in fact, is that its whole thing is DOM manipulation.
-
-ES6 and front-end frameworks that enjoy its superpowers like React and Vue, are going in a completely different direction. They have no interest in manipulating the DOM. They are interested in pure functions, declarative style, and the Module pattern.
-
-Finally, by developing the GO App in this way, as a kind of discovery (hey I never built one before), it may actually lead to some unexpected places.
-
-Very grateful to Ryan Glover for the Meteor implementation. Please see https://www.papaparse.com/ for Papa Parse.
-
-To run Meteor https://www.meteor.com/
-`curl https://install.meteor.com/ | sh`
-
-Then install these dependencies
-`meteor add harrison:papa-parse`
-`meteor add themeteorchef:bert`
-`meteor add reactive-var`
-`meteor add fortawesome:fontawesome`
-
-
+###License###
 This open source software for the View is produced under the <a href='https://www.gnu.org/licenses/gpl-3.0.html'>GNU GPL license v3 </a>. See https://www.gnu.org/licenses/gpl-3.0.html for more information.

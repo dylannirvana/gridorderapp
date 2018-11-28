@@ -12,7 +12,7 @@ import {
     Col,
     Jumbotron,
 } from 'reactstrap';
-import ProductFeed from './components/ProductFeed';
+import ProductImport from './components/ProductImport';
 
 class App extends Component {
     constructor(props) {
@@ -29,7 +29,6 @@ class App extends Component {
         });
     }
     
-// this is just the layout really, nav, input. Needs grid    
     render() {
         return (
             <div>
@@ -51,14 +50,14 @@ class App extends Component {
                     <Container>
                         <Row>
                             <Col>
-                                <h1>Product Feed</h1>                    
+                                <h1>Import</h1>                    
                                   <ProductFeed />                              
                             </Col>
                         </Row>
                         <Row>
                             <Col>
                                 <h1>The Grid</h1>                    
-                                  {/* <Grid />                               */}
+                                  {/* <ProductFeed  /> */}
                             </Col>
                         </Row>
                     </Container>
