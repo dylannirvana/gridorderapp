@@ -10,13 +10,14 @@ import {
     Container,
     Row,
     Col,
-    Jumbotron,
+    Jumbotron
 } from 'reactstrap';
-import ProductImport from './components/ProductImport';
-import FileUploader from './components/FileUploader/FileUploader';
-import ProductGrid from './components/ProductGrid';
 
+import ProductImport from './components/ProductImport';
+import FileUploader from './components/FileUploader';
+import ProductGrid from './components/ProductGrid';
 import Papa from 'papaparse';
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -35,7 +36,7 @@ class App extends Component {
     uploadFile = (event) => {
         const inventory = event.target.files[0];
 
-        var component = this;
+        const component = this;
         Papa.parse(inventory, {
             header: true,
             complete: function(results) {

@@ -4,31 +4,8 @@ import { Input, InputGroup } from 'reactstrap';
 // all this does is take the input file and render it to the DOM
 
 class FileUploader extends React.Component{
-    constructor(){
-        super();
-        this.state = {feed:{}}
-        this.uploadHandler = this.uploadHandler.bind(this);
-    }
 
-    uploadHandler(event) {
 
-      /*  const inventory = event.target.files[0];
-
-        var component = this;
-        Papa.parse(inventory, {
-            header: true,
-            complete: function(results) {
-
-                component.setState({
-                    feed: results.data
-                });
-
-            }
-        });*/
-
-      this.props.onFileUpload(event);
-
-    }
     render() {
         return (
               <div>
@@ -36,14 +13,13 @@ class FileUploader extends React.Component{
                     < Input
                         type = "file"
                         name = "inputCSV"
-                        onChange = {this.uploadHandler}
+                        onChange = {this.props.onFileUpload}
                     />
                   </InputGroup>
 
               </div>
 
-
-                )
+        )
     }
 }
 

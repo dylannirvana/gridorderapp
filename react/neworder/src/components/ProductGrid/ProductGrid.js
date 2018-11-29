@@ -1,9 +1,7 @@
 import React from 'react';
-import { Input, InputGroup } from 'reactstrap';
-import Papa from 'papaparse';
-import Product from "../Product";
-// all this does is take the input file and render it to the DOM
+import Product from "../Product/Product";
 
+// all this does is take the input file and render it to the DOM
 class ProductGrid extends React.Component{
 
     render() {
@@ -29,10 +27,6 @@ class ProductGrid extends React.Component{
 
 
 }
-
-
-
-
 
 export default ProductGrid;
 
