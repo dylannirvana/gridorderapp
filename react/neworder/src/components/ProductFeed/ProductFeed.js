@@ -12,11 +12,13 @@ import Papa from 'papaparse';
       complete: function(results) {     
         const items = results.data;
         console.log(items)
-
+        this.setState({ itemList:items })
       }
     })
   }
+  
   class ProductFeed extends Component {
+    state = { itemList: [] };
 
     render() {
       return (
