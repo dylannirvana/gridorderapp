@@ -1,37 +1,21 @@
-import React, { Component } from 'react';
-import { Input, InputGroup } from 'reactstrap';
-import Papa from 'papaparse';
+import Papa from 'papaparse'
 
+const ProductFeed = (props) => {
 
+    const uploadHandler = (event) => {
+      const inventory = event.target.files[0]
 
-  const UploadHandler = (event) => {
-    const inventory = event.target.files[0];
+      Papa.parse(inventory, {
+        header: true,
+        complete: function(results) {   
 
-    Papa.parse(inventory, {
-      header: true,
-      complete: function(results) {     
-        const items = results.data;
-        console.log(items)
-        this.setState({ itemList:items })
-      }
-    })
-  }
-  
-  class ProductFeed extends Component {
-    state = { itemList: [] };
-
-    render() {
-      return (
-        <div>
-          <InputGroup>
-            <Input type="file" name="inputCSV" onChange={UploadHandler}/>
-          </InputGroup>
-        </div>
-      )
+          const feed = results.data;
+          
+          console.log(feed)
+          return feed;
+        }
+      })
     }
-  
-
-
-}
-
+  } 
+    
 export default ProductFeed;
