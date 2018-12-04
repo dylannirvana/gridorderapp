@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
     Collapse,
     Navbar,
@@ -10,51 +10,20 @@ import {
     Container,
     Row,
     Col,
-    Jumbotron
+    Jumbotron,
 } from 'reactstrap';
+import ProductImport from './components/ProductImport'
+import ProductGrid from './components/ProductGrid/ProductGrid';
 
-import ProductImport from './components/ProductImport';
-import FileUploader from './components/FileUploader';
-import ProductGrid from './components/ProductGrid';
-import Papa from 'papaparse';
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-
-        this.toggle = this.toggle.bind(this);
-        this.state = {
-            isOpen: false,
-            feed: {}
-        };
-    }
-    toggle() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
-    }
-    uploadFile = (event) => {
-        const inventory = event.target.files[0];
-
-        const component = this;
-        Papa.parse(inventory, {
-            header: true,
-            complete: function(results) {
-
-                component.setState({
-                    feed: results.data
-                });
-
-            }
-        });
-    }
     render() {
         return (
             <div>
                 <Navbar color="dark" dark expand="lg">
                     <NavbarBrand href="/">Grid Order Tool</NavbarBrand>
-                    <NavbarToggler onClick={this.toggle} />
-                    <Collapse isOpen={this.state.isOpen} navbar>
+                    <NavbarToggler  />
+                    <Collapse >
                         <Nav className="ml-auto" navbar>
                             <NavItem>
                                 <NavLink href="/components/">Hello Colleen!</NavLink>
@@ -70,13 +39,13 @@ class App extends Component {
                         <Row>
                             <Col>
                                 <h1>Import</h1>
-                                  <FileUploader onFileUpload = {this.uploadFile} />
+                                <ProductImport />
                             </Col>
                         </Row>
                         <Row>
                             <Col>
                                 <h1>The Grid</h1>
-                                <ProductGrid feed = {this.state.feed}/>
+                                {/* <ProductGrid />                   */}
                             </Col>
                         </Row>
                     </Container>
