@@ -46,7 +46,7 @@ class App extends Component {
         Papa.parse(inventory, {
             header: true,
             complete: function(results) {
-
+                console.log(results.data)
                 component.setState({
                     feed: results.data
                 });

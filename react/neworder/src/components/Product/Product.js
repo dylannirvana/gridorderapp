@@ -30,7 +30,7 @@ const Product = (props) => {
 
                 <CardImg top
                          width="100%"
-                         src="https://circaskin.circalighting.com/media/catalog/product/cache/1/image/480x/9df78eab33525d08d6e5fb8d27136e95/s/n/sn4001pn_7.png"
+                         src={product.image}
                          alt="Card image cap"/>
                 <CardBody>
                     <CardText>
