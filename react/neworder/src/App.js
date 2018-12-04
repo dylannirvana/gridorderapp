@@ -10,25 +10,52 @@ import {
     Container,
     Row,
     Col,
-    Jumbotron,
+    Jumbotron
 } from 'reactstrap';
-import ProductImport from './components/ProductImport';
+
+
+import FileUploader from './components/FileUploader';
+import ProductGrid from './components/ProductGrid';
+
+import Papa from 'papaparse';
 
 class App extends Component {
+
     constructor(props) {
         super(props);
 
         this.toggle = this.toggle.bind(this);
         this.state = {
-            isOpen: false
+            isOpen: false,
+            feed: {} //The  parsed JSON obtained from PapaParse
         };
     }
+
     toggle() {
         this.setState({
             isOpen: !this.state.isOpen
         });
     }
-    
+
+
+    //Takes the parsed JSON from PapaParse and updates the product grid
+    uploadFile = (event) => {
+        const inventory = event.target.files[0];
+
+        const component = this;
+        Papa.parse(inventory, {
+            header: true,
+            complete: function(results) {
+
+                component.setState({
+                    feed: results.data
+                });
+
+            }
+        });
+    }
+
+
     render() {
         return (
             <div>
@@ -50,14 +77,14 @@ class App extends Component {
                     <Container>
                         <Row>
                             <Col>
-                                <h1>Import</h1>                    
-                                  <ProductFeed />                              
+                                <h1>Import</h1>
+                                <FileUploader onFileUpload = {this.uploadFile} />
                             </Col>
                         </Row>
                         <Row>
                             <Col>
-                                <h1>The Grid</h1>                    
-                                  {/* <ProductFeed  /> */}
+                                <h1>The Grid</h1>
+                                <ProductGrid feed = {this.state.feed}/>
                             </Col>
                         </Row>
                     </Container>
