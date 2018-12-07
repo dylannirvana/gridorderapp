@@ -1,20 +1,24 @@
 import React from 'react';
-import Product from "../Product/Product";
+import Product from "./Product";
 import {Row} from 'reactstrap';
 
 import Packery from 'packery';
 import Draggabilly from 'draggabilly';
 
 //Imports isotope styles for grid layout
-import '../../../node_modules/isotope/dist/isotope.css';
-
-
+//import '../../../../../node_modules/isotope/dist/isotope.css';
 
 
 // all this does is take the input file and render it to the DOM
 class ProductGrid extends React.Component {
-
+    constructor(props){
+        super(props);
+        this.state = {
+            draggie: []
+        };
+    }
     render() {
+
 
 
         return (
@@ -22,8 +26,7 @@ class ProductGrid extends React.Component {
 
                 {
                     //Loop through the products
-                    Object.values(this.props.feed).map(product =>
-
+                    Object.values(this.props.grid).map(product =>
                         //Invokes and renders the Product Component
                         <Product
                             key={product.sku}
@@ -36,19 +39,43 @@ class ProductGrid extends React.Component {
         )
     }
 
-    //This function is executed every time Product Grid Component is loaded with a new CSV file
-    componentDidUpdate() {
-
-        //Initialize Packery
-        var pckry = new Packery('.grid', {
+    initPackery() {
+        var component = this;
+        window.pckry = new Packery('.grid', {
             itemSelector: '.grid-item'
         });
 
         //Make the products Dragable
-        pckry.getItemElements().forEach(function (itemElem) {
+        window.pckry.getItemElements().forEach(function (itemElem) {
             var draggie = new Draggabilly(itemElem);
-            pckry.bindDraggabillyEvents(draggie);
+            window.pckry.bindDraggabillyEvents(draggie);
+            component.state.draggie.push(draggie);
         });
+    }
+
+    destroyPackery(){
+        this.state.draggie.forEach(function (itemElem) {
+            itemElem.destroy();
+        });
+        window.pckry.destroy();
+        window.pckry = undefined;
+        this.state.draggie = [];
+    }
+
+    //This function is executed every time Product Grid Component is loaded with a new CSV file
+    componentDidUpdate() {
+
+
+        if (window.pckry == undefined) {
+            //Initialize Packery
+            this.initPackery();
+        } else {
+            console.log(' ============= RELOADING PCKRY ==============')
+            this.destroyPackery();
+            this.initPackery();
+
+        }
+
 
     }
 

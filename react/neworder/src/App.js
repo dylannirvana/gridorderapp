@@ -14,8 +14,8 @@ import {
 } from 'reactstrap';
 
 
-import FileUploader from './components/FileUploader';
-import ProductGrid from './components/ProductGrid';
+import Content from './components/Content';
+
 
 import Papa from 'papaparse';
 
@@ -38,22 +38,7 @@ class App extends Component {
     }
 
 
-    //Takes the parsed JSON from PapaParse and updates the product grid
-    uploadFile = (event) => {
-        const inventory = event.target.files[0];
 
-        const component = this;
-        Papa.parse(inventory, {
-            header: true,
-            complete: function(results) {
-
-                component.setState({
-                    feed: results.data
-                });
-
-            }
-        });
-    }
 
 
     render() {
@@ -74,20 +59,7 @@ class App extends Component {
                     </Collapse>
                 </Navbar>
                 <Jumbotron>
-                    <Container>
-                        <Row>
-                            <Col>
-                                <h1>Import</h1>
-                                <FileUploader onFileUpload = {this.uploadFile} />
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <h1>The Grid</h1>
-                                <ProductGrid feed = {this.state.feed}/>
-                            </Col>
-                        </Row>
-                    </Container>
+                    <Content/>
                 </Jumbotron>
             </div>
         );

@@ -15,13 +15,12 @@ const Product = (props) => {
 
 
     const {product} = props;
-
+    product.category = product.category == undefined ? '' : product.category;
     return (
 
         //Render the Product as a BootStarp Card
-        <div className=" grid-item element-item ceiling chandelier adele" data-category="">
+        <div className={"grid-item " + product.category.split(' ')[0] + ' ' + product.function} data-category="">
             <Card>
-
                 <CardTitle>
                     {product.name}
                 </CardTitle>
