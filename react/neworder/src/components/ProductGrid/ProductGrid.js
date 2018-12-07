@@ -1,9 +1,12 @@
 import React from 'react';
 import Product from "./Product";
-import {Row} from 'reactstrap';
+import {Row,
+    Col,
+    Jumbotron} from 'reactstrap';
 
 import Packery from 'packery';
 import Draggabilly from 'draggabilly';
+
 
 //Imports isotope styles for grid layout
 //import '../../../../../node_modules/isotope/dist/isotope.css';
@@ -11,31 +14,33 @@ import Draggabilly from 'draggabilly';
 
 // all this does is take the input file and render it to the DOM
 class ProductGrid extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             draggie: []
         };
     }
+
     render() {
 
 
-
         return (
-            <Row className="grid row">
-
-                {
-                    //Loop through the products
-                    Object.values(this.props.grid).map(product =>
-                        //Invokes and renders the Product Component
-                        <Product
-                            key={product.sku}
-                            product={product}
-                        />
-                    )
-                }
-
-            </Row>
+            <Jumbotron fluid={true} id={"page-content"}>
+                <Row className="grid row">
+                    <Col>
+                        {
+                            //Loop through the products
+                            Object.values(this.props.grid).map(product =>
+                                //Invokes and renders the Product Component
+                                <Product
+                                    key={product.sku}
+                                    product={product}
+                                />
+                            )
+                        }
+                    </Col>
+                </Row>
+            </Jumbotron>
         )
     }
 
@@ -53,7 +58,7 @@ class ProductGrid extends React.Component {
         });
     }
 
-    destroyPackery(){
+    destroyPackery() {
         this.state.draggie.forEach(function (itemElem) {
             itemElem.destroy();
         });

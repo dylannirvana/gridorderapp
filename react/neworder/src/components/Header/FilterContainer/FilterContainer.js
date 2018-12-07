@@ -5,7 +5,16 @@ import Filter from "./Filter";
 
 class FilterContainer extends React.Component {
 
+    constructor(props) {
+        super(props);
 
+
+        this.state = {
+            ready: false, //The  parsed JSON obtained from PapaParse
+
+
+        };
+    }
     getFilterValues(filterName){
         const feed = this.props.feed;
         let filterValueList = [];
@@ -25,22 +34,26 @@ class FilterContainer extends React.Component {
 
     render() {
 
-console.log('RENDER FILETER CONTAINER')
+        console.log('RENDER FILETER CONTAINER')
         var productFilters = {category: [], function: [], family: []};
-        return (
-            //Loop through the products
-            Object.keys(productFilters).map(filterName =>
 
-                //Invokes and renders the Product Component
+        if(this.props.feed && !this.state.ready){
 
-                <Filter
-                    key={filterName}
-                    filterValues={this.getFilterValues(filterName)}
-                    filterName={filterName}
-                    onFilterChange={this.props.onFilterChange}
-                />
+            this.state.ready = true;
+            return (
+                //Loop through the products
+                Object.keys(productFilters).map(filterName =>
+
+                    //Invokes and renders the Product Component
+
+                    <div>TEST</div>
+                )
             )
-        )
+        }else{
+            alert('NULL')
+            return null;
+        }
+
 
     }
 }
