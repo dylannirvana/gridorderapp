@@ -10,25 +10,37 @@ import {
     Container,
     Row,
     Col,
-    Jumbotron,
+    Jumbotron
 } from 'reactstrap';
-import ProductImport from './components/ProductImport';
+
+
+import Content from './components/Content';
+
+
+import Papa from 'papaparse';
 
 class App extends Component {
+
     constructor(props) {
         super(props);
 
         this.toggle = this.toggle.bind(this);
         this.state = {
-            isOpen: false
+            isOpen: false,
+            feed: {} //The  parsed JSON obtained from PapaParse
         };
     }
+
     toggle() {
         this.setState({
             isOpen: !this.state.isOpen
         });
     }
-    
+
+
+
+
+
     render() {
         return (
             <div>
@@ -47,20 +59,7 @@ class App extends Component {
                     </Collapse>
                 </Navbar>
                 <Jumbotron>
-                    <Container>
-                        <Row>
-                            <Col>
-                                <h1>Import</h1>                    
-                                  <ProductFeed />                              
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <h1>The Grid</h1>                    
-                                  {/* <ProductFeed  /> */}
-                            </Col>
-                        </Row>
-                    </Container>
+                    <Content/>
                 </Jumbotron>
             </div>
         );
