@@ -1,7 +1,5 @@
 /* CSS for styling the Products */
 
-
-
 .jumbotron .container {
     /*This ensures only 3 products are displayed per row, above 800px*/
     max-width: 737px;
@@ -40,4 +38,41 @@
 }
 .card small.name {
     margin-left: 120px;
+}
+
+
+
+
+/* CSS for Drag interaction */
+
+.grid-item:hover {
+    border-color: hsla(0, 0%, 100%, 0.5);
+    cursor: move;
+}
+
+.grid-item.is-dragging,
+.grid-item.is-positioning-post-drag {
+    background: #C90;
+    z-index: 2;
+}
+
+.packery-drop-placeholder {
+    outline: 3px dashed hsla(0, 0%, 0%, 0.5);
+    outline-offset: -6px;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+
+#page-content{
+    background: white;
+}
+
+
+/* CSS for Product Grid */
+#page.product-grid-loaded #page-content{
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
 }

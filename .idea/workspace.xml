@@ -2,27 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b17e46e1-16cb-450f-8178-e15daabbbe2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/Filter/Filter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/neworder/src/GridOrder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/neworder/src/components/Header/Menu/Menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Content/Content.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Content/FileUploader/FileUploader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Content/FileUploader/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Content/FilterContainer/Filter/Filter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Content/FilterContainer/Filter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/Filter/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Content/FilterContainer/FilterContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Content/FilterContainer/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Content/ProductGrid/Product/Product.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Content/ProductGrid/Product/Product.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Content/ProductGrid/Product/ProductDrag.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Content/ProductGrid/Product/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Content/ProductGrid/ProductGrid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Content/ProductGrid/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Content/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/GridOrder.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/GridOrder.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Content/Content.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/Filter/Filter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/Filter/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/FilterContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/components/Header/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Header/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Menu/Menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Menu/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product/Product.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product/Product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product/ProductDrag.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/ProductGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/ProductGrid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/neworder/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -65,52 +67,54 @@
     <session id="-784076075">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="2" />
-          <entry key="html" value="1" />
-          <entry key="js" value="17" />
-          <entry key="scss" value="3" />
+          <entry key="css" value="5" />
+          <entry key="html" value="2" />
+          <entry key="js" value="51" />
+          <entry key="scss" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="2" />
-          <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="17" />
-          <entry key="SCSS" value="3" />
+          <entry key="CSS" value="5" />
+          <entry key="HTML" value="2" />
+          <entry key="JavaScript" value="51" />
+          <entry key="SCSS" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="44" />
-          <entry key="html" value="3" />
-          <entry key="js" value="1949" />
-          <entry key="scss" value="279" />
+          <entry key="css" value="66" />
+          <entry key="html" value="15" />
+          <entry key="js" value="4822" />
+          <entry key="scss" value="1056" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="44" />
-          <entry key="HTML" value="3" />
-          <entry key="JavaScript" value="1949" />
-          <entry key="SCSS" value="279" />
+          <entry key="CSS" value="66" />
+          <entry key="HTML" value="15" />
+          <entry key="JavaScript" value="4822" />
+          <entry key="SCSS" value="1056" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.36" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.36" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/neworder/src/App.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/react/neworder/src/GridOrder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="391">
+              <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -119,19 +123,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/Header.scss">
+        <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/Menu/FilterContainer/Filter/Filter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+            <state relative-caret-position="216">
+              <caret line="74" column="88" selection-start-line="74" selection-start-column="88" selection-end-line="74" selection-end-column="88" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/Filter/Filter.js">
+        <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/Menu/Menu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+            <state relative-caret-position="312">
+              <caret line="57" column="86" lean-forward="true" selection-start-line="57" selection-start-column="86" selection-end-line="57" selection-end-column="86" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -142,8 +149,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/Header.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+            <state relative-caret-position="482">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -152,20 +159,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Menu/Menu.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Menu/index.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/FilterContainer.js">
+        <entry file="file://$PROJECT_DIR$/react/neworder/src/components/ProductGrid/FileUploader/FileUploader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+            <state relative-caret-position="357">
+              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -174,19 +171,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/index.js">
+        <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/Menu/FilterContainer/FilterContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="44" selection-start-column="44" selection-end-column="44" />
+            <state relative-caret-position="176">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Content/Content.scss">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react/neworder/src/components/ProductGrid/ProductGrid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            <state relative-caret-position="601">
+              <caret line="58" column="45" lean-forward="true" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="76" column="20" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/styles.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="73" column="23" lean-forward="true" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product/Product.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-17">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -207,18 +240,21 @@
       <find>onFilterChange</find>
       <find>FilterContainer</find>
       <find>uploadFile</find>
-      <find>getFilterValues</find>
       <find>onFilter</find>
-      <find>FileUploader</find>
       <find>productFilters</find>
       <find>Filter</find>
       <find>csvParsed</find>
       <find>toggle</find>
+      <find>alert</find>
+      <find>getFilterValues</find>
+      <find>setState</find>
+      <find>console.log</find>
+      <find>FileUploader</find>
     </findStrings>
     <dirStrings>
       <dir>F:\Projects\gridorderapp\react\neworder\src\components\Content</dir>
-      <dir>F:\Projects\gridorderapp\react\neworder\src\components</dir>
       <dir>F:\Projects\gridorderapp\react\neworder\src</dir>
+      <dir>F:\Projects\gridorderapp\react\neworder\src\components</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -228,10 +264,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/react/neworder/src/components/Header/index.js" />
-        <option value="$PROJECT_DIR$/react/neworder/src/App.css" />
         <option value="$PROJECT_DIR$/react/neworder/src/components/Header/Header.css" />
         <option value="$PROJECT_DIR$/react/neworder/src/components/Content/Content.scss" />
-        <option value="$PROJECT_DIR$/react/neworder/public/index.html" />
         <option value="$PROJECT_DIR$/react/neworder/src/components/Content/Content.js" />
         <option value="$PROJECT_DIR$/react/neworder/src/components/Header/FileUploader/FileUploader.js" />
         <option value="$PROJECT_DIR$/react/neworder/src/components/Content/ProductGrid/Product/Product.js" />
@@ -239,11 +273,37 @@
         <option value="$PROJECT_DIR$/react/neworder/src/components/Header/Header.scss" />
         <option value="$PROJECT_DIR$/react/neworder/src/components/Header/Filter/Filter.js" />
         <option value="$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/index.js" />
-        <option value="$PROJECT_DIR$/react/neworder/src/components/Header/Header.js" />
-        <option value="$PROJECT_DIR$/react/neworder/src/App.js" />
         <option value="$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/Filter/Filter.js" />
         <option value="$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/FilterContainer.js" />
         <option value="$PROJECT_DIR$/react/neworder/src/components/Menu/Menu.js" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/Header/Menu/index.js" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/Header/Menu/FilterContainer/FilterCriteria.js" />
+        <option value="$PROJECT_DIR$/react/neworder/src/App.js" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/FileUploader.js" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/FileUploader/index.js" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/Header/Menu/FilterContainer/Filter.js" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/Header/Menu/FilterContainer/Filter/index.js" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product/Product.css" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product/ProductDrag.css" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product/styles.scss" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/styles.scss" />
+        <option value="$PROJECT_DIR$/react/neworder/src/App.css" />
+        <option value="$PROJECT_DIR$/react/neworder/public/index.html" />
+        <option value="$PROJECT_DIR$/react/neworder/src/index.js" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/FileUploader/styles.scss" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/FileUploader/FileUploader.js" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/FileUploader/FileUploader.scss" />
+        <option value="$PROJECT_DIR$/react/neworder/src/GridOrder.scss" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product/Product.js" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product.scss" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/ProductGrid.js" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/Header/Menu/FilterContainer/Filter/Filter.scss" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/Header/Menu/FilterContainer/FilterContainer.js" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/Header/Menu/FilterContainer/Filter/Filter.js" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/Header/Header.js" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/Header/styles.scss" />
+        <option value="$PROJECT_DIR$/react/neworder/src/components/Header/Menu/Menu.js" />
+        <option value="$PROJECT_DIR$/react/neworder/src/GridOrder.js" />
       </list>
     </option>
   </component>
@@ -252,6 +312,26 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/archive/vanilla/node_modules" />
+    <handled-path value="$PROJECT_DIR$/react/neworder/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/archive/meteor/archive/glover-parse/package.json" />
+      <path value="$PROJECT_DIR$/archive/meteor/archive/podcasts/package.json" />
+      <path value="$PROJECT_DIR$/archive/meteor/archive/todos-blaze/package.json" />
+      <path value="$PROJECT_DIR$/archive/meteor/archive/todos-blaze2/package.json" />
+      <path value="$PROJECT_DIR$/archive/meteor/archive/todos-react/package.json" />
+      <path value="$PROJECT_DIR$/archive/meteor/neworder/package.json" />
+      <path value="$PROJECT_DIR$/archive/meteor/simple-structure/package.json" />
+      <path value="$PROJECT_DIR$/archive/meteor/vanilla/package.json" />
+      <path value="$PROJECT_DIR$/archive/vanilla/package.json" />
+      <path value="$PROJECT_DIR$/assets/PapaParse-4.6.0/package.json" />
+      <path value="$PROJECT_DIR$/assets/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/react/neworder/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1400" />
@@ -309,7 +389,49 @@
               <item name="neworder" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Content" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gridorderapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gridorderapp" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
+              <item name="neworder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+              <item name="Menu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gridorderapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gridorderapp" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
+              <item name="neworder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+              <item name="Menu" type="462c0819:PsiDirectoryNode" />
+              <item name="FilterContainer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gridorderapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gridorderapp" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
+              <item name="neworder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+              <item name="Menu" type="462c0819:PsiDirectoryNode" />
+              <item name="FilterContainer" type="462c0819:PsiDirectoryNode" />
+              <item name="Filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gridorderapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gridorderapp" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
+              <item name="neworder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="ProductGrid" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -324,16 +446,19 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Projects\gridorderapp\react\neworder\src\components" />
-      <recent name="F:\Projects\gridorderapp\react\neworder\src\components\Header\FilterContainer" />
-      <recent name="F:\Projects\gridorderapp\react\neworder\src\components\Header" />
-      <recent name="F:\Projects\gridorderapp\react\neworder\src\components\Content" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Projects\gridorderapp\react\neworder\src\components\Header\Menu\FilterContainer\Filter" />
+      <recent name="F:\Projects\gridorderapp\react\neworder\src\components\ProductGrid\FileUploader" />
+      <recent name="F:\Projects\gridorderapp\react\neworder\src\components\ProductGrid\Product" />
       <recent name="F:\Projects\gridorderapp\react\neworder\src\components\Menu" />
       <recent name="F:\Projects\gridorderapp\react\neworder\src\components\Content" />
-      <recent name="F:\Projects\gridorderapp\react\neworder\src\components\Header" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Projects\gridorderapp\react\neworder\src\components\ProductGrid" />
+      <recent name="F:\Projects\gridorderapp\react\neworder\src\components\ProductGrid\Product" />
+      <recent name="F:\Projects\gridorderapp\react\neworder\src\components\Header\Menu\FilterContainer\Filter" />
+      <recent name="F:\Projects\gridorderapp\react\neworder\src\components\Header\Menu\FilterContainer" />
+      <recent name="F:\Projects\gridorderapp\react\neworder\src\components\ProductGrid\FileUploader" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -384,24 +509,26 @@
       <workItem from="1539891335265" duration="952000" />
       <workItem from="1542831877422" duration="4000" />
       <workItem from="1544188987353" duration="26000" />
+      <workItem from="1544192324278" duration="2702000" />
+      <workItem from="1544422761031" duration="150000" />
+      <workItem from="1544422939461" duration="5768000" />
+      <workItem from="1544431511787" duration="20177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21828000" />
+    <option name="totallyTimeSpent" value="50625000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Storybook" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17910448" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18656716" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="RNConsole" />
+      <window_info id="Storybook" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.23568575" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -409,12 +536,14 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.30985916" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2751896" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="RNConsole" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,23 +581,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/isotope-docs.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/neworder/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/isotope.pkgd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11237">
-          <caret line="669" column="5" selection-start-line="669" selection-start-column="5" selection-end-line="669" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/isotope-docs.min.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/isotope.pkgd.js" />
     <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -476,58 +590,175 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Content/ProductGrid/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/neworder/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="25" column="80" selection-start-line="25" selection-start-column="80" selection-end-line="25" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Content/ProductGrid/index.js" />
     <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Content/FilterContainer/index.js" />
     <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Content/FilterContainer/FilterContainer.js" />
-    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Content/ProductGrid/Product/Product.js">
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Content/ProductGrid/Product/Product.js" />
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/FileUploader/FileUploader.js" />
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Content/Content.js" />
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Content/ProductGrid/ProductGrid.js" />
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/Filter/Filter.js" />
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/index.js" />
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/FilterContainer.js" />
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/Menu/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/FileUploader/FileUploader.js" />
-    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Content/Content.js" />
-    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Content/ProductGrid/ProductGrid.js">
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/Menu/FilterContainer/FilterCriteria.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="51">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Content/Content.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/Menu/FilterContainer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" lean-forward="true" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/ProductGrid/FileUploader/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/Menu/FilterContainer/Filter/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="34" lean-forward="true" selection-start-column="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/button.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/neworder/src/App.js">
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product/Product.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product/ProductDrag.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/Header.scss">
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/ProductGrid/FileUploader/FileUploader.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+        <state relative-caret-position="323">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/Filter/Filter.js">
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/GridOrder.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/Menu/FilterContainer/Filter/Filter.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/ProductGrid/FileUploader/FileUploader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/Menu/FilterContainer/FilterContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="76" column="20" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/ProductGrid/ProductGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="58" column="45" lean-forward="true" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product/Product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="73" column="23" lean-forward="true" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/Menu/FilterContainer/Filter/Filter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="74" column="88" selection-start-line="74" selection-start-column="88" selection-end-line="74" selection-end-column="88" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/Menu/Menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="57" column="86" lean-forward="true" selection-start-line="57" selection-start-column="86" selection-end-line="57" selection-end-column="86" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -536,41 +767,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/Header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+        <state relative-caret-position="482">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Menu/Menu.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Menu/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/FilterContainer.js">
+    <entry file="file://$PROJECT_DIR$/react/neworder/src/GridOrder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+        <state relative-caret-position="391">
+          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Header/FilterContainer/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="44" selection-start-column="44" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/neworder/src/components/Content/Content.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
         </state>
       </provider>
     </entry>
