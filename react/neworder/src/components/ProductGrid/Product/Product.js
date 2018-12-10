@@ -8,8 +8,8 @@ import {
 } from 'reactstrap';
 
 //Import custom styles
-import './Product.css';
-import './ProductDrag.css';
+
+
 
 const Product = (props) => {
 
