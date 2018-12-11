@@ -14,10 +14,10 @@ import {
     Jumbotron,
     Input
 } from 'reactstrap';
-import "./styles.scss";
-import Menu from './Menu/Menu'
+import "./Header.scss";
+import Menu from '../Menu'
 
-import Papa from "papaparse";
+
 
 
 

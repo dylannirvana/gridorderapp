@@ -1,78 +1,73 @@
 /* CSS for styling the Products */
-
-.jumbotron .container {
-    /*This ensures only 3 products are displayed per row, above 800px*/
-    max-width: 737px;
-}
-
-/* CARDS */
-.grid-item {
-    width: 240px;
-    height: 400px;
-
-}
-.card {
-    align-items: center;
-    height: 400px;
-    padding: 10px;
-}
-.card-img-top {
-    height: 220px;
-    width: auto;
-}
-.card-body {
-    text-align: center;
-    padding: 1rem;
-}
-.card-title {
-    font-size: .9rem;
-    margin-bottom: .1rem;
-}
-.card-text {
-    font-size: .8rem;
-    margin-bottom: .2rem;
-    line-height: 1rem;
-}
-.card small {
-    margin-left: 0;
-}
-.card small.name {
-    margin-left: 120px;
-}
+#page {
 
 
+    /* CARDS */
+    .grid-item {
+        width: 20%;
+        height: 400px;
 
+    }
+    .card {
+        align-items: center;
+        height: 400px;
+        padding: 10px;
+        border: 1px dotted $color-mustard;
+        border-radius: 0;
+    }
+    .card-img-top {
+        height: 220px;
+        width: auto;
+    }
+    .card-body {
+        text-align: center;
+        padding: 1rem;
+    }
+    .card-title {
+        font-size: .9rem;
+        margin-bottom: .1rem;
+    }
+    .card-text {
+        font-size: .8rem;
+        margin-bottom: .2rem;
+        line-height: 1rem;
+    }
+    .card small {
+        margin-left: 0;
+    }
+    .card small.name {
+        margin-left: 120px;
+    }
 
-/* CSS for Drag interaction */
+    /* CSS for Drag interaction */
 
-.grid-item:hover {
-    border-color: hsla(0, 0%, 100%, 0.5);
-    cursor: move;
-}
+    .grid-item:hover {
 
-.grid-item.is-dragging,
-.grid-item.is-positioning-post-drag {
-    background: #C90;
-    z-index: 2;
-}
+        cursor: move;
+    }
 
-.packery-drop-placeholder {
-    outline: 3px dashed hsla(0, 0%, 0%, 0.5);
-    outline-offset: -6px;
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
-}
+    .grid-item.is-dragging,
+    .grid-item.is-positioning-post-drag {
+        background: #C90;
+        z-index: 2;
+    }
 
+    .packery-drop-placeholder {
+        outline: 3px dashed hsla(0, 0%, 0%, 0.5);
+        outline-offset: -6px;
+        -webkit-transition: -webkit-transform 0.2s;
+        transition: transform 0.2s;
+    }
 
-#page-content{
-    background: white;
-}
+    #page-content {
+        background: white;
+    }
 
-
-/* CSS for Product Grid */
-#page.product-grid-loaded #page-content{
-    padding: 0;
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
+    /* CSS for Product Grid */
+    #page.product-grid-loaded #page-content {
+        padding: 0;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
 }

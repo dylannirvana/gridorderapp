@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input, InputGroup } from 'reactstrap';
 import Papa from "papaparse";
-import './FileUploader.scss';
+
 // Render the necessary HTML for user to upload CSV file
 export default class FileUploader extends React.Component{
 
@@ -13,7 +13,7 @@ export default class FileUploader extends React.Component{
         Papa.parse(inventory, {
             header: true,
             complete: function (results) {
-
+console.log(results.data)
                // component.props.container.setState('feed',results.data)
                // component.props.container.setState('grid',results.data)
                 component.props.container.setState({

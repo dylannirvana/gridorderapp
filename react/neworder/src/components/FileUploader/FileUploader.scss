@@ -1,10 +1,12 @@
+
+
 .file-upload-wrapper{
     .file-upload-button{
         position:absolute;
         top: -1000px;
     }
     .file-upload-label{
-        border: 2px solid #ebc60b;
+        border: 2px solid $primary-border-color;
         border-radius: 3px;
         padding: 20px 40PX;
         background: #FFFFFF;
@@ -13,7 +15,7 @@
         cursor: pointer;
 
         &:hover{
-            background: #ebc60b;
+            background: $primary-background-color;
             color: #FFFFFF
         }
     }

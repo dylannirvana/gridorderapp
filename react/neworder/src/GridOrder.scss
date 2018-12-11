@@ -1,9 +1,33 @@
-#page.no-grid{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+@import '_variables';
+@import 'components/Header/Header';
+@import 'components/Menu/Menu';
+@import 'components/FileUploader/FileUploader';
+@import 'components/ProductGrid/Product';
+#page{
+  &.no-grid{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    #page-content{
+      padding-top: 64px;
+    }
+
+  }
+
+  #page-content{
+    padding: 0;
+  }
+  .row,.col{
+    margin: 0;
+    padding: 0;
+  }
+
 
 }
+
+
+
 

@@ -1,0 +1,41 @@
+@import '../../_variables';
+#page-header{
+    padding: 0;
+    .navbar{
+        background: $primary-background-color;
+        height: 50px;
+        /*.navbar-toggler{
+            display: block;
+            position: absolute;
+            right: 0;
+        }*/
+        #csv-upload-button{
+            display: inline-block;
+            width: auto;
+        }
+    }
+
+    #logo{
+        background: white;
+        padding: 20px;
+        position: absolute;
+        height: 148px;
+        border: 1px solid black;
+        vertical-align: middle;
+        /* line-height: 300px; */
+        color: black;
+        font-size: 50px;
+        max-width: 192px;
+        display: block;
+        white-space: normal;
+        top: 0;
+        z-index: 99;
+        text-align: center;
+        font-weight: bold;
+        line-height: 39px;
+    }
+
+
+
+}
+

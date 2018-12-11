@@ -15,11 +15,12 @@ const Product = (props) => {
 
 
     const {product} = props;
+
     product.category = product.category == undefined ? '' : product.category;
     return (
 
         //Render the Product as a BootStarp Card
-        <div className={"grid-item " + product.category.split(' ')[0] + ' ' + product.function} data-category="">
+        <div className={"grid-item " + product.category.split(' ')[0] + ' ' + product.function} data-sku={product.sku}>
             <Card>
                 <CardTitle>
                     {product.name}

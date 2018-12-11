@@ -1,6 +1,6 @@
 import React from "react";
 
-import Filter from "./Filter/Filter";
+import FilterAccordion from "./FilterAccordion";
 
 import FilterCriteria from "./FilterCriteria";
 class FilterContainer extends React.Component {
@@ -23,15 +23,15 @@ class FilterContainer extends React.Component {
 
         return (
             //Loop through the products
-            Object.values(FilterCriteria).map(filterName =>
+            Object.values(FilterCriteria).map(filterCriteria =>
 
 
 
 
-                    <Filter
-                        key={filterName}
+                    <FilterAccordion
+                        key={filterCriteria}
                         isOpen={this.state.collapse}
-                        filterName={filterName}
+                        filterCriteria={filterCriteria}
                         container={this.props.container}
                     />
 

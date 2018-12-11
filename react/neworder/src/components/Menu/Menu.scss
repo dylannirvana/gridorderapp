@@ -1,43 +1,3 @@
-#page-header{
-    padding: 0;
-    .navbar{
-        background: #ebc60b;
-        height: 50px;
-        /*.navbar-toggler{
-            display: block;
-            position: absolute;
-            right: 0;
-        }*/
-        #csv-upload-button{
-            display: inline-block;
-            width: auto;
-        }
-    }
-
-    #logo{
-        background: white;
-        padding: 20px;
-        position: absolute;
-        height: 148px;
-        border: 1px solid black;
-        vertical-align: middle;
-        /* line-height: 300px; */
-        color: black;
-        font-size: 50px;
-        max-width: 192px;
-        display: block;
-        white-space: normal;
-        top: 0;
-        z-index: 99;
-        text-align: center;
-        font-weight: bold;
-        line-height: 39px;
-    }
-
-
-
-}
-
 
 #offcanvas-menu{
     position: fixed;
@@ -49,7 +9,7 @@
     z-index: 99;
     min-width: 170px;
     padding: 20px;
-    border-left: 3px solid #ebc60b;
+    border-left: 3px solid $primary-border-color;
     padding-top: 65px;
 
     .close {
@@ -72,7 +32,7 @@
             content: ' ';
             height: 33px;
             width: 2px;
-            background-color: #ebc60b;
+            background-color: $primary-background-color;
         }
 
         &:before {
@@ -87,7 +47,7 @@
 
     .filter-accordion{
         margin-top: 5px;
-        border: 2px solid #ebc60b;
+        border: 2px solid $primary-border-color;
 
 
         button{
@@ -109,7 +69,7 @@
         .collapse{
             background: white;
             button:first-of-type{
-                border-top: 1px solid #ebc60b ;
+                border-top: 1px solid $primary-border-color ;
             }
         }
     }

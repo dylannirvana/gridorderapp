@@ -1,13 +1,14 @@
 import React from "react";
 import {
+    Button,
     Collapse,
     NavbarToggler,
 
 } from 'reactstrap';
 
 
-import FilterContainer from "./FilterContainer/FilterContainer";
-
+import FilterContainer from "../FilterContainer";
+import Papa from "papaparse";
 
 class Menu extends React.Component {
     constructor(props) {
@@ -45,11 +46,43 @@ class Menu extends React.Component {
         return filterValueList;
     };
 
+    saveNewGrid(){
+        const newGridHTML = window.pckry.getItemElements();
+        var newGridJSON = [];
+
+        newGridHTML.forEach(function(product,index){
+            newGridJSON.push({basecode: product.getAttribute('data-sku'), neworder: (index + 1) })
+
+        })
+
+        var csv = Papa.unparse(newGridJSON);
+        var csvData = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
+        var csvURL =  null;
+        if (navigator.msSaveBlob)
+        {
+            csvURL = navigator.msSaveBlob(csvData, 'download.csv');
+        }
+        else
+        {
+            csvURL = window.URL.createObjectURL(csvData);
+        }
+
+        var downloadLink = document.createElement('a');
+        downloadLink.href = csvURL;
+        downloadLink.setAttribute('download', 'download.csv');
+        downloadLink.click();
+
+
+    }
+
 
     render() {
         return (
 
             <ul className={"ml-auto navbar-nav"}>
+                <li>
+                    <Button onClick={this.saveNewGrid}>Save</Button>
+                </li>
                 <li>
                     <NavbarToggler onClick={this.togglePushMenu} className="mr-2" style={{display: this.props.container.gridPopulated() ? '' : 'none'}}><span
                         className="navbar-text">Filters</span>

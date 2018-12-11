@@ -9,8 +9,8 @@ import {
 import Packery from 'packery';
 import Draggabilly from 'draggabilly';
 
-import FileUploader from './FileUploader';
-import './Product.scss';
+import FileUploader from '../FileUploader';
+
 
 
 // all this does is take the input file and render it to the DOM
@@ -28,7 +28,7 @@ class ProductGrid extends React.Component {
 
         return (
             <Jumbotron fluid={true} id={"page-content"}>
-                <Row className="grid row">
+                <Row className="grid">
 
 
 
@@ -67,6 +67,7 @@ class ProductGrid extends React.Component {
             window.pckry.bindDraggabillyEvents(draggie);
             component.state.draggie.push(draggie);
         });
+
     }
 
     destroyPackery() {
