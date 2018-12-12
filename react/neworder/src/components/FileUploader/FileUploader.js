@@ -14,8 +14,7 @@ export default class FileUploader extends React.Component{
             header: true,
             complete: function (results) {
 
-               // component.props.container.setState('feed',results.data)
-               // component.props.container.setState('grid',results.data)
+
                 component.props.container.setState({
                     feed: Array.from(results.data),
                     grid: results.data,
@@ -25,7 +24,6 @@ export default class FileUploader extends React.Component{
             }
         });
 
-    //    this.props.container.setState({'packeryRefresh': true})
 
 
     }

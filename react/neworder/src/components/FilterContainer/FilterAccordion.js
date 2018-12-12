@@ -16,7 +16,8 @@ export default class FilterAccordion extends React.Component {
     }
 
 
-
+    //Get the filter options associated with a filter criteria
+    //Example, This function returns all options associated with the filter criteria CATEGORY
     getFilterOptions(filterCriteria) {
         const feed = this.props.container.getState('feed');
         let filterValueList = [];
@@ -36,6 +37,7 @@ export default class FilterAccordion extends React.Component {
 
 
 
+    //Toggle the accordion
     toggle(event) {
 
         this.setState({
@@ -47,8 +49,6 @@ export default class FilterAccordion extends React.Component {
     render() {
 
         const filterOptions = this.getFilterOptions(this.props.filterCriteria);
-
-      //  if (!filterOptions.length || this.props.container.getState('grid').length) return null;
 
         return (
             <div key={this.props.filterCriteria + '-accordion'} className={"filter-accordion"}>

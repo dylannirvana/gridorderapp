@@ -13,7 +13,7 @@ import Draggabilly from 'draggabilly';
 import FileUploader from '../FileUploader';
 
 
-// all this does is take the input file and render it to the DOM
+
 class ProductGrid extends React.Component {
     constructor(props) {
         super(props);
@@ -54,28 +54,29 @@ class ProductGrid extends React.Component {
         )
     }
 
+    //Initialize packery on the product grid and make the Bootstrap cards draggable
     initPackery() {
-        console.log('INIT PACKERY')
+
         const component = this;
 
-            console.log('INIT PACKERY  >INSIDE IF')
 
+        var packeryInstance = new Packery('.grid', {
+            itemSelector: '.grid-item',
+            percentPosition: true
+        });
 
-            var packeryInstance = new Packery('.grid', {
-                itemSelector: '.grid-item',
-                percentPosition: true
-            });
-            //Make the products Dragable
-            packeryInstance.getItemElements().forEach(function (itemElem) {
-                var draggie = new Draggabilly(itemElem);
-                packeryInstance.bindDraggabillyEvents(draggie);
-                component.state.draggie.push(draggie);
-            });
-            this.setState({
-                packery: packeryInstance
-            })
+        //Make the products Dragable
+        packeryInstance.getItemElements().forEach(function (itemElem) {
+            var draggie = new Draggabilly(itemElem);
+            packeryInstance.bindDraggabillyEvents(draggie);
+            component.state.draggie.push(draggie);
+        });
 
+        this.setState({
+            packery: packeryInstance
+        });
 
+        window.pckry = packeryInstance;
 
 
     }
@@ -95,22 +96,20 @@ class ProductGrid extends React.Component {
 
     }
 
-    /* componentDidUpdate() {
-         return this.props.container.gridPopulated();
-     }*/
 
-    //This function is executed every time Product Grid Component is loaded with a new CSV file
+
+    //This function is executed every time this component is rendered
     componentDidUpdate() {
-        //  console.log('===========UPDATE HAPPENED ========= ' + this.props.container.gridFiltered())
-        const component = this;
-        if (this.props.container.getState('packeryRefresh')) {
-            console.log('PACKERY REFRESH')
-            //this.props.container.setState({'packeryRefresh': false})
-            this.destroyPackery();
-            this.initPackery();
-            this.props.container.setState({'packeryRefresh': false})
-            //Make the products Dragable
 
+        const component = this;
+
+        if (this.props.container.getState('packeryRefresh')) {
+
+            this.destroyPackery();
+
+            this.initPackery();
+
+            this.props.container.setState({'packeryRefresh': false})
 
         }
 

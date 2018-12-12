@@ -8,9 +8,6 @@ import {
 import Menu from '../Menu'
 
 
-
-
-
 class Header extends React.Component {
 
     render() {

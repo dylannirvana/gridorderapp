@@ -9,7 +9,7 @@ class FilterContainer extends React.Component {
         super(props);
 
 
-        this.toggle = this.toggle.bind(this);
+
         this.state = { collapse: false, appliedFilters:[] };
         const component = this;
         this.appliedFilters = {
@@ -27,9 +27,7 @@ class FilterContainer extends React.Component {
             }
         }
     }
-    toggle() {
-        this.setState({ collapse: !this.state.collapse });
-    }
+
 
 
 
@@ -37,13 +35,11 @@ class FilterContainer extends React.Component {
     render() {
 
 
-
-
         return (
-            //Loop through the products
+
+
+            //Display filters in an accordion form
             Object.values(FilterCriteria).map(filterCriteria =>
-
-
 
 
                     <FilterAccordion

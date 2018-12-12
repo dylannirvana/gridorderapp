@@ -13,11 +13,12 @@ class GridOrder extends Component {
 
         this.state = {
             feed: [], //The  parsed JSON obtained from PapaParse
-            grid: [],
-            packeryRefresh: false
+            grid: [], // filtered grid
+            packeryRefresh: false /// whether packery should be refreshed
 
         };
 
+        //Container allows the child components to manage the state of the GridOrder component
         this.container = {
 
             getState: function (state) {
@@ -27,6 +28,8 @@ class GridOrder extends Component {
             setState: function (state) {
                 component.setState(state)
             },
+
+
             gridPopulated: function(){
                 return Boolean(component.state.feed.length);
             }

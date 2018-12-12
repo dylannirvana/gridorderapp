@@ -1,8 +1,7 @@
 import React from "react";
 import {
     Button,
-    Collapse,
-    NavbarToggler,
+    Collapse
 
 } from 'reactstrap';
 
@@ -16,6 +15,7 @@ class Menu extends React.Component {
 
         this.togglePushMenu = this.togglePushMenu.bind(this);
         this.startNewSession = this.startNewSession.bind(this);
+
         this.state = {
             isOpen: false,
 
@@ -30,23 +30,7 @@ class Menu extends React.Component {
     }
 
 
-    getFilterValues(filterName) {
-        const feed = this.props.feed;
-        let filterValueList = [];
-
-        for (let index in this.props.feed) {
-            const product = feed[index];
-
-
-            let filterValue = product[filterName] === undefined ? null : product[filterName].split(" ")[0];
-            if (filterValue && !filterValueList.includes(filterValue)) {
-                filterValueList.push(filterValue)
-            }
-        }
-
-        return filterValueList;
-    };
-
+    //Generates a new CSV file, based on new order of the grid tiles
     saveNewGrid(){
         const newGridHTML = window.pckry.getItemElements();
         var newGridJSON = [];
@@ -76,7 +60,10 @@ class Menu extends React.Component {
 
     }
 
+    //Destroy the current session and start a new one
     startNewSession(){
+
+
         this.props.container.setState({
             'feed': [],
             'grid': [],
@@ -110,9 +97,6 @@ class Menu extends React.Component {
                                 <div className={"close"} onClick={this.togglePushMenu}>Close</div>
                                 <FilterContainer container={this.props.container}/>
                             </div>
-
-
-
                         }
                     </Collapse>
                 </li>
