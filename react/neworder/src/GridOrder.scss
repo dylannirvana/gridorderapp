@@ -1,30 +1,64 @@
-@import '_variables';
+/* Colors */
+$color-mustard: #ebc60b;
+$color-white: #FFFFFF;
+$color-gray: #363636;
+/*Element Colors */
+$primary-background-color: $color-mustard;
+$primary-background-hover-color: $color-white;
+
+$primary-border-color: $color-mustard;
+
+$primary-text-color: $color-gray;
+$primary-text-hover-color: $color-white;
+
 @import 'components/Header/Header';
 @import 'components/Menu/Menu';
 @import 'components/FileUploader/FileUploader';
 @import 'components/ProductGrid/Product';
-#page{
-  &.no-grid{
+#page {
+  &.no-grid {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 
-    #page-content{
+    #page-content {
       padding-top: 64px;
     }
 
   }
 
-  #page-content{
+  #page-content {
     padding: 0;
   }
-  .row,.col{
+  .row, .col {
     margin: 0;
     padding: 0;
   }
 
+  .button {
+    border-radius: 3px;
+    margin: 0;
+    cursor: pointer;
+    transition: 0.5s background-color, 0.5s color;
+    &:focus {
+      outline: none;
+    }
+    &.yellow-button {
+      background-color: $color-mustard;
+      color: $color-white;
+    }
+    &.white-button {
+      color: $color-gray;
+      background-color: $color-white;
+
+      &:hover {
+        background: $color-mustard;
+        color: $color-white
+      }
+    }
+  }
 
 }
 

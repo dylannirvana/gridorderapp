@@ -7,16 +7,13 @@
     }
     .file-upload-label{
         border: 2px solid $primary-border-color;
-        border-radius: 3px;
-        padding: 20px 40PX;
-        background: #FFFFFF;
-        display: inline-block;
-        margin: 0;
-        cursor: pointer;
 
-        &:hover{
-            background: $primary-background-color;
-            color: #FFFFFF
-        }
+        padding: 20px 40PX;
+
+        display: inline-block;
+
+
+
+
     }
 }

@@ -20,7 +20,7 @@ class GridOrder extends Component {
         this.container = {
 
             getState: function (state) {
-                return state != undefined ? component.state[state] : component.state
+                return state !== undefined ? component.state[state] : component.state
             },
 
             setState: function (state) {

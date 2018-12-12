@@ -10,11 +10,29 @@ class FilterContainer extends React.Component {
 
 
         this.toggle = this.toggle.bind(this);
-        this.state = { collapse: false };
+        this.state = { collapse: false, appliedFilters:[] };
+        const component = this;
+        this.appliedFilters = {
+            add: function(criteria,label){
+                component.state.appliedFilters.push({'label':label,'criteria': criteria});
+                return component.state.appliedFilters;
+            },
+            remove: function(filterLabel){
+                return component.state.appliedFilters.filter(function(filter){
+                    return filter.label != filterLabel;
+                })
+            },
+            get:function(){
+                return component.state.appliedFilters;
+            }
+        }
     }
     toggle() {
         this.setState({ collapse: !this.state.collapse });
     }
+
+
+
 
     render() {
 
@@ -33,6 +51,7 @@ class FilterContainer extends React.Component {
                         isOpen={this.state.collapse}
                         filterCriteria={filterCriteria}
                         container={this.props.container}
+                        appliedFilters = {this.appliedFilters}
                     />
 
 

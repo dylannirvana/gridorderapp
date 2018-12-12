@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, InputGroup } from 'reactstrap';
+
 import Papa from "papaparse";
 
 // Render the necessary HTML for user to upload CSV file
@@ -13,7 +13,7 @@ export default class FileUploader extends React.Component{
         Papa.parse(inventory, {
             header: true,
             complete: function (results) {
-console.log(results.data)
+
                // component.props.container.setState('feed',results.data)
                // component.props.container.setState('grid',results.data)
                 component.props.container.setState({
@@ -31,7 +31,7 @@ console.log(results.data)
 
         return (
 
-            <label className="file-upload-wrapper">
+            <label className="file-upload-wrapper white-button button">
                 <input className={"file-upload-button"} onChange={this.uploadFile} type="file" required/>
                 <span className={"file-upload-label"}>Select a CSV</span>
             </label>

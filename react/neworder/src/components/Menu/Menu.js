@@ -37,7 +37,7 @@ class Menu extends React.Component {
             const product = feed[index];
 
 
-            let filterValue = product[filterName] == undefined ? null : product[filterName].split(" ")[0];
+            let filterValue = product[filterName] === undefined ? null : product[filterName].split(" ")[0];
             if (filterValue && !filterValueList.includes(filterValue)) {
                 filterValueList.push(filterValue)
             }
@@ -80,7 +80,7 @@ class Menu extends React.Component {
         return (
 
             <ul className={"ml-auto navbar-nav"}>
-                <li>
+                <li style={{display: this.props.container.gridPopulated() ? '' : 'none'}}>
                     <Button onClick={this.saveNewGrid}>Save</Button>
                 </li>
                 <li>

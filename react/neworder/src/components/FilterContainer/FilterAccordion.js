@@ -1,7 +1,7 @@
 import React from "react";
 
-import {ButtonGroup, Button, DropdownMenu, DropdownItem, Collapse} from 'reactstrap';
-import FilterCriteria from "./FilterCriteria";
+import {Button,  Collapse} from 'reactstrap';
+
 import FilterButton from "./FilterButton";
 export default class FilterAccordion extends React.Component {
 
@@ -15,10 +15,7 @@ export default class FilterAccordion extends React.Component {
         this.toggle = this.toggle.bind(this);
     }
 
-    toggle() {
 
-        this.setState({collapse: !this.state.collapse});
-    }
 
     getFilterOptions(filterCriteria) {
         const feed = this.props.container.getState('feed');
@@ -28,7 +25,7 @@ export default class FilterAccordion extends React.Component {
             const product = feed[index];
 
 
-            let filterValue = product[filterCriteria] == undefined ? null : product[filterCriteria].split(" ")[0];
+            let filterValue = product[filterCriteria] === undefined ? null : product[filterCriteria].split(" ")[0];
             if (filterValue && !filterValueList.includes(filterValue)) {
                 filterValueList.push(filterValue)
             }
@@ -60,7 +57,7 @@ export default class FilterAccordion extends React.Component {
 
                     {
                         Object.values(filterOptions).map(filterLabel =>
-                                <FilterButton container={this.props.container} filterCriteria={this.props.filterCriteria} filterLabel={filterLabel} key={filterLabel}/>
+                                <FilterButton  appliedFilters = {this.props.appliedFilters} container={this.props.container} filterCriteria={this.props.filterCriteria} filterLabel={filterLabel} key={filterLabel}/>
                         )
                     }
 

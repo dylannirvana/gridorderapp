@@ -1,20 +1,10 @@
 import React from "react";
 import {
-    Collapse,
-    Button,
     Navbar,
-    NavbarToggler,
     NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    Container,
-    Row,
-    Col,
-    Jumbotron,
-    Input
+    Container
 } from 'reactstrap';
-import "./Header.scss";
+
 import Menu from '../Menu'
 
 

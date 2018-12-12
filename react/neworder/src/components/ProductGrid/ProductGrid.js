@@ -76,14 +76,15 @@ class ProductGrid extends React.Component {
         });
         window.pckry.destroy();
         window.pckry = undefined;
-        this.state.draggie = [];
+        this.setState({draggie: []})
+
     }
 
     //This function is executed every time Product Grid Component is loaded with a new CSV file
     componentDidUpdate() {
 
 
-        if (window.pckry == undefined) {
+        if (window.pckry === undefined) {
             //Initialize Packery
             this.initPackery();
         } else {
