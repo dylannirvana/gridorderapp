@@ -15,6 +15,7 @@ class Menu extends React.Component {
         super(props);
 
         this.togglePushMenu = this.togglePushMenu.bind(this);
+        this.startNewSession = this.startNewSession.bind(this);
         this.state = {
             isOpen: false,
 
@@ -75,18 +76,33 @@ class Menu extends React.Component {
 
     }
 
+    startNewSession(){
+        this.props.container.setState({
+            'feed': [],
+            'grid': [],
+            packeryRefresh: false
+        })
+    }
+
 
     render() {
         return (
 
             <ul className={"ml-auto navbar-nav"}>
                 <li style={{display: this.props.container.gridPopulated() ? '' : 'none'}}>
-                    <Button onClick={this.saveNewGrid}>Save</Button>
+                    <Button className={"white-button nav-btn"} onClick={this.startNewSession}>
+                        New Session
+                    </Button>
+                </li>
+                <li style={{display: this.props.container.gridPopulated() ? '' : 'none'}}>
+                    <Button className={"white-button nav-btn"} onClick={this.saveNewGrid}>
+                        Save
+                    </Button>
                 </li>
                 <li>
-                    <NavbarToggler onClick={this.togglePushMenu} className="mr-2" style={{display: this.props.container.gridPopulated() ? '' : 'none'}}><span
-                        className="navbar-text">Filters</span>
-                    </NavbarToggler>
+                    <Button onClick={this.togglePushMenu} className={"white-button btn nav-btn"} style={{display: this.props.container.gridPopulated() ? '' : 'none'}}>
+                        Filters
+                    </Button>
 
                     <Collapse id={"offcanvas-menu"} isOpen={this.state.isOpen} navbar>
                         {

@@ -1,8 +1,6 @@
 import React from "react";
 
 
-
-
 export default class FilterButton extends React.Component {
     constructor(props) {
         super(props);
@@ -22,7 +20,7 @@ export default class FilterButton extends React.Component {
         var activeFilters;
         var filteredGrid = feed;
         this.state.selected = !component.state.selected;
-console.log(this.state.selected)
+        console.log(this.state.selected)
         if (this.state.selected) {
             activeFilters = component.props.appliedFilters.add(component.props.filterCriteria, filterLabel);
         } else {
@@ -31,22 +29,22 @@ console.log(this.state.selected)
 
         //    if (!component.state.selected) {
 
-console.log('======= APPLIED FILTERS =====================' ,component.props.appliedFilters.get())
-
-        if(activeFilters.length){
+       
+        if (activeFilters.length) {
             filteredGrid = feed.filter(function (product, index) {
                 // var result = false;
                 return activeFilters.some(function (filter) {
-                    console.log(product[filter.criteria],product,filter.criteria)
-                    if ( product[filter.criteria] != undefined && !product[filter.criteria].indexOf(filter.label)) {
+
+                    if (product[filter.criteria] != undefined && !product[filter.criteria].indexOf(filter.label)) {
                         return true;
                     }
                 })
             })
         }
 
-        this.props.container.setState({'grid': filteredGrid})
-        console.log('======= FILTERED GRID =====================',filteredGrid)
+        this.props.container.setState({'grid': filteredGrid,'packeryRefresh': true})
+        console.log('======= FILTERED GRID =====================', filteredGrid);
+        //component.container.setState()
         /*
           //If filter is not selected, execute the logic and select teh filter
           console.log('================IF=================== ' + component.props.filterCriteria + ' ' + event.target.textContent)
@@ -94,7 +92,7 @@ console.log('======= APPLIED FILTERS =====================' ,component.props.app
     render() {
 
         return (
-            <button className={"filter-option " + (this.state.selected ? 'active' : '')} onClick={this.onFilterClick}>
+            <button className={"btn white-button filter-option " + (this.state.selected ? 'active' : '')} onClick={this.onFilterClick}>
                 {this.props.filterLabel}
             </button>
         );

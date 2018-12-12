@@ -13,7 +13,8 @@ class GridOrder extends Component {
 
         this.state = {
             feed: [], //The  parsed JSON obtained from PapaParse
-            grid: []
+            grid: [],
+            packeryRefresh: false
 
         };
 
@@ -29,6 +30,8 @@ class GridOrder extends Component {
             gridPopulated: function(){
                 return Boolean(component.state.feed.length);
             }
+
+
         }
     }
 

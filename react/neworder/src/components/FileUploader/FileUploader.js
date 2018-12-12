@@ -18,11 +18,14 @@ export default class FileUploader extends React.Component{
                // component.props.container.setState('grid',results.data)
                 component.props.container.setState({
                     feed: Array.from(results.data),
-                    grid: results.data
+                    grid: results.data,
+                    packeryRefresh: true
                 });
 
             }
         });
+
+    //    this.props.container.setState({'packeryRefresh': true})
 
 
     }
@@ -31,7 +34,7 @@ export default class FileUploader extends React.Component{
 
         return (
 
-            <label className="file-upload-wrapper white-button button">
+            <label className="file-upload-wrapper white-button btn">
                 <input className={"file-upload-button"} onChange={this.uploadFile} type="file" required/>
                 <span className={"file-upload-label"}>Select a CSV</span>
             </label>

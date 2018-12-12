@@ -3,7 +3,8 @@ import Product from "./Product/Product";
 import {
     Row,
     Col,
-    Jumbotron}
+    Jumbotron
+}
     from 'reactstrap';
 
 import Packery from 'packery';
@@ -12,24 +13,22 @@ import Draggabilly from 'draggabilly';
 import FileUploader from '../FileUploader';
 
 
-
 // all this does is take the input file and render it to the DOM
 class ProductGrid extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            draggie: []
+            draggie: [],
+            packery: null
         };
     }
 
     render() {
 
 
-
         return (
             <Jumbotron fluid={true} id={"page-content"}>
                 <Row className="grid">
-
 
 
                     <Col>
@@ -45,7 +44,8 @@ class ProductGrid extends React.Component {
 
                         }
                         {
-                            !this.props.container.getState('feed').length && <FileUploader container={this.props.container} />
+                            !this.props.container.getState('feed').length &&
+                            <FileUploader container={this.props.container}/>
                         }
                     </Col>
 
@@ -55,42 +55,62 @@ class ProductGrid extends React.Component {
     }
 
     initPackery() {
-        var component = this;
-        window.pckry = new Packery('.grid', {
-            itemSelector: '.grid-item',
-            percentPosition: true
-        });
+        console.log('INIT PACKERY')
+        const component = this;
 
-        //Make the products Dragable
-        window.pckry.getItemElements().forEach(function (itemElem) {
-            var draggie = new Draggabilly(itemElem);
-            window.pckry.bindDraggabillyEvents(draggie);
-            component.state.draggie.push(draggie);
-        });
+            console.log('INIT PACKERY  >INSIDE IF')
+
+
+            var packeryInstance = new Packery('.grid', {
+                itemSelector: '.grid-item',
+                percentPosition: true
+            });
+            //Make the products Dragable
+            packeryInstance.getItemElements().forEach(function (itemElem) {
+                var draggie = new Draggabilly(itemElem);
+                packeryInstance.bindDraggabillyEvents(draggie);
+                component.state.draggie.push(draggie);
+            });
+            this.setState({
+                packery: packeryInstance
+            })
+
+
+
 
     }
 
     destroyPackery() {
-        this.state.draggie.forEach(function (itemElem) {
-            itemElem.destroy();
-        });
-        window.pckry.destroy();
-        window.pckry = undefined;
-        this.setState({draggie: []})
+        console.log('DESTROY PACKERY')
+        if (this.state.draggie.length) {
+            this.state.draggie.forEach(function (itemElem) {
+                itemElem.destroy();
+            });
+            this.state.packery.destroy();
+
+            this.setState({draggie: [], packery: null})
+            this.props.container.setState({'packeryRefresh': true})
+        }
+
 
     }
 
+    /* componentDidUpdate() {
+         return this.props.container.gridPopulated();
+     }*/
+
     //This function is executed every time Product Grid Component is loaded with a new CSV file
     componentDidUpdate() {
-
-
-        if (window.pckry === undefined) {
-            //Initialize Packery
-            this.initPackery();
-        } else {
-
+        //  console.log('===========UPDATE HAPPENED ========= ' + this.props.container.gridFiltered())
+        const component = this;
+        if (this.props.container.getState('packeryRefresh')) {
+            console.log('PACKERY REFRESH')
+            //this.props.container.setState({'packeryRefresh': false})
             this.destroyPackery();
             this.initPackery();
+            this.props.container.setState({'packeryRefresh': false})
+            //Make the products Dragable
+
 
         }
 
