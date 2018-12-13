@@ -14,7 +14,7 @@ You will also see any lint errors in the console.
 
 # Component Structure:
 
-## IMPORTANT: All the components are logically grouped into folders by feature
+### IMPORTANT: All the components are logically grouped into folders by feature
 
 ## Core components of the App are 
 1. The Product Grid -> Displays a set of Product Components in a Grid Format (located under components/ProductGrid folder)
