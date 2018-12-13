@@ -16,6 +16,10 @@ You will also see any lint errors in the console.
 
 ### IMPORTANT: All the components are logically grouped into folders by feature
 
+### Component Diagarm can be found at the below URL:
+https://github.com/dylannirvana/gridorderapp/blob/corra/react/neworder/src/component-diagram/component-diagram.pdf
+This diagram illustrates all the components that compose the App and their individual roles.
+
 ### Core components of the App are 
 1. The Product Grid -> Displays a set of Product Components in a Grid Format (located under components/ProductGrid folder)
 2. Grid Controls  -> A collection of grid control components, that allow user to interact with the Product Grid (located under components/GridControls folder)
