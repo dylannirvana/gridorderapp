@@ -14,14 +14,14 @@ You will also see any lint errors in the console.
 
 # Component Structure:
 
-##IMPORTANT: All the components are logically grouped into folders by feature
+## IMPORTANT: All the components are logically grouped into folders by feature
 
-##Core components of the App are 
+## Core components of the App are 
 1. The Product Grid -> Displays a set of Product Components in a Grid Format (located under components/ProductGrid folder)
 2. Grid Controls  -> A collection of grid control components, that allow user to interact with the Product Grid (located under components/GridControls folder)
 3. Header -> Displays the Header for the App (located under components/Header folder)
 
-#More Info:
+# More Info:
 1. App.js basically holds the layout and calls the Header & Product Grid Components
 2. Grid Controls (except the File Uploader component) are rendered as children of the Header Component. 
 3. File Uploader component is rendered as a child of the Product Grid Component 
