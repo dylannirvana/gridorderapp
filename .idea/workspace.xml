@@ -3,25 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b17e46e1-16cb-450f-8178-e15daabbbe2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/GridOrder.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/GridOrder.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/GridOrder.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/FileUploader/FileUploader.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/components/GridControls/FileUploader/FileUploader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/FileUploader/FileUploader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/components/GridControls/FileUploader/FileUploader.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/FileUploader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/components/GridControls/FileUploader/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/FilterContainer/FilterAccordion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/FilterContainer/FilterButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/components/GridControls/Filters/Filter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/FilterContainer/FilterContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/FilterContainer/FilterCriteria.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/components/GridControls/Filters/FilterCriteria.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/FilterContainer/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Menu/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/components/GridControls/GridControls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Menu/Menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/components/GridControls/GridControls.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/Menu/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/components/GridControls/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/ProductGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/components/ProductGrid/ProductGrid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/neworder/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/neworder/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -140,7 +121,7 @@
         <entry file="file://$PROJECT_DIR$/react/neworder/src/App.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -158,7 +139,7 @@
         <entry file="file://$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-576">
-              <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -180,7 +161,7 @@
         <entry file="file://$PROJECT_DIR$/react/neworder/src/components/GridControls/GridControls.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#9#35#0" expanded="true" />
@@ -193,7 +174,7 @@
         <entry file="file://$PROJECT_DIR$/react/neworder/src/components/GridControls/GridControls.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1547">
-              <caret line="91" column="5" lean-forward="true" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+              <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -203,7 +184,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="459">
-                <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+                <caret line="30" selection-start-line="30" selection-end-line="30" />
               </first_editor>
               <second_editor />
             </state>
@@ -519,12 +500,12 @@
       <workItem from="1544594356754" duration="27911000" />
       <workItem from="1544678352343" duration="165000" />
       <workItem from="1544685712985" duration="9839000" />
-      <workItem from="1544698265318" duration="10092000" />
+      <workItem from="1544698265318" duration="10453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120625000" />
+    <option name="totallyTimeSpent" value="120986000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1015,7 +996,7 @@
     <entry file="file://$PROJECT_DIR$/react/neworder/src/components/GridControls/GridControls.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#9#35#0" expanded="true" />
@@ -1033,14 +1014,14 @@
     <entry file="file://$PROJECT_DIR$/react/neworder/src/components/ProductGrid/Product.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-576">
-          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/react/neworder/src/components/GridControls/GridControls.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1547">
-          <caret line="91" column="5" lean-forward="true" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1057,7 +1038,7 @@
     <entry file="file://$PROJECT_DIR$/react/neworder/src/App.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1065,7 +1046,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="459">
-            <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <caret line="30" selection-start-line="30" selection-end-line="30" />
           </first_editor>
           <second_editor />
         </state>
