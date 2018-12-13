@@ -58,8 +58,7 @@ class ProductGrid extends React.Component {
 
         var packeryInstance = new Packery('.grid', {
             itemSelector: '.grid-item',
-            percentPosition: true,
-            columnWidth: 240
+            percentPosition: true
         });
 
         //Make the products Dragable
@@ -84,9 +83,9 @@ class ProductGrid extends React.Component {
         const packeryInstance = component.props.container.getState('packery');
 
         if (packeryInstance) {
-            console.log('DESTROY PACKERY')
+
             component.props.container.getState('dragableComponents').forEach(function (draggie) {
-                console.log('DRAGGIE DESTROY')
+
                 draggie.destroy();
             });
 
