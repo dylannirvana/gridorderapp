@@ -1,11 +1,15 @@
+/*
+* Entry point for the App
+ */
+
 import React, {Component} from 'react';
 
 
 import Header from './components/Header/Header';
 import ProductGrid from './components/ProductGrid/ProductGrid';
-import './GridOrder.scss';
+import './App.scss';
 
-class GridOrder extends Component {
+class App extends Component {
 
     constructor(props) {
         super(props);
@@ -14,13 +18,18 @@ class GridOrder extends Component {
         this.state = {
             feed: [], //The  parsed JSON obtained from PapaParse
             grid: [], // filtered grid
-            packeryRefresh: false /// whether packery should be refreshed
 
+            appliedFilters: [], //Filters applied by the user
+
+            packeryRefresh: false, /// whether packery should be refreshed
+            packery: false, //Reference to the Packery Instance
+            dragableComponents: [] //Array of dragable product components
         };
 
         //Container allows the child components to manage the state of the GridOrder component
         this.container = {
 
+            //Functions for managing state
             getState: function (state) {
                 return state !== undefined ? component.state[state] : component.state
             },
@@ -29,9 +38,23 @@ class GridOrder extends Component {
                 component.setState(state)
             },
 
-
+            //Indicates if the grid has been populated with data
             gridPopulated: function(){
                 return Boolean(component.state.feed.length);
+            },
+
+            //Functions for managing filters
+            addFilter: function(criteria,label){
+                component.state.appliedFilters.push({'label':label,'criteria': criteria});
+                return component.state.appliedFilters;
+            },
+            removeFilter: function(filterLabel){
+                return component.state.appliedFilters.filter(function(filter){
+                    return filter.label !== filterLabel;
+                })
+            },
+            getAppliedFilters:function(){
+                return component.state.appliedFilters;
             }
 
 
@@ -51,4 +74,4 @@ class GridOrder extends Component {
     }
 }
 
-export default GridOrder;
+export default App;

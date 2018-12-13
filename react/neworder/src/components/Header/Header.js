@@ -1,3 +1,6 @@
+/*
+* Renders the header, which includes the Logo and Grid Controls
+ */
 import React from "react";
 import {
     Navbar,
@@ -5,19 +8,20 @@ import {
     Container
 } from 'reactstrap';
 
-import Menu from '../Menu'
+import GridControls from '../GridControls'
 
 
-class Header extends React.Component {
+export default class Header extends React.Component {
 
     render() {
-        var productFilters = {category: [], function: [], family: []};
+
         return (
             <Container fluid={true} id={"page-header"}>
                 <Navbar>
                     <NavbarBrand id={"logo"} href="/">Grid Order Tool</NavbarBrand>
 
-                        <Menu container={this.props.container} />
+                    {/*Render the controls for controlling the product grid*/}
+                    <GridControls container={this.props.container}/>
 
 
                 </Navbar>
@@ -27,4 +31,3 @@ class Header extends React.Component {
     }
 }
 
-export default Header;

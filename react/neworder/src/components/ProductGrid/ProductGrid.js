@@ -1,27 +1,22 @@
+/*
+* This component represents the Product Grid
+ */
+
 import React from 'react';
-import Product from "./Product/Product";
+import Product from "./Product";
 import {
     Row,
     Col,
     Jumbotron
-}
-    from 'reactstrap';
+} from 'reactstrap';
 
 import Packery from 'packery';
 import Draggabilly from 'draggabilly';
 
-import FileUploader from '../FileUploader';
-
+import FileUploader from '../GridControls/FileUploader';
 
 
 class ProductGrid extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            draggie: [],
-            packery: null
-        };
-    }
 
     render() {
 
@@ -44,7 +39,8 @@ class ProductGrid extends React.Component {
 
                         }
                         {
-                            !this.props.container.getState('feed').length &&
+                            //If there are no products uploaded via CSV, display the FileUploader component
+                            !this.props.container.gridPopulated().length &&
                             <FileUploader container={this.props.container}/>
                         }
                     </Col>
@@ -58,7 +54,7 @@ class ProductGrid extends React.Component {
     initPackery() {
 
         const component = this;
-
+        let dragableComponents = [];
 
         var packeryInstance = new Packery('.grid', {
             itemSelector: '.grid-item',
@@ -69,39 +65,46 @@ class ProductGrid extends React.Component {
         packeryInstance.getItemElements().forEach(function (itemElem) {
             var draggie = new Draggabilly(itemElem);
             packeryInstance.bindDraggabillyEvents(draggie);
-            component.state.draggie.push(draggie);
+            dragableComponents.push(draggie);
         });
 
-        this.setState({
-            packery: packeryInstance
+        component.props.container.setState({
+            packery: packeryInstance,
+            dragableComponents: dragableComponents
         });
-
-        window.pckry = packeryInstance;
 
 
     }
 
+    //Destroys existing packery instance
     destroyPackery() {
         console.log('DESTROY PACKERY')
-        if (this.state.draggie.length) {
-            this.state.draggie.forEach(function (itemElem) {
-                itemElem.destroy();
-            });
-            this.state.packery.destroy();
+        const component = this;
+        const packeryInstance = component.props.container.getState('packery');
 
-            this.setState({draggie: [], packery: null})
-            this.props.container.setState({'packeryRefresh': true})
+        if (packeryInstance) {
+
+            component.props.container.getState('dragableComponents').forEach(function (draggie) {
+                draggie.destroy();
+            });
+
+            packeryInstance.destroy();
         }
 
 
+        component.props.container.setState({
+            packeryRefresh: false,
+            dragableComponents: [],
+            packery: false
+        })
+
+
     }
 
 
-
-    //This function is executed every time this component is rendered
+    //This function is executed every time this component is updated
     componentDidUpdate() {
 
-        const component = this;
 
         if (this.props.container.getState('packeryRefresh')) {
 

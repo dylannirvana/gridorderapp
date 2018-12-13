@@ -9,7 +9,7 @@
     z-index: 99;
     min-width: 170px;
     padding: 20px;
-    border-left: 3px solid $primary-border-color;
+    border-left: 3px solid $color-mustard;
     padding-top: 65px;
 
     .close {
@@ -32,7 +32,7 @@
             content: ' ';
             height: 33px;
             width: 2px;
-            background-color: $primary-background-color;
+            background-color: $color-mustard;
         }
 
         &:before {
@@ -47,7 +47,7 @@
 
     .filter-accordion{
         margin-top: 5px;
-        border: 2px solid $primary-border-color;
+        border: 2px solid $color-mustard;
 
 
         button.btn{
@@ -74,14 +74,14 @@
         .collapse{
             background: white;
             button:first-of-type{
-                border-top: 1px solid $primary-border-color ;
+                border-top: 1px solid $color-mustard ;
             }
         }
     }
 
 }
 .navbar{
-    background: $primary-background-color;
+    background: $color-mustard;
     height: 50px;
 
     .navbar-nav{

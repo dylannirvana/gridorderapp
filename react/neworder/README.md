@@ -12,15 +12,23 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-## TODO:
+## Component Structure:
 
-App.js basically holds the layout. ProductFeed input passes event.target to the uploadHandler, parses the CSV into JSON. _item_ is the array object that needs to be  rendered in Bootstrap Grid and interated through, and accessible to Packery <br>
+IMPORTANT: All the components are logically grouped into folders by feature
 
-Props and state needs to be added to do the following. Please refer to Issue #38. <br>
+Core components of the App are 
+1. The Product Grid -> Displays a set of Product Components in a Grid Format (located under components/ProductGrid folder)
+2. Grid Controls  -> A collection of grid control components, that allow user to interact with the Product Grid (located under components/GridControls folder)
+3. Header -> Displays the Header for the App (located under components/Header folder)
 
-1. Render items object from uploadHandler in Grid 
-2. Iterate over object in Bootstrap .row .col-md-4 
-3. Make sure that Packery and Draggabilly have access to .grid .grid-item 
+More Info:
+1. App.js basically holds the layout and calls the Header & Product Grid Components
+2. Grid Controls (except the File Uploader component) are rendered as children of the Header Component. 
+3. File Uploader component is rendered as a child of the Product Grid Component 
+4. Product Grid renders all the products (Product component) in a  grid form
+5. App component (root component) holds the state container, which is passed down to the children via props. 
+This state container implements an API, which allows the child components to change the state of App component
+
 
 ## Learn More
 

@@ -1,3 +1,7 @@
+/*
+*This component represents the Product displayed within the Product Grid
+ */
+
 import React from "react";
 import {
     Card,
@@ -7,16 +11,13 @@ import {
     CardTitle
 } from 'reactstrap';
 
-//Import custom styles
-
-
 
 const Product = (props) => {
 
 
     const {product} = props;
 
-    product.category = product.category == undefined ? '' : product.category;
+    product.category = product.category === undefined ? '' : product.category;
     return (
 
         //Render the Product as a BootStarp Card
