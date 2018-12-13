@@ -40,7 +40,7 @@ class ProductGrid extends React.Component {
                         }
                         {
                             //If there are no products uploaded via CSV, display the FileUploader component
-                            !this.props.container.gridPopulated().length &&
+                            !this.props.container.gridPopulated() &&
                             <FileUploader container={this.props.container}/>
                         }
                     </Col>
@@ -58,7 +58,8 @@ class ProductGrid extends React.Component {
 
         var packeryInstance = new Packery('.grid', {
             itemSelector: '.grid-item',
-            percentPosition: true
+            percentPosition: true,
+            columnWidth: 240
         });
 
         //Make the products Dragable
@@ -78,13 +79,14 @@ class ProductGrid extends React.Component {
 
     //Destroys existing packery instance
     destroyPackery() {
-        console.log('DESTROY PACKERY')
+
         const component = this;
         const packeryInstance = component.props.container.getState('packery');
 
         if (packeryInstance) {
-
+            console.log('DESTROY PACKERY')
             component.props.container.getState('dragableComponents').forEach(function (draggie) {
+                console.log('DRAGGIE DESTROY')
                 draggie.destroy();
             });
 
