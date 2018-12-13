@@ -1,10 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+## `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,16 +12,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-## Component Structure:
+# Component Structure:
 
-IMPORTANT: All the components are logically grouped into folders by feature
+### IMPORTANT: All the components are logically grouped into folders by feature
 
-Core components of the App are 
+### Core components of the App are 
 1. The Product Grid -> Displays a set of Product Components in a Grid Format (located under components/ProductGrid folder)
 2. Grid Controls  -> A collection of grid control components, that allow user to interact with the Product Grid (located under components/GridControls folder)
 3. Header -> Displays the Header for the App (located under components/Header folder)
 
-More Info:
+### More Info:
 1. App.js basically holds the layout and calls the Header & Product Grid Components
 2. Grid Controls (except the File Uploader component) are rendered as children of the Header Component. 
 3. File Uploader component is rendered as a child of the Product Grid Component 
@@ -30,7 +30,7 @@ More Info:
 This state container implements an API, which allows the child components to change the state of App component
 
 
-## Learn More
+# Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
