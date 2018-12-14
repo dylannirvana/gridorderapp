@@ -62,7 +62,7 @@ class ProductGrid extends React.Component {
             gutter: 5
         });
 
-        //Make the products Dragable
+        //Initialize instance of dragable component, which makes the products dragable
         packeryInstance.getItemElements().forEach(function (itemElem) {
             var draggie = new Draggabilly(itemElem);
             packeryInstance.bindDraggabillyEvents(draggie);
@@ -77,6 +77,8 @@ class ProductGrid extends React.Component {
                document.querySelector(elementID + ' .neworder-label').textContent = 'New Order: '+ (index+1);
 
             });
+
+            //Adding CSS class .show-neworder-label shows the .neworder-label
             document.getElementById('page').classList.add('show-neworder-label');
         });
 
@@ -95,13 +97,16 @@ class ProductGrid extends React.Component {
         const packeryInstance = component.props.container.getState('packery');
 
         if (packeryInstance) {
-
+            //Destroy instances of dragable component, which makes the products dragable
             component.props.container.getState('dragableComponents').forEach(function (draggie) {
 
                 draggie.destroy();
             });
 
+            //Removing  CSS class .show-neworder-label hides the .neworder-label
             document.getElementById('page').classList.remove('show-neworder-label');
+
+            //Destroy Packery Instance
             packeryInstance.destroy();
         }
 
