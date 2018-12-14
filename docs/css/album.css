@@ -62,7 +62,7 @@ small.name {
 }
 
 .btn-primary {
-  background-color: purple;
+  background-color: #333;
 }
 .btn-secondary {
     color: #343a40;
@@ -70,6 +70,13 @@ small.name {
     background-color: #ddd;
     border-color: #6c757d;
   }
+  .btn-warning {
+    color: #343a40;
+    /* background-color: #fff; */
+    background-color: #ddd;
+    border-color: #6c757d;
+  }
+
  /* FUNCTIONS */
 /* .sort-by-button-group {
   display: none;
