@@ -21,7 +21,7 @@ const Product = (props) => {
     return (
 
         //Render the Product as a BootStarp Card
-        <div className={"grid-item " + product.category.split(' ')[0] + ' ' + product.function} data-sku={product.sku}>
+        <div className={"grid-item " + product.category.split(' ')[0] + ' ' + product.function} id={"product-"+product.sku} data-sku={product.sku}>
             <Card>
                 <CardTitle>
                     {product.name}
@@ -43,8 +43,9 @@ const Product = (props) => {
                     <CardText>
                         {product.relatives}
                     </CardText>
-                    <div className="d-flex justify-content-between align-items-center">
-                        <small className="text-muted name">{product.designer}</small>
+                    <div className="product-info justify-content-between align-items-center">
+                        <span className="text-muted name">{product.designer}</span>
+                        <span className="text-muted neworder-label"></span>
                     </div>
                 </CardBody>
             </Card>

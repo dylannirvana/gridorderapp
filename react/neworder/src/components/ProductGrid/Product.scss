@@ -4,7 +4,7 @@
   /* CARDS */
   .grid-item {
     width: 240px;
-    height: 400px;
+    height: 430px;
 
   }
   .card {
@@ -12,6 +12,7 @@
     padding: 10px;
     border: 1px dotted $color-mustard;
     border-radius: 0;
+    height: 100%;
   }
   .card-img-top {
     height: 220px;
@@ -37,6 +38,25 @@
     margin-left: 120px;
   }
 
+  .product-info{
+    .name{
+      display: block;
+    }
+    .neworder-label{
+      display: none ;
+    }
+  }
+
+  &.show-neworder-label{
+    .product-info{
+      .neworder-label{
+        display: block;
+      }
+    }
+
+
+  }
+
   /* CSS for Drag interaction */
 
   .grid-item:hover {
@@ -56,6 +76,8 @@
     -webkit-transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
   }
+
+
 
 }
 

@@ -58,7 +58,8 @@ class ProductGrid extends React.Component {
 
         var packeryInstance = new Packery('.grid', {
             itemSelector: '.grid-item',
-            percentPosition: true
+            percentPosition: true,
+            gutter: 5
         });
 
         //Make the products Dragable
@@ -66,6 +67,17 @@ class ProductGrid extends React.Component {
             var draggie = new Draggabilly(itemElem);
             packeryInstance.bindDraggabillyEvents(draggie);
             dragableComponents.push(draggie);
+        });
+
+        //Update the new order of product tiles
+        packeryInstance.on( 'dragItemPositioned', function(){
+
+            this.getItemElements().forEach( function( element, index ) {
+               const elementID = '#' + element.getAttribute('id');
+               document.querySelector(elementID + ' .neworder-label').textContent = 'New Order: '+ (index+1);
+
+            });
+            document.getElementById('page').classList.add('show-neworder-label');
         });
 
         component.props.container.setState({
@@ -89,6 +101,7 @@ class ProductGrid extends React.Component {
                 draggie.destroy();
             });
 
+            document.getElementById('page').classList.remove('show-neworder-label');
             packeryInstance.destroy();
         }
 
