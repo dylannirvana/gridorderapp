@@ -13,7 +13,7 @@ import NewSession from "./NewSession";
 
 import SaveGrid from "./SaveGrid";
 import FilterCriteria from "./Filters/FilterCriteria";
-import Accordion from "./Accordion";
+import AccordionContainer from "./AccordionContainer";
 
 
 class GridControls extends React.Component {
@@ -35,22 +35,7 @@ class GridControls extends React.Component {
         });
     }
 
-    //Get the filters associated with a filter criteria
-    //Example, This function returns all filters associated with the filter criteria CATEGORY
-    getFilters(filterCriteria) {
-        const feed = this.props.container.getState('feed');
-        let filterValueList = [];
 
-        //Iterate over the filter critera (Example: CATEGORY, FUNCTION etc) and fetch the applicable filters for each criteria
-        feed.forEach(function (product) {
-            const filterValue = product[filterCriteria] === undefined ? null : product[filterCriteria].split(" ")[0];
-            if (filterValue && !filterValueList.includes(filterValue.toLowerCase())) {
-                filterValueList.push(filterValue.toLowerCase())
-            }
-        });
-
-        return filterValueList;
-    };
 
 
     render() {
@@ -81,16 +66,9 @@ class GridControls extends React.Component {
                             <div className={"wrapper"}>
                                 <div className={"close"} onClick={this.togglePushMenu}>Close</div>
                                 {
-                                    //Display filters in an accordion form
-                                    Object.values(FilterCriteria).map(filterCriteria =>
-                                        <Accordion
-                                            key={filterCriteria}
-                                            isOpen={this.state.collapse}
-                                            filterCriteria={filterCriteria}
-                                            filters={this.getFilters(filterCriteria)}
-                                            container={this.props.container}
-                                        />
-                                    )
+                                    <AccordionContainer
+                                        container={this.props.container}
+                                    />
                                 }
                             </div>
                         }

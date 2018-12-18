@@ -8,6 +8,7 @@ import React, {Component} from 'react';
 import Header from './components/Header/Header';
 import ProductGrid from './components/ProductGrid/ProductGrid';
 import './App.scss';
+import FilterCriteria from "./components/GridControls/Filters/FilterCriteria";
 
 class App extends Component {
 
@@ -19,6 +20,8 @@ class App extends Component {
             feed: [], //The  parsed JSON obtained from PapaParse
             grid: [], // filtered grid
 
+            appliedCriteria: [],
+            reloadFilters: false,
             appliedFilters: [], //Filters applied by the user
 
             packeryRefresh: false, /// whether packery should be refreshed
@@ -55,6 +58,12 @@ class App extends Component {
             },
             getAppliedFilters:function(){
                 return component.state.appliedFilters;
+            },
+            getAppliedCategories:function(){
+                return component.state.appliedCriteria;
+            },
+            addCategory:function(criteria){
+                component.state.appliedCriteria.push(criteria)
             }
 
 

@@ -19,6 +19,8 @@ export default class Filter extends React.Component {
 
     }
 
+
+
     //Filters the grid, based on the filters selected by the user
     filterGrid = (event) => {
 
@@ -37,6 +39,7 @@ export default class Filter extends React.Component {
         } else { //Else, remove the filter from the list of applied filters
             activeFilters = component.props.container.removeFilter(filterLabel);
         }
+      //  component.props.container.addCategory('function')
 
         if (activeFilters.length) { //If any filters have been applied
 
@@ -58,7 +61,7 @@ export default class Filter extends React.Component {
         }
 
         //Update thr product grid
-        this.props.container.setState({'grid': filteredGrid, 'packeryRefresh': true})
+        this.props.container.setState({'grid': filteredGrid, 'packeryRefresh': true, reloadFilters: true})
 
 
     }
