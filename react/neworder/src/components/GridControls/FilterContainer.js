@@ -1,9 +1,6 @@
 import React from "react";
 
-import {Button, Collapse} from 'reactstrap';
 
-import FilterOption from "./Filters/FilterOption";
-import FilterCategory from "./Filters/FilterCategory";
 import Filter from "./Filters/Filter";
 
 export default class FilterContainer extends React.Component {
@@ -96,34 +93,7 @@ export default class FilterContainer extends React.Component {
         return filterValueList;
     };
 
-    getNextFilterCategory() {
 
-        let appliedCategory = this.container.getAppliedFilterCategories();
-        // const index = FilterCategory[appliedCategory.length];
-        const nextCategory = FilterCategory[appliedCategory.length].label;
-        const appliedFilters = this.container.getAppliedFilters();
-
-
-        if (!appliedCategory.length && nextCategory !== undefined) {
-            appliedCategory.push(nextCategory)
-
-        } else {
-
-            let result = appliedFilters.some(function (filter) {
-                return filter.label == nextCategory;
-            });
-            if (this.props.container.getState().reloadFilters && !result.length && nextCategory !== undefined) {
-
-                appliedCategory.push(nextCategory)
-            }
-
-        }
-
-
-        return appliedCategory;
-
-
-    }
 
 
     //Toggle the accordion

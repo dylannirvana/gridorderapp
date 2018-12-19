@@ -2,7 +2,6 @@ import React from "react";
 
 import {Button, Collapse} from 'reactstrap';
 
-import FilterOption from "./FilterOption";
 
 export default class Filter extends React.Component {
 

@@ -12,7 +12,6 @@ import {
 import NewSession from "./NewSession";
 
 import SaveGrid from "./SaveGrid";
-import FilterCategory from "./Filters/FilterCategory";
 import FilterContainer from "./FilterContainer";
 
 
