@@ -12,7 +12,7 @@ import {
 import NewSession from "./NewSession";
 
 import SaveGrid from "./SaveGrid";
-import FilterContainer from "./FilterContainer";
+import FilterContainer from "./Filters/FilterContainer";
 
 
 class GridControls extends React.Component {

@@ -21,28 +21,7 @@ class App extends Component {
             feed: [], //The  parsed JSON obtained from PapaParse
             grid: [], // filtered grid
             filterFactory: new FilterFactory(),
-            /*filters: {
-                getRenderedFilters: function () {
-                    let result = new Object();
-                    let obj = component.state.filters;
-                    console.log(Object.keys(obj))
-                    console.log(obj)
 
-                    for(let key in obj) {
-                        console.log(key)
-                    }
-                    window.myObj = obj
-                    Object.keys(obj).forEach(function (key) {
-
-                        const value = obj[key];
-
-                        if (value instanceof Filter && value.hasRendered()) {
-                            result[key] = value;
-                        }
-                    })
-                    return result;
-                }
-            },*/
 
             packeryRefresh: false, /// whether packery should be refreshed
             packery: false, //Reference to the Packery Instance
@@ -83,26 +62,7 @@ class App extends Component {
             },
 
             initFilters: function () {
-
-                component.state.filterFactory.renderNextFilter(component.state.feed);
-                //component.state.filterFactory.addFilter('category', component.state.feed, true)
-                //component.state.filterFactory.addFilter('functions', component.state.feed, false)
-
-            /*    this.setState({
-                    filters: {
-                        'category': new Filter([], 'category', component.state.feed, true),
-                        'function': new Filter([], 'function', component.state.feed),
-
-                    }
-                })*/
-
-
-                /*this.setState({
-                    filterCategories: [
-                        new Filter([],'category', component.state.feed, true),
-                        new Filter([],'function', component.state.feed)
-                    ]
-                })*/
+                component.state.filterFactory.updateContext(component.state.feed);
             }
 
 

@@ -5,15 +5,15 @@ import {Button, Collapse} from 'reactstrap';
 
 export default class Filter extends React.Component {
 
-    constructor(props, label = "", feed = [], shouldRender = false) {
+    constructor(props, name = "", feed = [], shouldRender = false) {
 
         super(props);
 
-        const component = this;
+        const COMPONENT = this;
 
         this.state = {
             collapse: false,
-            label: label,
+            name: name,
             shouldRender: shouldRender,
             options: [],
             selectedOption: ""
@@ -21,51 +21,52 @@ export default class Filter extends React.Component {
 
         this.toggle = this.toggle.bind(this);
 
-        component.getLabel = function () {
-            return component.state.label;
+        COMPONENT.getName = function () {
+            return COMPONENT.state.name;
         };
-        component.shouldRender = function () {
-            return component.state.shouldRender;
+        COMPONENT.shouldRender = function () {
+            return COMPONENT.state.shouldRender;
         };
-        component.getSelectedOption = function () {
-            return component.state.selectedOption;
-        };
-
-        component.getOptions = function () {
-
-            return component.state.options;
+        COMPONENT.getSelectedOption = function () {
+            return COMPONENT.state.selectedOption;
         };
 
-        component.setSelectedOption = function (label) {
-            component.state.selectedOption = label;
+        COMPONENT.getOptions = function () {
+
+            return COMPONENT.state.options;
+        };
+
+        COMPONENT.setSelectedOption = function (option) {
+            console.log(option)
+            COMPONENT.state.selectedOption = option;
         }
 
-        component.isOptionSelected = function (label) {
-            return component.state.selectedOption.indexOf(label) == -1 ? false : true;
+        COMPONENT.isOptionSelected = function (label) {
+            return COMPONENT.state.selectedOption.indexOf(label) == -1 ? false : true;
         }
 
 
-        component.filterClickHandler = function (event) {
-            const filterFactory =  component.props.container.getFilterFactory();
-            let gridProducts = component.props.container.getGridProducts();
+        COMPONENT.filterClickHandler = function (event) {
+            const FILTER_FACTORY = COMPONENT.props.container.getFilterFactory();
+            let gridProducts = COMPONENT.props.container.getGridProducts();
 
-            component.props.filter.setSelectedOption(event.target.textContent);
-gridProducts = component.props.container.getFilterFactory().filterProducts(gridProducts)
-            filterFactory.renderNextFilter(gridProducts);
-//console.log(component.props.container.getFilterFactory().filterProducts(gridProducts))
-            component.props.container.setState({
-                grid: component.props.container.getFilterFactory().filterProducts(gridProducts)
+            COMPONENT.props.filter.setSelectedOption(event.target.textContent);
+            gridProducts = COMPONENT.props.container.getFilterFactory().filterProducts(gridProducts)
+            FILTER_FACTORY.updateContext(gridProducts);
+
+            COMPONENT.props.container.setState({
+                grid: COMPONENT.props.container.getFilterFactory().filterProducts(gridProducts)
             });
         }
 
 
         feed.forEach(function (product) {
-            const filterLabel = product[component.state.label] === undefined ? null : product[component.state.label].split(" ")[0];
+            const filterLabel = product[COMPONENT.state.name] === undefined ? null : product[COMPONENT.state.name].split(" ")[0];
 
-            if (filterLabel && component.state.options.indexOf(filterLabel) == -1) {
+            if (filterLabel && COMPONENT.state.options.indexOf(filterLabel) == -1) {
 
 
-                component.state.options.push(filterLabel)
+                COMPONENT.state.options.push(filterLabel)
 
 
             }
@@ -90,14 +91,14 @@ gridProducts = component.props.container.getFilterFactory().filterProducts(gridP
         return (
             <div key={this.props.filterCategory + '-accordion'} className={"filter-accordion"}>
                 <Button key={this.props.filterCategory + '-toggle'} className={"filter-accordion-head"}
-                        onClick={this.toggle}>{this.props.filter.getLabel()}</Button>
+                        onClick={this.toggle}>{this.props.filter.getName()}</Button>
                 <Collapse isOpen={this.state.collapse}>
 
                     {
                         Object.values(this.props.filter.getOptions()).map(filterOption =>
 
                             <Button
-                                key={this.props.filter.getLabel() + '-' + filterOption}
+                                key={this.props.filter.getName() + '-' + filterOption}
                                 className={"btn white-button filter-option " + (this.props.filter.isOptionSelected(filterOption) ? 'active' : '')}
                                 onClick={this.filterClickHandler}>
                                 {filterOption}
