@@ -32,13 +32,19 @@ export default class Accordion extends React.Component {
 
 
         return (
-            <div key={this.props.filterCriteria + '-accordion'} className={"filter-accordion"}>
-                <Button key={this.props.filterCriteria + '-toggle'} className={"filter-accordion-head"} onClick={this.toggle}>{this.props.filterCriteria}</Button>
+            <div key={this.props.filterCategory + '-accordion'} className={"filter-accordion"}>
+                <Button key={this.props.filterCategory + '-toggle'} className={"filter-accordion-head"} onClick={this.toggle}>{this.props.filterCategory}</Button>
                 <Collapse isOpen={this.state.collapse}>
 
                     {
-                        Object.values(this.props.filters).map(filterLabel =>
-                                <Filter  container={this.props.container} filterCriteria={this.props.filterCriteria} filterLabel={filterLabel} key={filterLabel}/>
+                        Object.values(this.props.filters).map(filter =>
+                                <Filter
+                                    filterContainer = {this.props.filterContainer}
+                                    container={this.props.container}
+                                    filterCategory={this.props.filterCategory}
+                                    filterLabel={filter.label}
+                                    key={filter.label}
+                                />
                         )
                     }
 

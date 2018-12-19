@@ -27,6 +27,7 @@ export default class FileUploader extends React.Component {
                     grid: results.data,
                     packeryRefresh: true
                 });
+                component.props.container.initFilterCategory();
 
             }
         });

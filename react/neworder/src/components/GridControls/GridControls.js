@@ -12,8 +12,8 @@ import {
 import NewSession from "./NewSession";
 
 import SaveGrid from "./SaveGrid";
-import FilterCriteria from "./Filters/FilterCriteria";
-import AccordionContainer from "./AccordionContainer";
+import FilterCategory from "./Filters/FilterCategory";
+import FilterContainer from "./FilterContainer";
 
 
 class GridControls extends React.Component {
@@ -66,7 +66,7 @@ class GridControls extends React.Component {
                             <div className={"wrapper"}>
                                 <div className={"close"} onClick={this.togglePushMenu}>Close</div>
                                 {
-                                    <AccordionContainer
+                                    <FilterContainer
                                         container={this.props.container}
                                     />
                                 }

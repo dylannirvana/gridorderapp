@@ -8,7 +8,8 @@ import React, {Component} from 'react';
 import Header from './components/Header/Header';
 import ProductGrid from './components/ProductGrid/ProductGrid';
 import './App.scss';
-import FilterCriteria from "./components/GridControls/Filters/FilterCriteria";
+import FilterCategory from "./components/GridControls/Filters/FilterCategory";
+
 
 class App extends Component {
 
@@ -20,8 +21,8 @@ class App extends Component {
             feed: [], //The  parsed JSON obtained from PapaParse
             grid: [], // filtered grid
 
-            appliedCriteria: [],
-            reloadFilters: false,
+            filterCategories: [],
+
             appliedFilters: [], //Filters applied by the user
 
             packeryRefresh: false, /// whether packery should be refreshed
@@ -42,28 +43,18 @@ class App extends Component {
             },
 
             //Indicates if the grid has been populated with data
-            gridPopulated: function(){
+            gridPopulated: function () {
                 return Boolean(component.state.feed.length);
             },
 
-            //Functions for managing filters
-            addFilter: function(criteria,label){
-                component.state.appliedFilters.push({'label':label,'criteria': criteria});
-                return component.state.appliedFilters;
-            },
-            removeFilter: function(filterLabel){
-                return component.state.appliedFilters.filter(function(filter){
-                    return filter.label !== filterLabel;
+            initFilterCategory: function () {
+
+                this.setState({
+                    filterCategories: [
+                        new FilterCategory('category', component.state.feed, true),
+                        new FilterCategory('function', component.state.feed)
+                    ]
                 })
-            },
-            getAppliedFilters:function(){
-                return component.state.appliedFilters;
-            },
-            getAppliedCategories:function(){
-                return component.state.appliedCriteria;
-            },
-            addCategory:function(criteria){
-                component.state.appliedCriteria.push(criteria)
             }
 
 

@@ -4,7 +4,7 @@
  */
 
 import React from "react";
-
+import FilterCategory from "./FilterCategoryList";
 
 export default class Filter extends React.Component {
     constructor(props) {
@@ -31,13 +31,15 @@ export default class Filter extends React.Component {
         let activeFilters,
             filteredGrid = feed;
 
+        let filterCategories = this.props.container.getState('filterCategories');
+
         //Update the selected state of the component
         component.state.selected = !component.state.selected
 
         if (this.state.selected) { //If filter button is selected, add it to the list of appliedFilters
-            activeFilters = component.props.container.addFilter(component.props.filterCriteria, filterLabel);
+            activeFilters = component.props.filterContainer.addFilter(component.props.filterCategory, filterLabel);
         } else { //Else, remove the filter from the list of applied filters
-            activeFilters = component.props.container.removeFilter(filterLabel);
+            activeFilters = component.props.filterContainer.removeFilter(filterLabel);
         }
       //  component.props.container.addCategory('function')
 
@@ -48,7 +50,7 @@ export default class Filter extends React.Component {
                 return activeFilters.some(function (filter) { //Loop through the applied filters
 
                     //Check if the product matches atleast one of the the selected filters
-                    if (product[filter.criteria] !== undefined && !product[filter.criteria].toLowerCase().indexOf(filter.label)) {
+                    if (product[filter.category] !== undefined && !product[filter.category].toLowerCase().indexOf(filter.label)) {
 
                         //If there is a match, return true and exit the loop
                         return true;
@@ -60,9 +62,20 @@ export default class Filter extends React.Component {
             })
         }
 
-        //Update thr product grid
-        this.props.container.setState({'grid': filteredGrid, 'packeryRefresh': true, reloadFilters: true})
+        filterCategories.filter(function(filterCategory,index){
+            if(filterCategory.label == component.props.filterCategory){
+                filterCategory.setActiveFilter(component.props.filterLabel);
 
+                if(filterCategories.indexOf(filterCategory.label)+1 < filterCategories.length){
+                    filterCategories[filterCategories.indexOf(filterCategory.label)+1].rendered = true;
+                }
+            }
+
+        })
+
+        //Update thr product grid
+        this.props.container.setState({'grid': filteredGrid, 'packeryRefresh': true, reloadFilters: true, filterCategories: filterCategories})
+        this.props.filterContainer.reload();
 
     }
 
