@@ -1,91 +1,114 @@
-/*
-* This component displays the filter button
-* And also implements the logic to filter the grid, when the filter button is clicked
- */
-
 import React from "react";
-import FilterCategory from "./FilterCategoryList";
+
+import {Button, Collapse} from 'reactstrap';
+
+import FilterOption from "./FilterOption";
 
 export default class Filter extends React.Component {
-    constructor(props) {
+
+    constructor(props, label = "", feed = [], shouldRender = false) {
 
         super(props);
 
+        const component = this;
+
         this.state = {
-            selected: false // Indicates, if the filter has been selected
+            collapse: false,
+            label: label,
+            shouldRender: shouldRender,
+            options: [],
+            selectedOption: ""
         };
 
-        this.filterGrid = this.filterGrid.bind(this);
+        this.toggle = this.toggle.bind(this);
 
-    }
+        component.getLabel = function () {
+            return component.state.label;
+        };
+        component.shouldRender = function () {
+            return component.state.shouldRender;
+        };
+        component.getSelectedOption = function () {
+            return component.state.selectedOption;
+        };
 
+        component.getOptions = function () {
 
+            return component.state.options;
+        };
 
-    //Filters the grid, based on the filters selected by the user
-    filterGrid = (event) => {
-
-        const component = this,
-            feed = Array.from(this.props.container.getState('feed')),
-            filterLabel = event.target.textContent;
-
-        let activeFilters,
-            filteredGrid = feed;
-
-        let filterCategories = this.props.container.getState('filterCategories');
-
-        //Update the selected state of the component
-        component.state.selected = !component.state.selected
-
-        if (this.state.selected) { //If filter button is selected, add it to the list of appliedFilters
-            activeFilters = component.props.filterContainer.addFilter(component.props.filterCategory, filterLabel);
-        } else { //Else, remove the filter from the list of applied filters
-            activeFilters = component.props.filterContainer.removeFilter(filterLabel);
-        }
-      //  component.props.container.addCategory('function')
-
-        if (activeFilters.length) { //If any filters have been applied
-
-            filteredGrid = feed.filter(function (product, index) { //Loop through each product in the product feed
-
-                return activeFilters.some(function (filter) { //Loop through the applied filters
-
-                    //Check if the product matches atleast one of the the selected filters
-                    if (product[filter.category] !== undefined && !product[filter.category].toLowerCase().indexOf(filter.label)) {
-
-                        //If there is a match, return true and exit the loop
-                        return true;
-                    }
-
-                    //If there is no match, return false and continue with the loop
-                    return false;
-                })
-            })
+        component.setSelectedOption = function (label) {
+            component.state.selectedOption = label;
         }
 
-        filterCategories.filter(function(filterCategory,index){
-            if(filterCategory.label == component.props.filterCategory){
-                filterCategory.setActiveFilter(component.props.filterLabel);
+        component.isOptionSelected = function (label) {
+            return component.state.selectedOption.indexOf(label) == -1 ? false : true;
+        }
 
-                if(filterCategories.indexOf(filterCategory.label)+1 < filterCategories.length){
-                    filterCategories[filterCategories.indexOf(filterCategory.label)+1].rendered = true;
-                }
+
+        component.filterClickHandler = function (event) {
+            const filterFactory =  component.props.container.getFilterFactory();
+            let gridProducts = component.props.container.getGridProducts();
+
+            component.props.filter.setSelectedOption(event.target.textContent);
+gridProducts = component.props.container.getFilterFactory().filterProducts(gridProducts)
+            filterFactory.renderNextFilter(gridProducts);
+//console.log(component.props.container.getFilterFactory().filterProducts(gridProducts))
+            component.props.container.setState({
+                grid: component.props.container.getFilterFactory().filterProducts(gridProducts)
+            });
+        }
+
+
+        feed.forEach(function (product) {
+            const filterLabel = product[component.state.label] === undefined ? null : product[component.state.label].split(" ")[0];
+
+            if (filterLabel && component.state.options.indexOf(filterLabel) == -1) {
+
+
+                component.state.options.push(filterLabel)
+
+
             }
 
-        })
-
-        //Update thr product grid
-        this.props.container.setState({'grid': filteredGrid, 'packeryRefresh': true, reloadFilters: true, filterCategories: filterCategories})
-        this.props.filterContainer.reload();
+        });
 
     }
+
+
+    //Toggle the accordion
+    toggle(event) {
+
+        this.setState({
+            collapse: !this.state.collapse
+        });
+    }
+
 
     render() {
 
+
         return (
-            <button className={"btn white-button filter-option " + (this.state.selected ? 'active' : '')}
-                    onClick={this.filterGrid}>
-                {this.props.filterLabel}
-            </button>
+            <div key={this.props.filterCategory + '-accordion'} className={"filter-accordion"}>
+                <Button key={this.props.filterCategory + '-toggle'} className={"filter-accordion-head"}
+                        onClick={this.toggle}>{this.props.filter.getLabel()}</Button>
+                <Collapse isOpen={this.state.collapse}>
+
+                    {
+                        Object.values(this.props.filter.getOptions()).map(filterOption =>
+
+                            <Button
+                                key={this.props.filter.getLabel() + '-' + filterOption}
+                                className={"btn white-button filter-option " + (this.props.filter.isOptionSelected(filterOption) ? 'active' : '')}
+                                onClick={this.filterClickHandler}>
+                                {filterOption}
+                            </Button>
+                        )
+                    }
+
+
+                </Collapse>
+            </div>
         );
     }
 }

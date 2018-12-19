@@ -8,7 +8,7 @@ import React, {Component} from 'react';
 import Header from './components/Header/Header';
 import ProductGrid from './components/ProductGrid/ProductGrid';
 import './App.scss';
-import FilterCategory from "./components/GridControls/Filters/FilterCategory";
+import FilterFactory from "./components/GridControls/Filters/FilterFactory";
 
 
 class App extends Component {
@@ -20,10 +20,29 @@ class App extends Component {
         this.state = {
             feed: [], //The  parsed JSON obtained from PapaParse
             grid: [], // filtered grid
+            filterFactory: new FilterFactory(),
+            /*filters: {
+                getRenderedFilters: function () {
+                    let result = new Object();
+                    let obj = component.state.filters;
+                    console.log(Object.keys(obj))
+                    console.log(obj)
 
-            filterCategories: [],
+                    for(let key in obj) {
+                        console.log(key)
+                    }
+                    window.myObj = obj
+                    Object.keys(obj).forEach(function (key) {
 
-            appliedFilters: [], //Filters applied by the user
+                        const value = obj[key];
+
+                        if (value instanceof Filter && value.hasRendered()) {
+                            result[key] = value;
+                        }
+                    })
+                    return result;
+                }
+            },*/
 
             packeryRefresh: false, /// whether packery should be refreshed
             packery: false, //Reference to the Packery Instance
@@ -42,19 +61,48 @@ class App extends Component {
                 component.setState(state)
             },
 
+            getFeed: function(){
+                return component.state.feed;
+            },
+
+            getGridProducts: function(){
+                return component.state.grid;
+            },
+
+            update: function (){
+                component.forceUpdate();
+            },
+
             //Indicates if the grid has been populated with data
             gridPopulated: function () {
                 return Boolean(component.state.feed.length);
             },
 
-            initFilterCategory: function () {
+            getFilterFactory: function () {
+                return component.state.filterFactory;
+            },
 
-                this.setState({
+            initFilters: function () {
+
+                component.state.filterFactory.renderNextFilter(component.state.feed);
+                //component.state.filterFactory.addFilter('category', component.state.feed, true)
+                //component.state.filterFactory.addFilter('functions', component.state.feed, false)
+
+            /*    this.setState({
+                    filters: {
+                        'category': new Filter([], 'category', component.state.feed, true),
+                        'function': new Filter([], 'function', component.state.feed),
+
+                    }
+                })*/
+
+
+                /*this.setState({
                     filterCategories: [
-                        new FilterCategory('category', component.state.feed, true),
-                        new FilterCategory('function', component.state.feed)
+                        new Filter([],'category', component.state.feed, true),
+                        new Filter([],'function', component.state.feed)
                     ]
-                })
+                })*/
             }
 
 

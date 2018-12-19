@@ -2,9 +2,9 @@ import React from "react";
 
 import {Button, Collapse} from 'reactstrap';
 
-import Filter from "./Filters/Filter";
+import FilterOption from "./Filters/FilterOption";
 import FilterCategory from "./Filters/FilterCategory";
-import Accordion from "./Accordion";
+import Filter from "./Filters/Filter";
 
 export default class FilterContainer extends React.Component {
 
@@ -36,7 +36,7 @@ export default class FilterContainer extends React.Component {
                 })
             },
             getAppliedFilters() {
-                return component.props.container.getState('appliedFilters');
+                return component.props.container.getState('filters');
             },
 
             getAppliedFiltersCount() {
@@ -56,18 +56,14 @@ export default class FilterContainer extends React.Component {
         this.toggle = this.toggle.bind(this);
     }
 
-    shouldComponentUpdate() {
-        /* if(!this.state.reload && !this.getAppliedFiltersCount()){
-             return true;
-         }else{
+   /* shouldComponentUpdate() {
 
-         }*/
 
         if (!this.props.container.gridPopulated()) {
             return false;
         }
         return (!this.state.reload && !this.container.getAppliedFiltersCount()) ? true : this.state.reload;
-    }
+    }*/
 
     //Get the filters associated with a filter category
     //Example, This function returns all filters associated with the filter category CATEGORY
@@ -124,7 +120,6 @@ export default class FilterContainer extends React.Component {
         }
 
 
-
         return appliedCategory;
 
 
@@ -144,34 +139,27 @@ export default class FilterContainer extends React.Component {
 
         //  if(this.props.container.gridPopulated() && this.props.container.getState().reloadFilters){
 
-        if (this.shouldComponentUpdate()) {
 
-            const children = <Accordion/>;
-            const filterCategories = this.props.container.getState('filterCategories');
+            const filterFactory = this.props.container.getFilterFactory();
 
-            const renderedCategories = filterCategories.filter(function(category){
-                return category.rendered ? true: false;
-            })
-console.log(renderedCategories)
+
             return (
 
                 //Display filters in an accordion form
-                Object.values(renderedCategories).map(category =>
-                    <Accordion
-                        key={"accordion-" + category.label}
+                Object.values(filterFactory.getRenderedFilters()).map(filter =>
+
+                    <Filter
+                        key={"accordion-" + filter.getLabel()}
                         isOpen={this.state.collapse}
-                        filterCategory={category.label}
-                        filters={category.getFilters()}
+                        filter={filter}
                         container={this.props.container}
-                        filterContainer={this.container}
+
                     />
                 )
 
 
             );
-        } else {
-            return null;
-        }
+
 
         /* }else{
             return null;
