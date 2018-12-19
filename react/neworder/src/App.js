@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 import {
     Collapse,
@@ -12,9 +13,13 @@ import {
     Col,
     Jumbotron,
 } from 'reactstrap';
-import ProductImport from './components/ProductImport'
-import ProductGrid from './components/ProductGrid/ProductGrid';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import ProductUpload from './components/ProductUpload.js'
 
+// This is the layout
+// Probably a good idea to display the imput and intro to upload
+// and once that is completed, remove the upload, and show the grid
 
 class App extends Component {
     render() {
@@ -39,13 +44,13 @@ class App extends Component {
                         <Row>
                             <Col>
                                 <h1>Import</h1>                    
-                                  <ProductImport />                              
+                                    <ProductUpload />                          
                             </Col>
                         </Row>
                         <Row>
                             <Col>
                                 <h1>The Grid</h1>  
-                                {/* <ProductGrid />                   */}
+                                {itemList.map(item => <ProductGrid someValue={item} />)} 
                             </Col>
                         </Row>
                     </Container>
@@ -54,5 +59,4 @@ class App extends Component {
         );
     }
 }
-
-export default App;
+    export default App;
