@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Input, InputGroup } from 'reactstrap'
-// import Papa from 'papaparse'
-import { uploadHandler } from './ProductGrid.js'
+import Papa from 'papaparse'
+// import ProductGrid from '../ProductGrid'
 
 // NOTE: This component shows the input, handles the upload, and exports the product object
 
@@ -10,36 +10,36 @@ import { uploadHandler } from './ProductGrid.js'
 // "All React components must act like pure functions with respect to their props."
 
 
-// // Stateless component
-// const ProductUpload = () => {
+// Stateless component
+const ProductUpload = () => {
 
-//     // Upload handler
-//   const uploadHandler = (event) => {
-//     const inventory = event.target.files[0]
+    // Upload handler
+  const uploadHandler = (event) => {
+    const inventory = event.target.files[0]
 
-//     Papa.parse(inventory, {
-//       header: true,
-//       complete: function(results) {  
+    Papa.parse(inventory, {
+      header: true,
+      complete: function(results) {  
 
-//         let items = results.data;   
-//         console.log(items)
-//       }
-//     })
-//   } // END UploadHandler
+        let items = results.data;   
+        console.log(items)
+      }
+    })
+  } // END UploadHandler
 
-//   return (
-//     <div>
-//       <InputGroup>
-//         <Input 
-//         type="file" 
-//         name="inputCSV" 
-//         onChange={uploadHandler}
-//         />
-//       </InputGroup>
-//     </div>
-//   )
+  return (
+    <div>
+      <InputGroup>
+        <Input 
+        type="file" 
+        name="inputCSV" 
+        onChange={uploadHandler}
+        />
+      </InputGroup>
+    </div>
+  )
 
-// } // END ProductUpload
+} // END ProductUpload
 
 
 
@@ -86,20 +86,20 @@ import { uploadHandler } from './ProductGrid.js'
 //   }
 // }
 
-// Just the input
-const ProductUpload = (props) => {
-  return (
-    <div>
-      <InputGroup>
-        <Input 
-        type="file" 
-        name="inputCSV" 
-        onChange={props.uploadHandler}
-        />
-      </InputGroup>
-    </div>
-  )
-}
+// // Just the input
+// const ProductUpload = (props) => {
+//   return (
+//     <div>
+//       <InputGroup>
+//         <Input 
+//         type="file" 
+//         name="inputCSV" 
+//         onChange={props.uploadHandler}
+//         />
+//       </InputGroup>
+//     </div>
+//   )
+// }
 
 export default ProductUpload
 

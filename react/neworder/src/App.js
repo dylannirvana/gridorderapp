@@ -15,7 +15,7 @@ import {
 } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import ProductUpload from './components/ProductUpload.js'
+import ProductUpload from './components/ProductUpload'
 
 // This is the layout
 // Probably a good idea to display the imput and intro to upload
@@ -50,7 +50,7 @@ class App extends Component {
                         <Row>
                             <Col>
                                 <h1>The Grid</h1>  
-                                {itemList.map(item => <ProductGrid someValue={item} />)} 
+                                {/* {itemList.map(item => <ProductGrid someValue={item} />)}  */}
                             </Col>
                         </Row>
                     </Container>
