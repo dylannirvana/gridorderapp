@@ -17,6 +17,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import ProductUpload from './components/ProductUpload'
 // import ProductGrid from './components/ProductGrid'
+import UploadHandler from './components/UploadHandler'
 
 // This is the layout
 // Probably a good idea to display the imput and intro to upload
@@ -51,7 +52,7 @@ class App extends Component {
                         <Row>
                             <Col>
                                 <h1>The Grid</h1>  
-                                {/* <ProductGrid /> */}
+                                <UploadHandler  />
                             </Col>
                         </Row>
                     </Container>

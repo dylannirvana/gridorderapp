@@ -1,8 +1,9 @@
-// import React from 'react'
-import React, { Component } from 'react'
+import React from 'react'
+// import React, { Component } from 'react'
 import { Input, InputGroup } from 'reactstrap'
-import Papa from 'papaparse'
+// import Papa from 'papaparse'
 // import ProductGrid from '../ProductGrid'
+import UploadHandler from '../UploadHandler'
 
 // NOTE: This component shows the input, handles the upload, and exports the product object
 
@@ -44,68 +45,70 @@ import Papa from 'papaparse'
 
 
 
-// Stateful component
-class ProductUpload extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      itemList: []
-    }
-  }
+// // Stateful component
+// class ProductUpload extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       itemList: []
+//     }
+//   }
 
-// state = {
-//   itemList: []
+// // state = {
+// //   itemList: []
+// // }
+
+//   render() {
+
+//     console.log(this.state) // this renders twice, once with [], then with object
+
+//     const uploadHandler = (event) => {
+//       event.preventDefault();
+//       const inventory = event.target.files[0]
+  
+//       Papa.parse(inventory, {
+//         header: true,
+//         complete: function(results) {
+  
+//           const items = results.data;   
+//           // console.log(this.state); // undefined
+//           this.setState({ itemList: items })
+
+//         }.bind(this) // binding was essential to this working
+//       })
+//     } // END UploadHandler
+
+//     console.log(typeof(this.state))
+//     console.log(this.itemList)
+
+//     return (
+//       <div>
+//         <InputGroup>
+//           <Input 
+//           type="file" 
+//           name="inputCSV" 
+//           onChange={uploadHandler}
+//           />
+//         </InputGroup>
+//       </div>
+//     )
+//   }
 // }
 
-  render() {
-
-    console.log(this.state) // this renders twice, once with [], then with object
-
-    const uploadHandler = (event) => {
-      event.preventDefault();
-      const inventory = event.target.files[0]
-  
-      Papa.parse(inventory, {
-        header: true,
-        complete: function(results) {
-  
-          const items = results.data;   
-          // console.log(this.state); // undefined
-          this.setState({ itemList: items })
-
-        }.bind(this) // binding was essential to this working
-      })
-    } // END UploadHandler
-    console.log(typeof(this.state))
-    console.log(this.itemList)
-    return (
-      <div>
-        <InputGroup>
-          <Input 
-          type="file" 
-          name="inputCSV" 
-          onChange={uploadHandler}
-          />
-        </InputGroup>
-      </div>
-    )
-  }
+// FIXME: Just the input, uses ProductGrid for the handler
+const ProductUpload = (props) => {
+  return (
+    <div>
+      <InputGroup>
+        <Input 
+        type="file" 
+        name="inputCSV" 
+        onChange={UploadHandler.uploadHandler} // ?
+        />
+      </InputGroup>
+    </div>
+  )
 }
-
-// // FIXME: Just the input, uses ProductGrid for the handler
-// const ProductUpload = (props) => {
-//   return (
-//     <div>
-//       <InputGroup>
-//         <Input 
-//         type="file" 
-//         name="inputCSV" 
-//         onChange={ProductGrid.uploadHandler}
-//         />
-//       </InputGroup>
-//     </div>
-//   )
-// }
 
 export default ProductUpload
 
