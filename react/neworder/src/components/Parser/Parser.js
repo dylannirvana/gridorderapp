@@ -44,7 +44,7 @@ import Papa from 'papaparse'
 
 
 // Stateful component
-class UploadHandler extends Component {
+class Parser extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -67,7 +67,7 @@ class UploadHandler extends Component {
 
       }.bind(this) // binding was essential to this working
     })
-  } // END UploadHandler
+  } // END Parser
   
   render() {
 
@@ -102,5 +102,5 @@ class UploadHandler extends Component {
 //   )
 // }
 
-export default UploadHandler
+export default Parser
 

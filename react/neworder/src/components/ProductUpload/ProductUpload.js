@@ -3,7 +3,7 @@ import React from 'react'
 import { Input, InputGroup } from 'reactstrap'
 // import Papa from 'papaparse'
 // import ProductGrid from '../ProductGrid'
-import UploadHandler from '../UploadHandler'
+import Parser from '../Parser'
 
 // NOTE: This component shows the input, handles the upload, and exports the product object
 
@@ -103,7 +103,7 @@ const ProductUpload = (props) => {
         <Input 
         type="file" 
         name="inputCSV" 
-        onChange={UploadHandler.uploadHandler} // ?
+        onChange={Parser.uploadHandler} // ?
         />
       </InputGroup>
     </div>
