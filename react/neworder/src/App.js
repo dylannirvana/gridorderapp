@@ -65,6 +65,7 @@ class App extends Component {
 
             initFilters: function () {
                 component.state.filterFactory.updateVisibleFilters(component.state.feed);
+                component.forceUpdate();
             }
 
 

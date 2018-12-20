@@ -1,10 +1,3 @@
-/* Colors */
-$color-mustard: #ebc60b;
-$color-white: #FFFFFF;
-$color-gray: #363636;
-
-
-
 @import 'components/Header/Header';
 @import 'components/GridControls/GridControls';
 @import 'components/GridControls/FileUploader/FileUploader';
@@ -18,9 +11,7 @@ $color-gray: #363636;
     align-items: center;
     justify-content: center;
 
-    #page-content {
-      padding-top: 64px;
-    }
+
 
   }
 
@@ -44,21 +35,8 @@ $color-gray: #363636;
     cursor: pointer;
     transition: 0.5s background-color, 0.5s color;
 
-    &.yellow-button {
-      background-color: $color-mustard;
-      color: $color-white;
-      border: 2px solid $color-white;
-    }
-    &.white-button {
-      color: $color-gray;
-      background-color: $color-white;
-      border: 2px solid $color-mustard;
 
-      &:hover {
-        background: $color-mustard;
-        color: $color-white
-      }
-    }
+
   }
 
 }

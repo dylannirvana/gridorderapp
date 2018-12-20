@@ -10,7 +10,6 @@ export default class Filter extends React.Component {
         super(props);
 
 
-
         this.state = {
             collapse: false,
             name: name,
@@ -21,9 +20,6 @@ export default class Filter extends React.Component {
 
 
         this.toggle = this.toggle.bind(this);
-
-
-
 
 
         /*
@@ -48,25 +44,22 @@ export default class Filter extends React.Component {
         };
 
 
-
         /*
          *  Click event handler, triggered when filter button is clicked
          */
-        this.filterOptionClick =  (event) => {
+        this.filterOptionClick = (event) => {
             const FILTER_FACTORY = this.props.container.getFilterFactory();
             let gridProducts = this.props.container.getGridProducts();
 
             FILTER_FACTORY.selectOption(this.props.filterName, event.target.textContent);
 
             gridProducts = this.props.container.getFilterFactory().filterProducts(gridProducts)
-            FILTER_FACTORY.updateVisibleFilters(gridProducts,this.props.filterName);
+            FILTER_FACTORY.updateVisibleFilters(gridProducts, this.props.filterName);
 
             this.props.container.setState({
                 grid: this.props.container.getFilterFactory().filterProducts(gridProducts)
             });
         }
-
-
 
 
     }
@@ -86,26 +79,20 @@ export default class Filter extends React.Component {
         //this.state = this.props.filterState;
 
         return (
-            <div key={this.props.filterCategory + '-accordion'} className={"filter-accordion"}>
 
-                <Button key={this.props.filterName + '-toggle'} className={"filter-accordion-head"}
-                        onClick={this.toggle}>{this.props.filterName}
+
+            Object.values(this.props.filterOptions).map(filterOption =>
+
+                <Button
+                    color={"warning"}
+                    key={this.props.filterName + '-' + filterOption}
+                    className={"btn white-button filter-option " + (this.props.selectedOption == filterOption ? 'active' : '')}
+                    onClick={this.filterOptionClick}>
+                    {filterOption}
                 </Button>
-                    {
-                        Object.values(this.props.filterOptions).map(filterOption =>
-
-                            <Button
-                                key={this.props.filterName + '-' + filterOption}
-                                className={"btn white-button filter-option " + (this.props.selectedOption == filterOption ? 'active' : '')}
-                                onClick={this.filterOptionClick}>
-                                {filterOption}
-                            </Button>
-                        )
-                    }
+            )
 
 
-
-            </div>
         );
     }
 }

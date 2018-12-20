@@ -41,38 +41,30 @@ class GridControls extends React.Component {
         return (
 
             <ul className={"ml-auto navbar-nav"}>
+
+                <li>
+                    {
+                        <FilterContainer
+                            container={this.props.container}
+                        />
+                    }
+
+                </li>
+
                 <li style={{display: this.props.container.gridPopulated() ? '' : 'none'}}>
 
                     {/* NewSession is a component for destryoing the current session and starting a new one*/}
                     <NewSession container={this.props.container}/>
 
                 </li>
+
                 <li style={{display: this.props.container.gridPopulated() ? '' : 'none'}}>
 
                     {/*SaveGrid is a component for generating a CSV file from the grid tiles */}
                     <SaveGrid container={this.props.container}/>
 
                 </li>
-                <li>
-                    <Button
-                        onClick={this.togglePushMenu} className={"white-button btn nav-btn"}
-                        style={{display: this.props.container.gridPopulated() ? '' : 'none'}}>
-                        Filters
-                    </Button>
 
-                    <Collapse id={"offcanvas-menu"} isOpen={this.state.isOpen} navbar>
-                        {
-                            <div className={"wrapper"}>
-                                <div className={"close"} onClick={this.togglePushMenu}>Close</div>
-                                {
-                                    <FilterContainer
-                                        container={this.props.container}
-                                    />
-                                }
-                            </div>
-                        }
-                    </Collapse>
-                </li>
 
             </ul>
         )

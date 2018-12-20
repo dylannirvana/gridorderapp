@@ -9,7 +9,6 @@
     z-index: 99;
     min-width: 170px;
     padding: 20px;
-    border-left: 3px solid $color-mustard;
     padding-top: 65px;
 
     .close {
@@ -32,7 +31,7 @@
             content: ' ';
             height: 33px;
             width: 2px;
-            background-color: $color-mustard;
+
         }
 
         &:before {
@@ -47,7 +46,7 @@
 
     .filter-accordion{
         margin-top: 5px;
-        border: 2px solid $color-mustard;
+
 
 
         button.btn{
@@ -62,10 +61,7 @@
             text-transform: capitalize;
             border: none;
 
-            &.active{
-                background-color: $color-mustard;
-                color: $color-white;
-            }
+
         }
 
 
@@ -73,9 +69,7 @@
 
         .collapse{
             background: white;
-            button:first-of-type{
-                border-top: 1px solid $color-mustard ;
-            }
+
         }
     }
 
