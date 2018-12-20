@@ -1,6 +1,6 @@
 import React from "react";
 import Filter from "./Filter";
-import {ButtonGroup,Container} from 'reactstrap';
+import {ButtonGroup, Container} from 'reactstrap';
 
 export default class FilterContainer extends React.Component {
 
@@ -39,37 +39,40 @@ export default class FilterContainer extends React.Component {
 
         //  if(this.props.container.gridPopulated() && this.props.container.getState().reloadFilters){
 
+        if (this.props.container.gridPopulated()) {
+            const FILTER_FACTORY = this.props.container.getFilterFactory();
 
-        const FILTER_FACTORY = this.props.container.getFilterFactory();
-        console.log(FILTER_FACTORY.getVisibleFilters())
 
-        return (
-            <Container className={"text-center"}>
-                {
-                    Object.values(FILTER_FACTORY.getVisibleFilters()).map(filter =>
-                        <div className={filter.filterName + '-filter'}>
-                            <h3 className="ui-group__title">{filter.filterName}</h3>
-                            <ButtonGroup className={"filter d-block js-radio-button-group text-center"}>
+            return (
+                <Container className={"text-center"}>
+                    {
+                        Object.values(FILTER_FACTORY.getVisibleFilters()).map(filter =>
+                            <div className={filter.filterName + '-filter'}>
+                                <h3 className="ui-group__title">{filter.filterName}</h3>
+                                <ButtonGroup className={"filter d-block js-radio-button-group text-center"}>
 
-                                {
-                                    <Filter
-                                        key={"accordion-" + filter.filterName}
-                                        isOpen={this.state.collapse}
-                                        filter={filter}
-                                        filterName={filter.filterName}
-                                        filterOptions={filter.filterOptions}
-                                        selectedOption={filter.selectedOption}
-                                        container={this.props.container}
+                                    {
+                                        <Filter
+                                            key={"accordion-" + filter.filterName}
+                                            isOpen={this.state.collapse}
+                                            filter={filter}
+                                            filterName={filter.filterName}
+                                            filterOptions={filter.filterOptions}
+                                            selectedOption={filter.selectedOption}
+                                            container={this.props.container}
 
-                                    />
-                                }
+                                        />
+                                    }
 
-                            </ButtonGroup>
-                        </div>
-                    )
-                }
-            </Container>
-        );
+                                </ButtonGroup>
+                            </div>
+                        )
+                    }
+                </Container>
+            );
+        }
+
+        return null;
 
 
     }

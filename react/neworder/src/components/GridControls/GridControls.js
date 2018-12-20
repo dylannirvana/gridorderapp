@@ -9,7 +9,7 @@ import {
 
 } from 'reactstrap';
 
-import NewSession from "./NewSession";
+
 
 import SaveGrid from "./SaveGrid";
 import FilterContainer from "./Filters/FilterContainer";
@@ -51,12 +51,6 @@ class GridControls extends React.Component {
 
                 </li>
 
-                <li style={{display: this.props.container.gridPopulated() ? '' : 'none'}}>
-
-                    {/* NewSession is a component for destryoing the current session and starting a new one*/}
-                    <NewSession container={this.props.container}/>
-
-                </li>
 
                 <li style={{display: this.props.container.gridPopulated() ? '' : 'none'}}>
 

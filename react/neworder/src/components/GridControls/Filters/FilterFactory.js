@@ -4,17 +4,25 @@ const FILTER_LIST = ['category', 'function']
 export default class FilterFactory {
 
 
-    constructor() {
-        const _SELF = this;
-        _SELF.filters = new Object();
-        _SELF.currentFilterIndex = 0;
+    constructor(feed) {
+        //const _SELF = this;
+        this.filters = new Object();
+
+        this.iterator = 0;
+
+        this.feed = Array.from(feed);
+
+        this.filteredProducts = Array.from(feed);
+
     }
 
-    addNewFilter = (filterName, isVisible, index,products) => {
+    addNewFilter = (filterName, isVisible, index) => {
 
         this.filters[filterName] = {
-            filterName, isVisible, index,
-            filterOptions: this.getFilterOptions(filterName,products),
+            filterName,
+            isVisible,
+            index,
+            filterOptions: this.getFilterOptions(filterName),
             selectedOption: ''
         }
     }
@@ -23,13 +31,13 @@ export default class FilterFactory {
         this.filters[filterName].selectedOption = option.toLowerCase();
     }
 
-    getFilterOptions = (filterName,products) => {
+    getFilterOptions = (filterName, products) => {
 
-        let filterOptions= [];
+        let filterOptions = [];
         /*
          * Iterate through the products and populate filter options
          */
-        products.forEach((product) => {
+        this.filteredProducts.forEach((product) => {
             const filterOption = product[filterName] === undefined ? null : product[filterName].split(" ")[0];
 
             if (filterOption && filterOptions.indexOf(filterOption.toLowerCase()) == -1) {
@@ -61,24 +69,68 @@ export default class FilterFactory {
     }
 
 
-    updateVisibleFilters = (products, filterName) => {
+    updateVisibleFilters = (clickedFilterName, filter = false) => {
 
-        if (this.currentFilterIndex < FILTER_LIST.length) {
-            this.addNewFilter(FILTER_LIST[this.currentFilterIndex], true, this.currentFilterIndex, products)
-            this.currentFilterIndex++;
+
+        let clickedFilterIndex = clickedFilterName ? this.filters[clickedFilterName].index : undefined;
+
+
+        if (clickedFilterIndex != undefined && clickedFilterIndex + 1 <= this.iterator - 1) {
+
+            //let feed = Array.from(this.feed);
+
+            const NEW_ITERATOR = clickedFilterIndex;
+          //  if (clickedFilterIndex != 0) {
+                for (; clickedFilterIndex++ <= this.iterator - 1; clickedFilterIndex++) {
+                    delete this.filters[FILTER_LIST[clickedFilterIndex]]
+                }
+            //}
+
+
+            this.iterator = 0;
+            for (this.iterator = 0; this.iterator === clickedFilterIndex; this.iterator++) {
+                let filter = this.filters[FILTER_LIST[this.iterator]];
+                this.filteredProducts = this.filterProducts(this.filteredProducts);
+                this.addNewFilter(filter.filterName, true, this.iterator)
+            }
+
+
+            this.iterator = NEW_ITERATOR;
+            console.log(this.iterator)
+            return filter ? this.filteredProducts : true;
+
+
         }
+
+        if (this.iterator < FILTER_LIST.length) {
+
+
+            const FILTER_NAME = FILTER_LIST[this.iterator];
+            if (filter) this.filteredProducts = this.filterProducts(this.filteredProducts);
+
+            //result = filter ? this.filterProducts(products) : products;
+
+            this.addNewFilter(FILTER_NAME, true, this.iterator)
+            this.iterator++;
+            console.log(this.iterator)
+            return this.filteredProducts;
+
+        }
+        return this.filteredProducts;
 
     };
 
     filterProducts(products) {
+
+
         let selectedOptions = [];
         const _SELF = this;
         const VISIBLE_FILTERS = _SELF.getVisibleFilters();
         FILTER_LIST.forEach(function (filterName) {
-            // console.log(renderedFilters)
+
             Object.keys(VISIBLE_FILTERS).forEach(function (key) {
 
-                //  console.log(filterName, _SELF.filters[filterName])
+
                 const SELECTED_OPTION = _SELF.filters[filterName] !== undefined ? _SELF.filters[filterName].selectedOption : undefined;
                 if (key === filterName && SELECTED_OPTION) {
                     selectedOptions.push({
@@ -98,7 +150,7 @@ export default class FilterFactory {
                 //Check if the product matches atleast one of the the selected filters
                 if (result && product[filter.name] !== undefined && product[filter.name].toLowerCase().indexOf(filter.selectedOption.toLowerCase()) !== -1) {
 
-                    // console.log(filter.label, filter.selectedOption.toLowerCase())
+
                     //If there is a match, return true and exit the loop
 
                     // result = true;

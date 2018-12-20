@@ -22,7 +22,7 @@ class App extends Component {
         this.state = {
             feed: [], //The  parsed JSON obtained from PapaParse
             grid: [], // filtered grid
-            filterFactory: new FilterFactory(),
+            filterFactory: undefined,
 
 
             packeryRefresh: false, /// whether packery should be refreshed
@@ -39,7 +39,14 @@ class App extends Component {
             },
 
             setState: function (state) {
-                component.setState(state)
+
+                if(component.state.filterFactory === undefined){
+                    component.state.filterFactory = new FilterFactory(state.feed);
+                    component.state.filterFactory.updateVisibleFilters();
+                }
+
+
+                component.setState(state);
             },
 
             getFeed: function(){
@@ -64,8 +71,8 @@ class App extends Component {
             },
 
             initFilters: function () {
-                component.state.filterFactory.updateVisibleFilters(component.state.feed);
-                component.forceUpdate();
+
+               // component.forceUpdate();
             }
 
 
