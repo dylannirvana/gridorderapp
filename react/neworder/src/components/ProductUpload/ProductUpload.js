@@ -46,20 +46,23 @@ import Papa from 'papaparse'
 
 // Stateful component
 class ProductUpload extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     itemList: []
-  //   }
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      itemList: []
+    }
+  }
+
+// state = {
+//   itemList: []
+// }
 
   render() {
 
-    this.setState = {
-      itemList: []
-    }
+    console.log(this.state) // this renders twice, once with [], then with object
 
     const uploadHandler = (event) => {
+      event.preventDefault();
       const inventory = event.target.files[0]
   
       Papa.parse(inventory, {
@@ -67,12 +70,14 @@ class ProductUpload extends Component {
         complete: function(results) {
   
           const items = results.data;   
-          console.log(items)
-          // this.setState({ itemList: items })
-        }
+          // console.log(this.state); // undefined
+          this.setState({ itemList: items })
+
+        }.bind(this) // binding was essential to this working
       })
     } // END UploadHandler
-    
+    console.log(typeof(this.state))
+    console.log(this.itemList)
     return (
       <div>
         <InputGroup>
