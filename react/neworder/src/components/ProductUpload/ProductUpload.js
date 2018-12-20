@@ -103,18 +103,3 @@ const ProductUpload = () => {
 
 export default ProductUpload
 
-
-  // TODO: export the product grid
-  // const ProductExport = () => {
-
-  // }
-
-  // // handle the export
-  // const ExportHandler = (props) => {
-
-  // }
-
-  // QUESTION: What about parsing the output? Isn't weird to have the input function just sitting
-  // there unused when the parser does an export?
-  // No, have the import handler AND the export handler here
-
