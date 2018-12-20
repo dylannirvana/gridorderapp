@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 
 import GridOrder from './App';
 import * as serviceWorker from './serviceWorker';
+
+import './styles/isotope-docs.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/album.css';
 
 // The purpose of this file is to assemble the application and render it to the DOM
 

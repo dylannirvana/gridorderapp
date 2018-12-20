@@ -50,12 +50,15 @@ export default class FilterContainer extends React.Component {
             return (
 
                 //Display filters in an accordion form
-                Object.values(FILTER_FACTORY.getRenderedContexts()).map(filter =>
+                Object.values(FILTER_FACTORY.getVisibleFilters()).map(filter =>
 
                     <Filter
-                        key={"accordion-" + filter.getName()}
+                        key={"accordion-" + filter.filterName}
                         isOpen={this.state.collapse}
                         filter={filter}
+                        filterName = {filter.filterName}
+                        filterOptions = {filter.filterOptions}
+                        selectedOption = {filter.selectedOption}
                         container={this.props.container}
 
                     />
