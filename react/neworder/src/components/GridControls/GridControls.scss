@@ -6,10 +6,14 @@
         .btn-group{
             .filter-option:not(:last-of-type){
                 margin-right: 5px;
-
+                font-style: initial;
             }
         }
 
+        .ui-group__title{
+            margin-right: 0;
+            text-transform: capitalize;
+        }
     }
 
 

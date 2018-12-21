@@ -10,43 +10,35 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
-
-
   }
-
 
   .row, .col {
     margin: 0;
     padding: 0;
   }
 
-  .btn,button{
-    &:focus {
-      outline: none;
-      box-shadow: none;
-    }
-  }
+
+
   .btn {
     border-radius: 3px;
     margin: 0;
     cursor: pointer;
     transition: 0.5s background-color, 0.5s color;
-
-
-
   }
-
 }
 
-#page-content {
+#app-intro{
+  padding-bottom: 20px;
+}
+
+#page-content{
   background: white;
   max-width: 730px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 20px;
-  padding: 0;
+  padding-top: 0;
 }
 
 

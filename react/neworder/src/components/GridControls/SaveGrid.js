@@ -43,7 +43,7 @@ export default class SaveGrid extends React.Component {
     render() {
 
         return (
-            <Button className={"nav-btn"} onClick={this.saveNewGrid}>
+            <Button color="primary" className={"nav-btn"} onClick={this.saveNewGrid}>
                 Save
             </Button>
 

@@ -87,7 +87,7 @@ class App extends Component {
 
                 <Header container={this.container}/>
 
-                <Jumbotron className={'text-center'}>
+                <Jumbotron  id="app-intro" className={"text-center"}>
                     <Container>
                         <h1 className={"jumbotron-heading"}>Grid Order App</h1>
                         <p className={"lead text-muted"}>
