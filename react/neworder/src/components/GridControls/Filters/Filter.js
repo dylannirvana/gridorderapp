@@ -51,7 +51,7 @@ export default class Filter extends React.Component {
             const FILTER_FACTORY = this.props.container.getFilterFactory();
            let gridProducts = this.props.container.getGridProducts();
 
-            FILTER_FACTORY.selectOption(this.props.filterName, event.target.textContent);
+            FILTER_FACTORY.toggleFilterOption(this.props.filterName, event.target.textContent);
 
       //      gridProducts = this.props.container.getFilterFactory().filterProducts(gridProducts)
             gridProducts = FILTER_FACTORY.updateVisibleFilters(this.props.filterName, true);
