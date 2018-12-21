@@ -8,7 +8,79 @@ export default class FilterFactory {
         //const _SELF = this;
         this.filters = new Object();
 
-        this.iterator = 0;
+
+        this.iterator = {
+
+            index: 0,
+
+            isFirst: () => {
+              return this.iterator.index === 0;
+            },
+
+            isLast: () => {
+                return this.iterator.index === FILTER_LIST.length - 1;
+            },
+            next: () => {
+
+                if (this.iterator.index <= FILTER_LIST.length - 1) {
+
+                    this.iterator.index++;
+
+                }
+
+                return this.iterator.current();
+            },
+
+            prev: () => {
+
+                if (this.iterator.index > 0) {
+
+                    this.iterator.index--;
+
+                }
+
+                return this.iterator.current();
+            },
+
+            current: () => {
+                if (this.iterator.index < FILTER_LIST.length) {
+
+                    const FILTER_NAME = FILTER_LIST[this.iterator.index];
+
+                    if (!this.filters[FILTER_NAME]) {
+                        this.addNewFilter(FILTER_NAME, true);
+
+                    }
+
+                    return this.filters[FILTER_NAME];
+
+                }
+
+                return false;
+            },
+
+            goTo: (filterName) => {
+                this.iterator.index = FILTER_LIST.indexOf(filterName);
+
+               // this.iterator.index++; //Do not remove clicked filter
+
+                //Remove filters that follow
+                for(let i = this.iterator.index + 1; i <= (FILTER_LIST.length - 1); i++){
+                    const FILTER_NAME = FILTER_LIST[i];
+
+                    if(this.filters[FILTER_NAME]){
+                        delete this.filters[FILTER_NAME];
+                    }
+
+                }
+
+                this.filterProducts(true);
+
+                this.iterator.next();
+            }
+
+
+        }
 
         this.feed = Array.from(feed);
 
@@ -42,7 +114,7 @@ export default class FilterFactory {
          * Iterate through the products and populate filter options
          */
 
-        console.log('GET FILTER OPTION' , this.filteredProducts)
+        console.log('GET FILTER OPTION', this.filteredProducts)
         this.filteredProducts.forEach((product) => {
             const filterOption = product[filterName] === undefined ? null : product[filterName].split(" ")[0];
 
@@ -74,80 +146,23 @@ export default class FilterFactory {
         return Object.keys(obj).length ? result : [];
     }
 
-    getNextFilter = () =>{
 
-    }
-    updateFilterIterator = (iteratorValue = false) => {
-
-        if(iteratorValue){
-            this.iterator = iteratorValue;
-        }else{
-            this.iterator = this.iterator + 1 == FILTER_LIST.length ? false : (this.iterator + 1);
-        }
-
-
-    }
 
     updateVisibleFilters = (clickedFilterName = "", filter = false) => {
 
+         if(!clickedFilterName){
 
-        /*if(!this.filters[clickedFilterName].selectedOption){
+             this.iterator.current();
 
-        }*/
-
-        if (clickedFilterName) {
-
-
-            //If filter has been de-selected
-            if (!this.filters[clickedFilterName].selectedOption) {
-
-                this.iterator = clickedFilterName ? FILTER_LIST.indexOf(clickedFilterName) : this.iterator;
-
-                this.iterator++; //Dont include the filter that was clicked
-
-
-                for (; this.iterator <= FILTER_LIST.length; this.iterator++) {
-                    delete this.filters[FILTER_LIST[this.iterator]]
-                    console.log('DELETING ' , this.filters[FILTER_LIST[this.iterator]])
-                }
-
-                this.iterator = (FILTER_LIST.indexOf(clickedFilterName) + 1);
-                //this.addNewFilter(FILTER_LIST[(FILTER_LIST.indexOf(clickedFilterName) + 1).filterName], true)
-
-
-                return this.filterProducts(true);
-            }
-
-
-
-
-        }
-
-        if (this.iterator < FILTER_LIST.length ||  this.iterator === false) {
-
-
-            const FILTER_NAME = FILTER_LIST[this.iterator];
-
-
-
-            if (filter) {
-                this.filteredProducts = this.filterProducts(true)
-            };
-
-            //result = filter ? this.filterProducts(products) : products;
-
-            this.addNewFilter(FILTER_NAME, true)
-            this.iterator++;
+            // console.log(this.filterProducts(true))
+             return this.filterProducts(true);
+         }else{
+            // const PRODUCTS = this.filterProducts();
+            this.iterator.goTo(clickedFilterName);
 
             return this.filteredProducts;
+         }
 
-        }
-
-
-
-      //  console.log(this.iterator)
-
-        return this.filteredProducts;
 
     };
 
@@ -174,7 +189,7 @@ export default class FilterFactory {
 
         });
 
-        console.log('SELECTED OPTIONS ' , selectedOptionsList)
+
         return selectedOptionsList;
     };
 
@@ -186,17 +201,17 @@ export default class FilterFactory {
         if (!selectedOptionsList.length) {
             this.filteredProducts = Array.from(this.feed);
 
-            console.log('RSET FILTER PRODUCTS ' , this.filteredProducts)
+           // console.log('RSET FILTER PRODUCTS ', this.filteredProducts)
             return this.filteredProducts;
         }
 
-        if(reset){
+        if (reset) {
             this.filteredProducts = Array.from(this.feed);
         }
 
         this.filteredProducts = this.filteredProducts.filter(function (product, index) { //Loop through each product in the product feed
             let result = true;
-            selectedOptionsList.some( (filter) => { //Loop through the applied filters
+            selectedOptionsList.some((filter) => { //Loop through the applied filters
 
                 //Check if the product matches atleast one of the the selected filters
                 if (result && product[filter.name] !== undefined && product[filter.name].toLowerCase().indexOf(filter.selectedOption.toLowerCase()) !== -1) {
@@ -213,7 +228,6 @@ export default class FilterFactory {
 
             return result;
         });
-        console.log('FILTER PRODUCTS ' , this.filteredProducts)
 
         return this.filteredProducts;
 

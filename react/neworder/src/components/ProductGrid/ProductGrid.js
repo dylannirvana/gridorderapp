@@ -58,8 +58,7 @@ class ProductGrid extends React.Component {
 
         var packeryInstance = new Packery('.grid', {
             itemSelector: '.grid-item',
-            percentPosition: true,
-            gutter: 5
+            percentPosition: true
         });
 
         //Initialize instance of dragable component, which makes the products dragable
