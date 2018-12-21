@@ -44,7 +44,7 @@ class GridControls extends React.Component {
                 </li>
 
 
-                <li style={{display: this.props.container.gridPopulated() ? '' : 'none'}}>
+                <li className={"text-center"} style={{display: this.props.container.gridPopulated() ? '' : 'none'}}>
 
                     {/*SaveGrid is a component for generating a CSV file from the grid tiles */}
                     <SaveGrid container={this.props.container}/>
