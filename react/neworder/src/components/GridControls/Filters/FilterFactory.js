@@ -1,6 +1,6 @@
 import Filter from './Filter';
 
-const FILTER_LIST = ['category', 'function', 'designer']
+const FILTER_LIST = ['category', 'function']
 export default class FilterFactory {
 
 

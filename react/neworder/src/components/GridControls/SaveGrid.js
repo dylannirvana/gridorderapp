@@ -34,6 +34,7 @@ export default class SaveGrid extends React.Component {
         var downloadLink = document.createElement('a');
         downloadLink.href = csvURL;
         downloadLink.setAttribute('download', 'download.csv');
+        document.body.appendChild(downloadLink); // Required for FF
         downloadLink.click();
 
 
