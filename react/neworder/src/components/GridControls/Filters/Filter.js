@@ -87,7 +87,7 @@ export default class Filter extends React.Component {
                 <Button
                     color={"warning"}
                     key={this.props.filterName + '-' + filterOption}
-                    className={"btn white-button filter-option " + (this.props.selectedOption == filterOption ? 'active' : '')}
+                    className={"btn filter-option " + (this.props.selectedOption == filterOption ? 'active' : '')}
                     onClick={this.filterOptionClick}>
                     {filterOption}
                 </Button>

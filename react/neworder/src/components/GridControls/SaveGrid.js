@@ -17,7 +17,7 @@ export default class SaveGrid extends React.Component {
 
     //Generates a new CSV file, based on new order of the grid tiles
     saveNewGrid() {
-        console.log('SAVE NEW GRID')
+
         const newGridHTML = this.props.container.getState('packery').getItemElements();
         let newGridJSON = [];
 
@@ -43,7 +43,7 @@ export default class SaveGrid extends React.Component {
 
         return (
             <Button className={"nav-btn"} onClick={this.saveNewGrid}>
-                Save Grid
+                Save
             </Button>
 
         )

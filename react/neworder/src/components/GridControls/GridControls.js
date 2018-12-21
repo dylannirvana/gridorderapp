@@ -32,20 +32,18 @@ class GridControls extends React.Component {
     render() {
         return (
 
-            <ul className={"ml-auto navbar-nav"}>
+            <ul id="product-grid-controls" className={"ml-auto navbar-nav"}>
 
-                <li>
+                <li className={"grid-control"}>
                     {
                         <FilterContainer
                             container={this.props.container}
                         />
                     }
-
                 </li>
 
 
-                <li className={"text-center"} style={{display: this.props.container.gridPopulated() ? '' : 'none'}}>
-
+                <li className={"text-center grid-control"} style={{display: this.props.container.gridPopulated() ? '' : 'none'}}>
                     {/*SaveGrid is a component for generating a CSV file from the grid tiles */}
                     <SaveGrid container={this.props.container}/>
 

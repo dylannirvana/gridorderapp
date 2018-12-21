@@ -1,77 +1,17 @@
 
-#offcanvas-menu{
-    position: fixed;
-    right: 0;
-    background: #f3f3f3;
-    height: 100%;
-    top: 0px;
-    width: 30%;
-    z-index: 99;
-    min-width: 170px;
-    padding: 20px;
-    padding-top: 65px;
+#product-grid-controls{
+    .grid-control{
+        margin-top: 10px;
 
-    .close {
-        position: absolute;
-        right: 32px;
-        top: 12px;
-        width: 32px;
-        height: 32px;
-        opacity: 1;
-        font-size: 0;
-        left: 20px;
+        .btn-group{
+            .filter-option:not(:last-of-type){
+                margin-right: 5px;
 
-        &:hover{
-            opacity: 1;
-        }
-
-        &:before, &:after {
-            position: absolute;
-            left: 15px;
-            content: ' ';
-            height: 33px;
-            width: 2px;
-
-        }
-
-        &:before {
-            transform: rotate(45deg);
-        }
-        &:after {
-            transform: rotate(-45deg);
-        }
-    }
-
-
-
-    .filter-accordion{
-        margin-top: 5px;
-
-
-
-        button.btn{
-            &:focus{
-                box-shadow: none;
             }
-
-            background: white;
-            width: 100%;
-            border-radius: 0;
-            color: #000;
-            text-transform: capitalize;
-            border: none;
-
-
         }
 
-
-
-
-        .collapse{
-            background: white;
-
-        }
     }
+
 
 }
 .navbar{
