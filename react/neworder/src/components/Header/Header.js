@@ -5,7 +5,11 @@ import React from "react";
 import {
     Navbar,
     NavbarBrand,
-    Container
+    Container,
+    Collapse,
+    Button,
+    Col,
+    Row
 } from 'reactstrap';
 
 
@@ -13,10 +17,45 @@ import {
 
 export default class Header extends React.Component {
 
+    constructor(props){
+        super(props);
+        this.toggle = this.toggle.bind(this);
+
+        this.state={
+            isOpen: false
+        }
+    }
+
+    toggle = () => {
+        this.setState({ collapse: !this.state.collapse });
+    }
+
     render() {
 
         return (
             <div id={"page-header"} className={"navbar navbar-dark bg-dark shadow-sm"}>
+                <Collapse id={"header-collapse-panel"} isOpen={this.state.collapse}>
+                    <Container>
+                        <Row>
+                            <Col sm="8" md="7" className={"py-4"}>
+                                <h4 className="text-white">About this tool</h4>
+                                <p className="text-muted">Add some information about how the Grid Order tool works. We
+                                    should be able to explain it in terms that are easy to understand. We encourage you
+                                    to use it.
+                                </p>
+                            </Col>
+                            <Col sm="4" md={{offset: 1}} className={"py-4"}>
+                                <h4 className="text-white">Questions?</h4>
+                                <ul className="list-unstyled">
+                                    <li><a href="#" className="text-white">Contact the Developer</a></li>
+                                    <li><a href="#" className="text-white">Merchandising</a></li>
+                                    <li><a href="#" className="text-white">Suggestions welcome!</a></li>
+                                </ul>
+                            </Col>
+
+                        </Row>
+                    </Container>
+                </Collapse>
             <Container >
                 <Navbar color="dark" dark>
                     <NavbarBrand className={"navbar-brand d-flex align-items-center"} id={"logo"} href="/">
@@ -34,6 +73,11 @@ export default class Header extends React.Component {
                         </svg>
                         <strong>Grid Order App</strong>
                     </NavbarBrand>
+
+                    <Button color="dark"  className={"navbar-toggler"} onClick={this.toggle} >
+                        <span className="navbar-toggler-icon"></span>
+                    </Button>
+
 
                 </Navbar>
             </Container>
