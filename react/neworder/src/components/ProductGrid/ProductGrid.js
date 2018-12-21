@@ -52,7 +52,7 @@ class ProductGrid extends React.Component {
 
     //Initialize packery on the product grid and make the Bootstrap cards draggable
     initPackery() {
-
+console.log('INIT PACKERY')
         const component = this;
         let dragableComponents = [];
 
@@ -91,7 +91,7 @@ class ProductGrid extends React.Component {
 
     //Destroys existing packery instance
     destroyPackery() {
-
+console.log('DESTROYING PACKEY')
         const component = this;
         const packeryInstance = component.props.container.getState('packery');
 

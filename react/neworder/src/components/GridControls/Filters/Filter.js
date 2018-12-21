@@ -55,9 +55,10 @@ export default class Filter extends React.Component {
 
       //      gridProducts = this.props.container.getFilterFactory().filterProducts(gridProducts)
             gridProducts = FILTER_FACTORY.updateVisibleFilters(this.props.filterName, true);
-console.log(gridProducts)
+
             this.props.container.setState({
-                grid: gridProducts
+                grid: gridProducts,
+                packeryRefresh: true
             });
         }
 

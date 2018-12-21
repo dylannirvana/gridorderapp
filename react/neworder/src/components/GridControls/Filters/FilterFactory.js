@@ -1,6 +1,6 @@
 import Filter from './Filter';
 
-const FILTER_LIST = ['category', 'function']
+const FILTER_LIST = ['category', 'function', 'designer']
 export default class FilterFactory {
 
 
@@ -114,7 +114,7 @@ export default class FilterFactory {
          * Iterate through the products and populate filter options
          */
 
-        console.log('GET FILTER OPTION', this.filteredProducts)
+
         this.filteredProducts.forEach((product) => {
             const filterOption = product[filterName] === undefined ? null : product[filterName].split(" ")[0];
 
@@ -154,7 +154,7 @@ export default class FilterFactory {
 
              this.iterator.current();
 
-            // console.log(this.filterProducts(true))
+
              return this.filterProducts(true);
          }else{
             // const PRODUCTS = this.filterProducts();
@@ -174,7 +174,7 @@ export default class FilterFactory {
         FILTER_LIST.forEach(filterName => {
 
             Object.keys(VISIBLE_FILTERS).forEach(key => {
-                //console.log(filterName)
+
 
                 const SELECTED_OPTION = this.filters[filterName] !== undefined ? this.filters[filterName].selectedOption : undefined;
 
@@ -201,7 +201,7 @@ export default class FilterFactory {
         if (!selectedOptionsList.length) {
             this.filteredProducts = Array.from(this.feed);
 
-           // console.log('RSET FILTER PRODUCTS ', this.filteredProducts)
+
             return this.filteredProducts;
         }
 
