@@ -21,6 +21,8 @@
   .card-body {
     text-align: center;
     padding: 1rem;
+    padding-bottom: 5px;
+    flex-grow: inherit;
   }
   .card-title {
     font-size: .9rem;
@@ -42,20 +44,16 @@
     .name{
       display: block;
     }
-    .neworder-label{
-      display: none ;
-    }
   }
 
-  &.show-neworder-label{
-    .product-info{
-      .neworder-label{
-        display: block;
-      }
-    }
 
-
+  .gridorder-label{
+    text-align: left;
+    display: block;
+    width: 100%;
   }
+
+
 
   /* CSS for Drag interaction */
 

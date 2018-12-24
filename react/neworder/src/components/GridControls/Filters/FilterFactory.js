@@ -1,6 +1,8 @@
 import Filter from './Filter';
 
-const FILTER_LIST = ['category', 'function']
+const FILTER_LIST = ['category', 'function', 'designer'];
+
+
 export default class FilterFactory {
 
 
@@ -14,12 +16,13 @@ export default class FilterFactory {
             index: 0,
 
             isFirst: () => {
-              return this.iterator.index === 0;
+                return this.iterator.index === 0;
             },
 
             isLast: () => {
                 return this.iterator.index === FILTER_LIST.length - 1;
             },
+
             next: () => {
 
                 if (this.iterator.index <= FILTER_LIST.length - 1) {
@@ -62,21 +65,24 @@ export default class FilterFactory {
             goTo: (filterName) => {
                 this.iterator.index = FILTER_LIST.indexOf(filterName);
 
-               // this.iterator.index++; //Do not remove clicked filter
+                // this.iterator.index++; //Do not remove clicked filter
 
                 //Remove filters that follow
-                for(let i = this.iterator.index + 1; i <= (FILTER_LIST.length - 1); i++){
+                for (let i = this.iterator.index + 1; i <= (FILTER_LIST.length - 1); i++) {
                     const FILTER_NAME = FILTER_LIST[i];
 
-                    if(this.filters[FILTER_NAME]){
-                        delete this.filters[FILTER_NAME];
+                    if (this.filters[FILTER_NAME]) {
+
+                        delete this.filters[FILTER_NAME]
+
                     }
 
                 }
 
                 this.filterProducts(true);
 
-                this.iterator.next();
+                //      delete this.filters['designer']
+
             }
 
 
@@ -99,6 +105,22 @@ export default class FilterFactory {
         }
     }
 
+    getCSSClasses(product){
+        let classes= '';
+
+         FILTER_LIST.forEach(filterName => {
+             if(product[filterName] !== undefined){
+                 classes += product[filterName].split(' > ')[0].replace(' ','-') + ' ';
+             }
+
+         })
+
+        return classes.toLowerCase();
+    };
+
+    getIndexOfProduct(product,originalFeed){
+        return originalFeed.indexOf(product) + 1;
+    }
     toggleFilterOption = (filterName, option) => {
         if (this.filters[filterName].selectedOption === option.toLowerCase()) {
             this.filters[filterName].selectedOption = "";
@@ -116,7 +138,8 @@ export default class FilterFactory {
 
 
         this.filteredProducts.forEach((product) => {
-            const filterOption = product[filterName] === undefined ? null : product[filterName].split(" ")[0];
+
+             const filterOption = product[filterName] === undefined ? null : product[filterName].split(" > ")[0];
 
             if (filterOption && filterOptions.indexOf(filterOption.toLowerCase()) == -1) {
                 filterOptions.push(filterOption.toLowerCase())
@@ -147,25 +170,53 @@ export default class FilterFactory {
     }
 
 
-
     updateVisibleFilters = (clickedFilterName = "", filter = false) => {
+        const FILTER = this.filters[clickedFilterName];
 
-         if(!clickedFilterName){
+        if (!clickedFilterName) { //If no filter has been clicked, show the first filter
 
-             this.iterator.current();
+            this.iterator.current();
 
 
-             return this.filterProducts(true);
-         }else{
-            // const PRODUCTS = this.filterProducts();
+            return this.filterProducts(true);
+        }else if(this.shouldSort(FILTER.filterName)){
+           return this.sortProducts(FILTER);
+        } else {
+
             this.iterator.goTo(clickedFilterName);
 
+            if (FILTER.selectedOption) { //If an option is selected
+                this.iterator.next();
+            }
+
             return this.filteredProducts;
-         }
+        }
 
 
     };
 
+    shouldSort(filterName){
+        return FILTER_LIST[FILTER_LIST.length - 1] === filterName;
+    }
+
+    sortProducts (FILTER){
+
+        let sortedProducts = Array.from(this.filteredProducts);
+
+        this.filteredProducts.forEach((product,index) => {
+
+            if(product[FILTER.filterName].toLowerCase() === FILTER.selectedOption.toLowerCase()){
+
+                sortedProducts.splice(index,1);
+                sortedProducts.unshift(product);
+            }
+        })
+
+        this.filteredProducts = sortedProducts;
+
+        return this.filteredProducts;
+
+    };
     getAllSelectedOptions = () => {
         let selectedOptionsList = [];
 

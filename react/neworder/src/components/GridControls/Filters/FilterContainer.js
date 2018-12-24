@@ -47,13 +47,13 @@ export default class FilterContainer extends React.Component {
                 <Container className={"text-center"}>
                     {
                         Object.values(FILTER_FACTORY.getVisibleFilters()).map(filter =>
-                            <div className={filter.filterName + '-filter'}>
+                            <div className={filter.filterName + '-filter'}  key={"accordion-" + filter.filterName}>
                                 <h3 className="ui-group__title">{filter.filterName}</h3>
                                 <ButtonGroup className={"filter d-block js-radio-button-group text-center"}>
 
                                     {
                                         <Filter
-                                            key={"accordion-" + filter.filterName}
+
                                             isOpen={this.state.collapse}
                                             filter={filter}
                                             filterName={filter.filterName}

@@ -34,6 +34,7 @@ class ProductGrid extends React.Component {
                                 <Product
                                     key={product.sku}
                                     product={product}
+                                    container={this.props.container}
                                 />
                             )
 
@@ -52,7 +53,7 @@ class ProductGrid extends React.Component {
 
     //Initialize packery on the product grid and make the Bootstrap cards draggable
     initPackery() {
-console.log('INIT PACKERY')
+
         const component = this;
         let dragableComponents = [];
 
@@ -68,18 +69,7 @@ console.log('INIT PACKERY')
             dragableComponents.push(draggie);
         });
 
-        //Update the new order of product tiles
-        packeryInstance.on( 'dragItemPositioned', function(){
 
-            this.getItemElements().forEach( function( element, index ) {
-               const elementID = '#' + element.getAttribute('id');
-               document.querySelector(elementID + ' .neworder-label').textContent = 'New Order: '+ (index+1);
-
-            });
-
-            //Adding CSS class .show-neworder-label shows the .neworder-label
-            document.getElementById('page').classList.add('show-neworder-label');
-        });
 
         component.props.container.setState({
             packery: packeryInstance,
@@ -91,7 +81,7 @@ console.log('INIT PACKERY')
 
     //Destroys existing packery instance
     destroyPackery() {
-console.log('DESTROYING PACKEY')
+
         const component = this;
         const packeryInstance = component.props.container.getState('packery');
 

@@ -12,47 +12,53 @@ import {
 } from 'reactstrap';
 
 
+
 const Product = (props) => {
 
 
-    const {product} = props;
+    const FILTER_FACTORY = props.container.getFilterFactory();
 
-    product.category = product.category === undefined ? '' : product.category;
+
     return (
 
         //Render the Product as a BootStarp Card
-        <div className={"grid-item " + product.category.split(' ')[0] + ' ' + product.function} id={"product-"+product.sku} data-sku={product.sku}>
+        <div className={"grid-item " + FILTER_FACTORY.getCSSClasses(props.product) } id={"product-"+props.product.sku} data-sku={props.product.sku}>
             <Card>
                 <CardTitle>
-                    {product.name}
+                    {props.product.name}
                 </CardTitle>
 
-                <small className="text-muted neworder">{product.sku}</small>
+                <small className="text-muted neworder">{props.product.sku}</small>
 
                 <CardImg top
                          width="100%"
-                         src={product.image}
+                         src={props.product.image}
                          alt="Card image cap"/>
                 <CardBody>
                     <CardText>
-                        {product.category}
+                        {props.product.category}
                     </CardText>
                     <CardText>
-                        {product.function}
+                        {props.product.function}
                     </CardText>
                     <CardText>
-                        {product.relatives}
+                        {props.product.relatives}
                     </CardText>
                     <div className="product-info justify-content-between align-items-center">
-                        <span className="text-muted name">{product.designer}</span>
-                        <span className="text-muted neworder-label"></span>
+                        <span className="text-muted name">{props.product.designer}</span>
+
                     </div>
+
+
                 </CardBody>
+                <CardText className="gridorder-label">
+                    Grid Order: {FILTER_FACTORY.getIndexOfProduct(props.product,props.container.getFeed())}
+                </CardText>
             </Card>
         </div>
 
 
-    )
+    );
 
 }
 

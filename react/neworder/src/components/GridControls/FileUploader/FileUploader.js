@@ -21,7 +21,7 @@ export default class FileUploader extends React.Component {
             header: true,
             complete: function (results) {
 
-
+                console.log(results.data)
                 component.props.container.setState({
                     feed: Array.from(results.data),
                     grid: results.data,
