@@ -16,18 +16,20 @@ export default class FileUploader extends React.Component {
     uploadFile(event) {
         const inventory = event.target.files[0],
             component = this;
-
+        document.body.classList.add('loading');
         Papa.parse(inventory, {
             header: true,
             complete: function (results) {
 
-                console.log(results.data)
+                console.log('Total Products : ' + results.data.length);
                 component.props.container.setState({
                     feed: Array.from(results.data),
                     grid: results.data,
                     packeryRefresh: true
                 });
-             //   component.props.container.initFilters();
+
+                document.body.classList.remove('loading');
+
 
             }
         });

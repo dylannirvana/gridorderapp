@@ -11,7 +11,7 @@ import './App.scss';
 import FilterFactory from "./components/GridControls/Filters/FilterFactory";
 import GridControls from "./components/GridControls";
 import {Container, Jumbotron} from 'reactstrap';
-
+import loaderIcon from './images/loader.gif';
 
 class App extends Component {
 
@@ -85,6 +85,7 @@ class App extends Component {
         return (
             <div id={"page"} className={!this.container.getState('feed').length ? 'no-grid' : 'product-grid-loaded'}>
 
+                <img src={loaderIcon} id="loader-icon" style={{display: 'none'}} alt="Loading"/>
                 <Header container={this.container}/>
 
                 <Jumbotron  id="app-intro" className={"text-center"}>

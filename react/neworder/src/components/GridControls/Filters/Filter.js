@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Button, Collapse} from 'reactstrap';
+import {Button} from 'reactstrap';
 
 
 export default class Filter extends React.Component {
@@ -31,7 +31,7 @@ export default class Filter extends React.Component {
 
         this.getSelectedOption = () => this.state.selectedOption
 
-        this.isOptionSelected = (filterOption) => this.getSelectedOption().indexOf(filterOption) == -1 ? false : true;
+        this.isOptionSelected = (filterOption) => this.getSelectedOption().indexOf(filterOption) === -1 ? false : true;
 
         this.shouldFilterRender = () => this.state.shouldFilterRender;
 
@@ -87,7 +87,7 @@ export default class Filter extends React.Component {
                 <Button
                     color={"warning"}
                     key={this.props.filterName + '-' + filterOption}
-                    className={"btn filter-option " + (this.props.selectedOption == filterOption ? 'active' : '')}
+                    className={"btn filter-option " + (this.props.selectedOption === filterOption ? 'active' : '')}
                     onClick={this.filterOptionClick}>
                     {filterOption}
                 </Button>

@@ -1,4 +1,15 @@
+#loader-icon{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
 
+body.loading{
+    #loader-icon{
+        display: block!important;
+    }
+}
 
 .file-upload-wrapper{
     .file-upload-button{

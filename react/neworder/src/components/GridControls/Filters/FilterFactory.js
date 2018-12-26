@@ -1,4 +1,4 @@
-import Filter from './Filter';
+
 
 const FILTER_LIST = ['category', 'function', 'designer'];
 
@@ -8,7 +8,7 @@ export default class FilterFactory {
 
     constructor(feed) {
         //const _SELF = this;
-        this.filters = new Object();
+        this.filters = {};
 
 
         this.iterator = {
@@ -141,7 +141,7 @@ export default class FilterFactory {
 
              const filterOption = product[filterName] === undefined ? null : product[filterName].split(" > ")[0];
 
-            if (filterOption && filterOptions.indexOf(filterOption.toLowerCase()) == -1) {
+            if (filterOption && filterOptions.indexOf(filterOption.toLowerCase()) === -1) {
                 filterOptions.push(filterOption.toLowerCase())
             }
 
@@ -153,7 +153,7 @@ export default class FilterFactory {
     getVisibleFilters = () => {
 
 
-        let result = new Object();
+        let result = {};
         let obj = this.filters;
 
         Object.keys(obj).forEach(function (key) {
@@ -196,7 +196,7 @@ export default class FilterFactory {
     };
 
     shouldSort(filterName){
-        return FILTER_LIST[FILTER_LIST.length - 1] === filterName;
+        return FILTER_LIST[FILTER_LIST.length - 1] === filterName && FILTER_LIST.length >= 3;
     }
 
     sortProducts (FILTER){
