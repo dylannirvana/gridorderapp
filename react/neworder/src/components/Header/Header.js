@@ -47,9 +47,9 @@ export default class Header extends React.Component {
                             <Col sm="4" md={{offset: 1}} className={"py-4"}>
                                 <h4 className="text-white">Questions?</h4>
                                 <ul className="list-unstyled">
-                                    <li><a href="#" className="text-white">Contact the Developer</a></li>
-                                    <li><a href="#" className="text-white">Merchandising</a></li>
-                                    <li><a href="#" className="text-white">Suggestions welcome!</a></li>
+                                    <li><a href="/" className="text-white">Contact the Developer</a></li>
+                                    <li><a href="/" className="text-white">Merchandising</a></li>
+                                    <li><a href="/" className="text-white">Suggestions welcome!</a></li>
                                 </ul>
                             </Col>
 
