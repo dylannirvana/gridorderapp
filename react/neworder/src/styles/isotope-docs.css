@@ -1827,7 +1827,7 @@ you can use the generic selector below, but it's slower:
     fill: #4078c0;
 }
 
-/* grid
+/* filteredProducts
 ------------------------- */
 
 .grid {
@@ -1902,7 +1902,7 @@ you can use the generic selector below, but it's slower:
     margin: 0 auto;
 }
 
-/* grid-image-item
+/* filteredProducts-image-item
 ------------------------- */
 
 .grid-image-item,
@@ -1917,7 +1917,7 @@ you can use the generic selector below, but it's slower:
     max-width: 100%;
 }
 
-/* grid-item
+/* filteredProducts-item
 ------------------------- */
 
 .grid-item {
@@ -1962,13 +1962,13 @@ you can use the generic selector below, but it's slower:
 
 .grid--fluid-5-col .grid-item--width2 { width: 40%; }
 
-/* ---- grid--masonry-gutter ---- */
+/* ---- filteredProducts--masonry-gutter ---- */
 
 .grid--has-gutter .grid-item--width2 {
     width: 110px;
 }
 
-/* ---- grid--masonry-gutter-bottom ---- */
+/* ---- filteredProducts--masonry-gutter-bottom ---- */
 
 .grid--masonry-gutter-bottom .grid-item {
     margin-bottom: 10px;
@@ -1978,12 +1978,12 @@ you can use the generic selector below, but it's slower:
     height: 110px;
 }
 
-/* ---- grid--packery-gutter ---- */
+/* ---- filteredProducts--packery-gutter ---- */
 
 .grid--packery-gutter .grid-item--width2 { width: 110px; }
 .grid--packery-gutter .grid-item--height2 { height: 110px; }
 
-/* ---- grid--fluid-gutter ---- */
+/* ---- filteredProducts--fluid-gutter ---- */
 
 .grid--fluid-gutter .grid-item,
 .grid--fluid-gutter .grid-sizer {
@@ -2076,7 +2076,7 @@ you can use the generic selector below, but it's slower:
 .grid--hor-order .grid-item--height2 { height: 100px; }
 .grid--hor-order .grid-item--height3 { height: 120px; }
 
-/* grid-splash-item
+/* filteredProducts-splash-item
 ------------------------- */
 
 .grid-splash-item {
@@ -2181,7 +2181,7 @@ you can use the generic selector below, but it's slower:
 
 }
 
-/* in-use-grid
+/* in-use-filteredProducts
 ------------------------- */
 
 .in-use-grid .grid-sizer,
@@ -2534,7 +2534,7 @@ you can use the generic selector below, but it's slower:
 .color-shape.wide, .color-shape.big { width: 150px; }
 .color-shape.tall, .color-shape.big { height: 150px; }
 
-/* grid-multi-item
+/* filteredProducts-multi-item
 ------------------------- */
 
 .grid-multi-item {

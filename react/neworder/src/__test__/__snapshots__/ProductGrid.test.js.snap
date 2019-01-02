@@ -1,0 +1,1464 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductGrid/> Verify Snapshot 1`] = `
+<div
+  className="jumbotron jumbotron-fluid"
+  id="page-content"
+>
+  <div
+    className="grid row"
+  >
+    <div
+      className="product-grid col"
+    >
+      <div
+        className="grid-item floor functional "
+        data-sku="81134"
+        id="product-81134"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Studio Swing Arm Floor Lamp
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            81134
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/8/1/81134hab_5.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Floor &gt; Task
+            </p>
+            <p
+              className="card-text"
+            >
+              Functional
+            </p>
+            <p
+              className="card-text"
+            >
+              VC CLASSIC
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Studio VC
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            1
+          </p>
+        </div>
+      </div>
+      <div
+        className="grid-item wall functional "
+        data-sku="82034"
+        id="product-82034"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Studio Swing Arm Wall Light
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            82034
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/8/2/82034hab_1.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Wall &gt; Task
+            </p>
+            <p
+              className="card-text"
+            >
+              Functional
+            </p>
+            <p
+              className="card-text"
+            >
+              VC CLASSIC
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Studio VC
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            2
+          </p>
+        </div>
+      </div>
+      <div
+        className="grid-item floor functional "
+        data-sku="91025"
+        id="product-91025"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Studio Adjustable Floor Lamp
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            91025
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/9/1/91025hab_5.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Floor &gt; Task
+            </p>
+            <p
+              className="card-text"
+            >
+              Functional
+            </p>
+            <p
+              className="card-text"
+            >
+              VC CLASSIC
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Studio VC
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            3
+          </p>
+        </div>
+      </div>
+      <div
+        className="grid-item wall functional "
+        data-sku="92000D"
+        id="product-92000D"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Classic Swing Arm Wall Lamp
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            92000D
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/9/2/92000dhabl_1.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Wall &gt; Task
+            </p>
+            <p
+              className="card-text"
+            >
+              Functional
+            </p>
+            <p
+              className="card-text"
+            >
+              VC CLASSIC
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Studio VC
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            4
+          </p>
+        </div>
+      </div>
+      <div
+        className="grid-item wall functional "
+        data-sku="92025"
+        id="product-92025"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Studio Swing Arm Wall Light
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            92025
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/9/2/92025hab_1.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Wall &gt; Task
+            </p>
+            <p
+              className="card-text"
+            >
+              Functional
+            </p>
+            <p
+              className="card-text"
+            >
+              VC CLASSIC
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Studio VC
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            5
+          </p>
+        </div>
+      </div>
+      <div
+        className="grid-item wall decorative "
+        data-sku="AH2000"
+        id="product-AH2000"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Dean Single Arm Sconce
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            AH2000
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/a/h/ah2000pnnp_5.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Wall &gt; Decorative
+            </p>
+            <p
+              className="card-text"
+            >
+              Decorative
+            </p>
+            <p
+              className="card-text"
+            >
+              Dean
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Alexa Hampton
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            6
+          </p>
+        </div>
+      </div>
+      <div
+        className="grid-item wall decorative "
+        data-sku="AH2001"
+        id="product-AH2001"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Dean Library Sconce
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            AH2001
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/a/h/ah2001pnnp_8.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Wall &gt; Decorative
+            </p>
+            <p
+              className="card-text"
+            >
+              Decorative
+            </p>
+            <p
+              className="card-text"
+            >
+              Dean
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Alexa Hampton
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            7
+          </p>
+        </div>
+      </div>
+      <div
+        className="grid-item wall decorative test-family "
+        data-sku="AH2002"
+        id="product-AH2002"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Abbot Single Arm Sconce
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            AH2002
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/a/h/ah2002pnnp_8.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Wall &gt; Decorative
+            </p>
+            <p
+              className="card-text"
+            >
+              Decorative
+            </p>
+            <p
+              className="card-text"
+            >
+              Abbot
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Alexa Hampton
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            8
+          </p>
+        </div>
+      </div>
+      <div
+        className="grid-item wall decorative "
+        data-sku="AH2003"
+        id="product-AH2003"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Abbot Library Sconce
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            AH2003
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/a/h/ah2003gmnp_5.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Wall &gt; Decorative
+            </p>
+            <p
+              className="card-text"
+            >
+              Decorative
+            </p>
+            <p
+              className="card-text"
+            >
+              Abbot
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Alexa Hampton
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            9
+          </p>
+        </div>
+      </div>
+      <div
+        className="grid-item wall decorative "
+        data-sku="AH2004"
+        id="product-AH2004"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Bing Single Arm Sconce
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            AH2004
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/a/h/ah2004pnnp_5.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Wall &gt; Decorative
+            </p>
+            <p
+              className="card-text"
+            >
+              Decorative
+            </p>
+            <p
+              className="card-text"
+            >
+              Bing
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Alexa Hampton
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            10
+          </p>
+        </div>
+      </div>
+      <div
+        className="grid-item wall decorative "
+        data-sku="AH2010"
+        id="product-AH2010"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Ginger Single Arm Sconce
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            AH2010
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/a/h/ah2010pnnp_5.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Wall &gt; Decorative
+            </p>
+            <p
+              className="card-text"
+            >
+              Decorative
+            </p>
+            <p
+              className="card-text"
+            >
+              Ginger
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Alexa Hampton
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            11
+          </p>
+        </div>
+      </div>
+      <div
+        className="grid-item wall functional "
+        data-sku="AH2012"
+        id="product-AH2012"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Gene Swing Arm
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            AH2012
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/a/h/ah2012nbs_1.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Wall &gt; Task
+            </p>
+            <p
+              className="card-text"
+            >
+              Functional
+            </p>
+            <p
+              className="card-text"
+            >
+              Gene
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Alexa Hampton
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            12
+          </p>
+        </div>
+      </div>
+      <div
+        className="grid-item wall decorative test-family "
+        data-sku="AH2013"
+        id="product-AH2013"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Gene Library Sconce
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            AH2013
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/a/h/ah2013nbnp_5.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Wall &gt; Decorative
+            </p>
+            <p
+              className="card-text"
+            >
+              Decorative
+            </p>
+            <p
+              className="card-text"
+            >
+              Gene
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Alexa Hampton
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            13
+          </p>
+        </div>
+      </div>
+      <div
+        className="grid-item wall picture "
+        data-sku="AH2700"
+        id="product-AH2700"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Dean 9" Picture Light
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            AH2700
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/a/h/ah2700nb_1.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Wall &gt; Picture
+            </p>
+            <p
+              className="card-text"
+            >
+              Picture
+            </p>
+            <p
+              className="card-text"
+            >
+              Dean2
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Alexa Hampton
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            14
+          </p>
+        </div>
+      </div>
+      <div
+        className="grid-item wall picture "
+        data-sku="AH2701"
+        id="product-AH2701"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Dean 12" Picture Light
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            AH2701
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/a/h/ah2701nb_1.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Wall &gt; Picture
+            </p>
+            <p
+              className="card-text"
+            >
+              Picture
+            </p>
+            <p
+              className="card-text"
+            >
+              Dean2
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Alexa Hampton
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            15
+          </p>
+        </div>
+      </div>
+      <div
+        className="grid-item wall picture "
+        data-sku="AH2702"
+        id="product-AH2702"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Dean 18" Picture Light
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            AH2702
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/a/h/ah2702nb_1.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Wall &gt; Picture
+            </p>
+            <p
+              className="card-text"
+            >
+              Picture
+            </p>
+            <p
+              className="card-text"
+            >
+              Dean2
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Alexa Hampton
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            16
+          </p>
+        </div>
+      </div>
+      <div
+        className="grid-item wall picture "
+        data-sku="AH2703"
+        id="product-AH2703"
+      >
+        <div
+          className="card"
+        >
+          <h5
+            className="card-title"
+          >
+            Dean 24" Picture Light
+          </h5>
+          <small
+            className="text-muted neworder"
+          >
+            AH2703
+          </small>
+          <img
+            alt="Card image cap"
+            className="card-img-top"
+            src="https://www.circalighting.com/media/catalog/product/a/h/ah2703nb_1.png"
+            width="100%"
+          />
+          <div
+            className="card-body"
+          >
+            <p
+              className="card-text"
+            >
+              Wall &gt; Picture
+            </p>
+            <p
+              className="card-text"
+            >
+              Picture
+            </p>
+            <p
+              className="card-text"
+            >
+              Dean2
+            </p>
+            <div
+              className="product-info justify-content-between align-items-center"
+            >
+              <span
+                className="text-muted name"
+              >
+                Alexa Hampton
+              </span>
+            </div>
+          </div>
+          <p
+            className="gridorder-label card-text"
+          >
+            Grid Order: 
+            17
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ProductGrid/> Verify if selecting Category -> Floor returns 15 products 1`] = `
+Array [
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Task",
+    "designer": "Studio VC",
+    "function": "Functional",
+    "gridorder": "4742.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/8/2/82034hab_1.png",
+    "name": "Studio Swing Arm Wall Light",
+    "neworder": "",
+    "relatives": "VC CLASSIC",
+    "sku": "82034",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Task",
+    "designer": "Studio VC",
+    "function": "Functional",
+    "gridorder": "4536.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/9/2/92000dhabl_1.png",
+    "name": "Classic Swing Arm Wall Lamp",
+    "neworder": "",
+    "relatives": "VC CLASSIC",
+    "sku": "92000D",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Task",
+    "designer": "Studio VC",
+    "function": "Functional",
+    "gridorder": "4738.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/9/2/92025hab_1.png",
+    "name": "Studio Swing Arm Wall Light",
+    "neworder": "",
+    "relatives": "VC CLASSIC",
+    "sku": "92025",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "function": "Decorative",
+    "gridorder": "4159.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2000pnnp_5.png",
+    "name": "Dean Single Arm Sconce",
+    "neworder": "",
+    "relatives": "Dean",
+    "sku": "AH2000",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "function": "Decorative",
+    "gridorder": "4161.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2001pnnp_8.png",
+    "name": "Dean Library Sconce",
+    "neworder": "",
+    "relatives": "Dean",
+    "sku": "AH2001",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "family": "test-family",
+    "function": "Decorative",
+    "gridorder": "4144.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2002pnnp_8.png",
+    "name": "Abbot Single Arm Sconce",
+    "neworder": "",
+    "relatives": "Abbot",
+    "sku": "AH2002",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "function": "Decorative",
+    "gridorder": "4146.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2003gmnp_5.png",
+    "name": "Abbot Library Sconce",
+    "neworder": "",
+    "relatives": "Abbot",
+    "sku": "AH2003",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "function": "Decorative",
+    "gridorder": "4137.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2004pnnp_5.png",
+    "name": "Bing Single Arm Sconce",
+    "neworder": "",
+    "relatives": "Bing",
+    "sku": "AH2004",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "function": "Decorative",
+    "gridorder": "4139.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2010pnnp_5.png",
+    "name": "Ginger Single Arm Sconce",
+    "neworder": "",
+    "relatives": "Ginger",
+    "sku": "AH2010",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Task",
+    "designer": "Alexa Hampton",
+    "function": "Functional",
+    "gridorder": "4525.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2012nbs_1.png",
+    "name": "Gene Swing Arm",
+    "neworder": "",
+    "relatives": "Gene",
+    "sku": "AH2012",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "family": "test-family",
+    "function": "Decorative",
+    "gridorder": "4150.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2013nbnp_5.png",
+    "name": "Gene Library Sconce",
+    "neworder": "",
+    "relatives": "Gene",
+    "sku": "AH2013",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Picture",
+    "designer": "Alexa Hampton",
+    "function": "Picture",
+    "gridorder": "5324.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2700nb_1.png",
+    "name": "Dean 9\\" Picture Light",
+    "neworder": "",
+    "relatives": "Dean2",
+    "sku": "AH2700",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Picture",
+    "designer": "Alexa Hampton",
+    "function": "Picture",
+    "gridorder": "5328.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2701nb_1.png",
+    "name": "Dean 12\\" Picture Light",
+    "neworder": "",
+    "relatives": "Dean2",
+    "sku": "AH2701",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Picture",
+    "designer": "Alexa Hampton",
+    "function": "Picture",
+    "gridorder": "5332.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2702nb_1.png",
+    "name": "Dean 18\\" Picture Light",
+    "neworder": "",
+    "relatives": "Dean2",
+    "sku": "AH2702",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Picture",
+    "designer": "Alexa Hampton",
+    "function": "Picture",
+    "gridorder": "5336.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2703nb_1.png",
+    "name": "Dean 24\\" Picture Light",
+    "neworder": "",
+    "relatives": "Dean2",
+    "sku": "AH2703",
+  },
+]
+`;
+
+exports[`<ProductGrid/> Verify if selecting Function -> Decorative returns 7 products 1`] = `
+Array [
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "function": "Decorative",
+    "gridorder": "4159.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2000pnnp_5.png",
+    "name": "Dean Single Arm Sconce",
+    "neworder": "",
+    "relatives": "Dean",
+    "sku": "AH2000",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "function": "Decorative",
+    "gridorder": "4161.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2001pnnp_8.png",
+    "name": "Dean Library Sconce",
+    "neworder": "",
+    "relatives": "Dean",
+    "sku": "AH2001",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "family": "test-family",
+    "function": "Decorative",
+    "gridorder": "4144.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2002pnnp_8.png",
+    "name": "Abbot Single Arm Sconce",
+    "neworder": "",
+    "relatives": "Abbot",
+    "sku": "AH2002",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "function": "Decorative",
+    "gridorder": "4146.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2003gmnp_5.png",
+    "name": "Abbot Library Sconce",
+    "neworder": "",
+    "relatives": "Abbot",
+    "sku": "AH2003",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "function": "Decorative",
+    "gridorder": "4137.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2004pnnp_5.png",
+    "name": "Bing Single Arm Sconce",
+    "neworder": "",
+    "relatives": "Bing",
+    "sku": "AH2004",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "function": "Decorative",
+    "gridorder": "4139.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2010pnnp_5.png",
+    "name": "Ginger Single Arm Sconce",
+    "neworder": "",
+    "relatives": "Ginger",
+    "sku": "AH2010",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "family": "test-family",
+    "function": "Decorative",
+    "gridorder": "4150.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2013nbnp_5.png",
+    "name": "Gene Library Sconce",
+    "neworder": "",
+    "relatives": "Gene",
+    "sku": "AH2013",
+  },
+]
+`;
+
+exports[`<ProductGrid/> Verify if sorting by family "test-family" sorts correctly 1`] = `
+Array [
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "family": "test-family",
+    "function": "Decorative",
+    "gridorder": "4144.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2002pnnp_8.png",
+    "name": "Abbot Single Arm Sconce",
+    "neworder": "",
+    "relatives": "Abbot",
+    "sku": "AH2002",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "family": "test-family",
+    "function": "Decorative",
+    "gridorder": "4150.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2013nbnp_5.png",
+    "name": "Gene Library Sconce",
+    "neworder": "",
+    "relatives": "Gene",
+    "sku": "AH2013",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "function": "Decorative",
+    "gridorder": "4159.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2000pnnp_5.png",
+    "name": "Dean Single Arm Sconce",
+    "neworder": "",
+    "relatives": "Dean",
+    "sku": "AH2000",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "function": "Decorative",
+    "gridorder": "4161.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2001pnnp_8.png",
+    "name": "Dean Library Sconce",
+    "neworder": "",
+    "relatives": "Dean",
+    "sku": "AH2001",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "function": "Decorative",
+    "gridorder": "4146.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2003gmnp_5.png",
+    "name": "Abbot Library Sconce",
+    "neworder": "",
+    "relatives": "Abbot",
+    "sku": "AH2003",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "function": "Decorative",
+    "gridorder": "4137.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2004pnnp_5.png",
+    "name": "Bing Single Arm Sconce",
+    "neworder": "",
+    "relatives": "Bing",
+    "sku": "AH2004",
+  },
+  Object {
+    "__parsed_extra": Array [
+      "",
+    ],
+    "category": "Wall > Decorative",
+    "designer": "Alexa Hampton",
+    "function": "Decorative",
+    "gridorder": "4139.0000",
+    "image": "https://www.circalighting.com/media/catalog/product/a/h/ah2010pnnp_5.png",
+    "name": "Ginger Single Arm Sconce",
+    "neworder": "",
+    "relatives": "Ginger",
+    "sku": "AH2010",
+  },
+]
+`;
