@@ -26,10 +26,10 @@ class ProductGrid extends React.Component {
                 <Row className="grid">
 
 
-                    <Col>
+                    <Col className="product-grid">
                         {
                             //Loop through the products
-                            Object.values(this.props.container.getState('grid')).map(product =>
+                            Object.values(this.props.container.getFilteredProducts()).map(product =>
                                 //Invokes and renders the Product Component
                                 <Product
                                     key={product.sku}
@@ -51,13 +51,13 @@ class ProductGrid extends React.Component {
         )
     }
 
-    //Initialize packery on the product grid and make the Bootstrap cards draggable
+    //Initialize packery on the product filteredProducts and make the Bootstrap cards draggable
     initPackery() {
 
         const component = this;
         let dragableComponents = [];
 
-        var packeryInstance = new Packery('.grid', {
+        var packeryInstance = new Packery('.product-grid', {
             itemSelector: '.grid-item',
             percentPosition: true
         });
@@ -92,8 +92,7 @@ class ProductGrid extends React.Component {
                 draggie.destroy();
             });
 
-            //Removing  CSS class .show-neworder-label hides the .neworder-label
-            document.getElementById('page').classList.remove('show-neworder-label');
+
 
             //Destroy Packery Instance
             packeryInstance.destroy();
@@ -118,7 +117,7 @@ class ProductGrid extends React.Component {
 
             this.destroyPackery();
 
-            this.initPackery();
+           this.initPackery();
 
             this.props.container.setState({'packeryRefresh': false})
 

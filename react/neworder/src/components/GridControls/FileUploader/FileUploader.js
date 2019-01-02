@@ -12,7 +12,7 @@ export default class FileUploader extends React.Component {
 
     }
 
-    //Takes the parsed JSON from PapaParse and updates the product grid
+    //Takes the parsed JSON from PapaParse and updates the product filteredProducts
     uploadFile(event) {
         const inventory = event.target.files[0],
             component = this;
@@ -22,9 +22,10 @@ export default class FileUploader extends React.Component {
             complete: function (results) {
 
                 console.log('Total Products : ' + results.data.length);
+
                 component.props.container.setState({
                     feed: Array.from(results.data),
-                    grid: results.data,
+                    filteredProducts: results.data,
                     packeryRefresh: true
                 });
 

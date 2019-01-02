@@ -1,5 +1,5 @@
 /*
-* This component and its children, represent a collection of controls for working with the grid
+* This component and its children, represent a collection of controls for working with the filteredProducts
  */
 
 import React from "react";
@@ -8,25 +8,6 @@ import FilterContainer from "./Filters/FilterContainer";
 
 
 class GridControls extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.togglePushMenu = this.togglePushMenu.bind(this);
-
-
-        this.state = {
-            isOpen: false,
-
-        };
-    }
-
-    togglePushMenu() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
-    }
-
-
 
 
     render() {
@@ -44,7 +25,7 @@ class GridControls extends React.Component {
 
 
                 <li className={"text-center grid-control"} style={{display: this.props.container.gridPopulated() ? '' : 'none'}}>
-                    {/*SaveGrid is a component for generating a CSV file from the grid tiles */}
+                    {/*SaveGrid is a component for generating a CSV file from the filteredProducts tiles */}
                     <SaveGrid container={this.props.container}/>
 
                 </li>

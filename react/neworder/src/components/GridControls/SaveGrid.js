@@ -1,5 +1,5 @@
 /*
-* This component generates a new CSV file, based on the new order of the grid tiles
+* This component generates a new CSV file, based on the new order of the filteredProducts tiles
  */
 
 import React from 'react';
@@ -15,7 +15,7 @@ export default class SaveGrid extends React.Component {
     }
 
 
-    //Generates a new CSV file, based on new order of the grid tiles
+    //Generates a new CSV file, based on new order of the filteredProducts tiles
     saveNewGrid() {
 
         const newGridHTML = this.props.container.getState('packery').getItemElements();

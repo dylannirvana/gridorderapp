@@ -1,12 +1,10 @@
-
-
-const FILTER_LIST = ['category', 'function', 'designer'];
+const FILTER_LIST = ['category', 'function', 'family'];
 
 
 export default class FilterFactory {
 
 
-    constructor(feed) {
+    constructor(feed,grid) {
         //const _SELF = this;
         this.filters = {};
 
@@ -79,7 +77,7 @@ export default class FilterFactory {
 
                 }
 
-                this.filterProducts(true);
+                this.filterProductFeed();
 
                 //      delete this.filters['designer']
 
@@ -88,9 +86,9 @@ export default class FilterFactory {
 
         }
 
-        this.feed = Array.from(feed);
 
-        this.filteredProducts = Array.from(feed);
+        this.feed = feed;
+        this.filteredProducts = grid;
 
     }
 
@@ -105,31 +103,35 @@ export default class FilterFactory {
         }
     }
 
-    getCSSClasses(product){
-        let classes= '';
+    getCSSClasses(product) {
+        let classes = '';
 
-         FILTER_LIST.forEach(filterName => {
-             if(product[filterName] !== undefined){
-                 classes += product[filterName].split(' > ')[0].replace(' ','-') + ' ';
-             }
+        FILTER_LIST.forEach(filterName => {
+            if (product[filterName] !== undefined) {
+                classes += product[filterName].split(' > ')[0].replace(' ', '-') + ' ';
+            }
 
-         })
+        })
 
         return classes.toLowerCase();
     };
 
-    getIndexOfProduct(product,originalFeed){
-        return originalFeed.indexOf(product) + 1;
+    getIndexOfProduct(product) {
+        return this.feed.indexOf(product) + 1;
     }
+
+
     toggleFilterOption = (filterName, option) => {
         if (this.filters[filterName].selectedOption === option.toLowerCase()) {
             this.filters[filterName].selectedOption = "";
         } else {
             this.filters[filterName].selectedOption = option.toLowerCase();
         }
+
+       return this.updateVisibleFilters(filterName, option)
     }
 
-    getFilterOptions = (filterName, products) => {
+    getFilterOptions = (filterName) => {
 
         let filterOptions = [];
         /*
@@ -139,7 +141,7 @@ export default class FilterFactory {
 
         this.filteredProducts.forEach((product) => {
 
-             const filterOption = product[filterName] === undefined ? null : product[filterName].split(" > ")[0];
+            const filterOption = product[filterName] === undefined ? null : product[filterName].split(" > ")[0];
 
             if (filterOption && filterOptions.indexOf(filterOption.toLowerCase()) === -1) {
                 filterOptions.push(filterOption.toLowerCase())
@@ -178,9 +180,9 @@ export default class FilterFactory {
             this.iterator.current();
 
 
-            return this.filterProducts(true);
-        }else if(this.shouldSort(FILTER.filterName)){
-           return this.sortProducts(FILTER);
+            return this.filterProductFeed();
+        } else if (this.shouldSort(FILTER.filterName)) {
+            return this.sortProducts(FILTER);
         } else {
 
             this.iterator.goTo(clickedFilterName);
@@ -195,19 +197,19 @@ export default class FilterFactory {
 
     };
 
-    shouldSort(filterName){
+    shouldSort(filterName) {
         return FILTER_LIST[FILTER_LIST.length - 1] === filterName && FILTER_LIST.length >= 3;
     }
 
-    sortProducts (FILTER){
+    sortProducts(FILTER) {
 
         let sortedProducts = Array.from(this.filteredProducts);
+        console.log('SORTED PRODUCTS LENGTH ' + this.filteredProducts.length)
+        this.filteredProducts.forEach((product, index) => {
 
-        this.filteredProducts.forEach((product,index) => {
+            if (product[FILTER.filterName] !== undefined && product[FILTER.filterName].toLowerCase() === FILTER.selectedOption.toLowerCase()) {
 
-            if(product[FILTER.filterName].toLowerCase() === FILTER.selectedOption.toLowerCase()){
-
-                sortedProducts.splice(index,1);
+                sortedProducts.splice(index, 1);
                 sortedProducts.unshift(product);
             }
         })
@@ -217,6 +219,7 @@ export default class FilterFactory {
         return this.filteredProducts;
 
     };
+
     getAllSelectedOptions = () => {
         let selectedOptionsList = [];
 
@@ -244,21 +247,17 @@ export default class FilterFactory {
         return selectedOptionsList;
     };
 
-    filterProducts(reset = false) {
+    filterProductFeed() {
 
         let selectedOptionsList = this.getAllSelectedOptions();
 
 
         if (!selectedOptionsList.length) {
             this.filteredProducts = Array.from(this.feed);
-
-
             return this.filteredProducts;
         }
 
-        if (reset) {
-            this.filteredProducts = Array.from(this.feed);
-        }
+        this.filteredProducts = Array.from(this.feed);
 
         this.filteredProducts = this.filteredProducts.filter(function (product, index) { //Loop through each product in the product feed
             let result = true;

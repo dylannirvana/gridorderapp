@@ -13,6 +13,7 @@ import GridControls from "./components/GridControls";
 import {Container, Jumbotron} from 'reactstrap';
 import loaderIcon from './images/loader.gif';
 
+
 class App extends Component {
 
     constructor(props) {
@@ -21,7 +22,7 @@ class App extends Component {
 
         this.state = {
             feed: [], //The  parsed JSON obtained from PapaParse
-            grid: [], // filtered grid
+            filteredProducts: [], // filtered filteredProducts
             filterFactory: undefined,
 
 
@@ -41,7 +42,7 @@ class App extends Component {
             setState: function (state) {
 
                 if(component.state.filterFactory === undefined){
-                    component.state.filterFactory = new FilterFactory(state.feed);
+                    component.state.filterFactory = new FilterFactory(state.feed,state.filteredProducts);
                     component.state.filterFactory.updateVisibleFilters();
                 }
 
@@ -54,20 +55,25 @@ class App extends Component {
             },
 
             getGridProducts: function(){
-                return component.state.grid;
+                return component.state.filteredProducts;
             },
 
             update: function (){
                 component.forceUpdate();
             },
 
-            //Indicates if the grid has been populated with data
+            //Indicates if the filteredProducts has been populated with data
             gridPopulated: function () {
                 return Boolean(component.state.feed.length);
             },
 
             getFilterFactory: function () {
+             //   console.log(component.state.filterFactory)
                 return component.state.filterFactory;
+            },
+            getFilteredProducts: function(){
+                //console.log(component.state.filteredProducts)
+                return component.state.filteredProducts;
             },
 
             initFilters: function () {
@@ -77,6 +83,8 @@ class App extends Component {
 
 
         }
+
+        return this;
     }
 
 
@@ -97,7 +105,7 @@ class App extends Component {
                     </Container>
                 </Jumbotron>
 
-                {/*Render the controls for controlling the product grid*/}
+                {/*Render the controls for controlling the product filteredProducts*/}
                 <GridControls container={this.container}/>
 
                 <ProductGrid container={this.container}/>

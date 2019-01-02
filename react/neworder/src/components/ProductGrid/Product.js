@@ -52,7 +52,7 @@ const Product = (props) => {
 
                 </CardBody>
                 <CardText className="gridorder-label">
-                    Grid Order: {FILTER_FACTORY.getIndexOfProduct(props.product,props.container.getFeed())}
+                    Grid Order: {FILTER_FACTORY.getIndexOfProduct(props.product)}
                 </CardText>
             </Card>
         </div>
