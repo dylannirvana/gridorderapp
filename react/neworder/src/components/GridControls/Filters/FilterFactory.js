@@ -5,10 +5,10 @@ export default class FilterFactory {
 
 
     constructor(feed,grid) {
-        //const _SELF = this;
-        this.filters = {};
 
+        this.filters = {}; // List of filters, created once the product feed is parsed
 
+        //Iterator keeps a track of where the user is in the filter selection process, which filters are visible etc
         this.iterator = {
 
             index: 0,
@@ -79,7 +79,6 @@ export default class FilterFactory {
 
                 this.filterProductFeed();
 
-                //      delete this.filters['designer']
 
             }
 
@@ -92,6 +91,11 @@ export default class FilterFactory {
 
     }
 
+
+
+    /*
+    * Adds new filter to this.filters
+     */
     addNewFilter = (filterName, isVisible) => {
 
         this.filters[filterName] = {
@@ -103,41 +107,14 @@ export default class FilterFactory {
         }
     }
 
-    getCSSClasses(product) {
-        let classes = '';
-
-        FILTER_LIST.forEach(filterName => {
-            if (product[filterName] !== undefined) {
-                classes += product[filterName].split(' > ')[0].replace(' ', '-') + ' ';
-            }
-
-        })
-
-        return classes.toLowerCase();
-    };
-
-    getIndexOfProduct(product) {
-        return this.feed.indexOf(product) + 1;
-    }
 
 
-    toggleFilterOption = (filterName, option) => {
-        if (this.filters[filterName].selectedOption === option.toLowerCase()) {
-            this.filters[filterName].selectedOption = "";
-        } else {
-            this.filters[filterName].selectedOption = option.toLowerCase();
-        }
-
-       return this.updateVisibleFilters(filterName, option)
-    }
-
+    /*
+     * Iterate through the products and populate filter options
+     */
     getFilterOptions = (filterName) => {
 
         let filterOptions = [];
-        /*
-         * Iterate through the products and populate filter options
-         */
-
 
         this.filteredProducts.forEach((product) => {
 
@@ -152,6 +129,58 @@ export default class FilterFactory {
         return filterOptions;
     };
 
+
+
+    /*
+    * Marks the filter option as selected / unselected
+    * and then toggles visibility of the other filters
+     */
+    toggleFilterOption = (filterName, option) => {
+
+        if (this.filters[filterName].selectedOption === option.toLowerCase()) {
+            this.filters[filterName].selectedOption = "";
+        } else {
+            this.filters[filterName].selectedOption = option.toLowerCase();
+        }
+
+        //Toggles visibility of the other filters
+        return this.updateVisibleFilters(filterName, option)
+    }
+
+
+
+    /*
+    * Makes relevant filters visible; Irrelevant filters are hidden
+     */
+    updateVisibleFilters = (clickedFilterName = "", filter = false) => {
+        const FILTER = this.filters[clickedFilterName];
+
+        if (!clickedFilterName) { //If no filter has been clicked, show the first filter
+
+            this.iterator.current();
+            return this.filterProductFeed();
+
+        } else if (this.shouldSort(FILTER.filterName)) {
+
+            return this.sortProducts(FILTER);
+
+        } else {
+
+            this.iterator.goTo(clickedFilterName);
+
+            if (FILTER.selectedOption) { //If an option is selected
+                this.iterator.next();
+            }
+
+            return this.filteredProducts;
+        }
+    };
+
+
+
+    /*
+    * Returns all visible filters
+     */
     getVisibleFilters = () => {
 
 
@@ -172,54 +201,10 @@ export default class FilterFactory {
     }
 
 
-    updateVisibleFilters = (clickedFilterName = "", filter = false) => {
-        const FILTER = this.filters[clickedFilterName];
 
-        if (!clickedFilterName) { //If no filter has been clicked, show the first filter
-
-            this.iterator.current();
-
-
-            return this.filterProductFeed();
-        } else if (this.shouldSort(FILTER.filterName)) {
-            return this.sortProducts(FILTER);
-        } else {
-
-            this.iterator.goTo(clickedFilterName);
-
-            if (FILTER.selectedOption) { //If an option is selected
-                this.iterator.next();
-            }
-
-            return this.filteredProducts;
-        }
-
-
-    };
-
-    shouldSort(filterName) {
-        return FILTER_LIST[FILTER_LIST.length - 1] === filterName && FILTER_LIST.length >= 3;
-    }
-
-    sortProducts(FILTER) {
-
-        let sortedProducts = Array.from(this.filteredProducts);
-        console.log('SORTED PRODUCTS LENGTH ' + this.filteredProducts.length)
-        this.filteredProducts.forEach((product, index) => {
-
-            if (product[FILTER.filterName] !== undefined && product[FILTER.filterName].toLowerCase() === FILTER.selectedOption.toLowerCase()) {
-
-                sortedProducts.splice(index, 1);
-                sortedProducts.unshift(product);
-            }
-        })
-
-        this.filteredProducts = sortedProducts;
-
-        return this.filteredProducts;
-
-    };
-
+    /*
+    * Returns an Array of all the selected filter options
+     */
     getAllSelectedOptions = () => {
         let selectedOptionsList = [];
 
@@ -243,10 +228,14 @@ export default class FilterFactory {
 
         });
 
-
         return selectedOptionsList;
     };
 
+
+
+    /*
+    * Filters the products, based on the filter options selected
+     */
     filterProductFeed() {
 
         let selectedOptionsList = this.getAllSelectedOptions();
@@ -283,5 +272,82 @@ export default class FilterFactory {
 
     };
 
+
+
+    /*
+    * Sorts the product
+     */
+    sortProducts(FILTER) {
+
+        let sortedProducts = Array.from(this.filteredProducts);
+
+        this.filteredProducts.forEach((product, index) => {
+
+            if (product[FILTER.filterName] !== undefined && product[FILTER.filterName].toLowerCase() === FILTER.selectedOption.toLowerCase()) {
+
+                sortedProducts.splice(index, 1);
+                sortedProducts.unshift(product);
+            }
+        })
+
+        this.filteredProducts = sortedProducts;
+
+        return this.filteredProducts;
+
+    };
+
+
+
+    /*
+    * Determines if sorting should happen
+     */
+    shouldSort(filterName) {
+        return FILTER_LIST[FILTER_LIST.length - 1] === filterName && FILTER_LIST.length >= 3;
+    }
+
+
+
+    /*
+    * Generates CSS classes for a given product
+     */
+    getCSSClasses(product) {
+        let classes = '';
+
+        FILTER_LIST.forEach(filterName => {
+            if (product[filterName] !== undefined) {
+                classes += product[filterName].split(' > ')[0].replace(' ', '-') + ' ';
+            }
+
+        })
+
+        return classes.toLowerCase();
+    };
+
+
+
+    /*
+    * Gets the index of a product in the product feed
+     */
+    getIndexOfProduct(product) {
+        return this.feed.indexOf(product) + 1;
+    }
+
+
+
+    /*
+    * Gets the product feed
+     */
+    getFeed(){
+        return this.feed;
+    }
+
+
+
+    /*
+    * Returns filtered products
+     */
+    getFilteredProducts = () =>{
+        return this.filteredProducts;
+    }
 
 }

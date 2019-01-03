@@ -49,7 +49,7 @@ export default class Filter extends React.Component {
          */
         this.filterOptionClick = (event) => {
             const FILTER_FACTORY = this.props.container.getFilterFactory();
-           let gridProducts = this.props.container.getGridProducts();
+
 
            const FILTERED_PRODUCTS = FILTER_FACTORY.toggleFilterOption(this.props.filterName, event.target.textContent);
 

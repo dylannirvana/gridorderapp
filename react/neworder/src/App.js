@@ -50,17 +50,6 @@ class App extends Component {
                 component.setState(state);
             },
 
-            getFeed: function(){
-                return component.state.feed;
-            },
-
-            getGridProducts: function(){
-                return component.state.filteredProducts;
-            },
-
-            update: function (){
-                component.forceUpdate();
-            },
 
             //Indicates if the filteredProducts has been populated with data
             gridPopulated: function () {
@@ -74,11 +63,6 @@ class App extends Component {
             getFilteredProducts: function(){
                 //console.log(component.state.filteredProducts)
                 return component.state.filteredProducts;
-            },
-
-            initFilters: function () {
-
-               // component.forceUpdate();
             }
 
 
