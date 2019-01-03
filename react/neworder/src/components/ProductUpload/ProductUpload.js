@@ -1,19 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Input, InputGroup } from 'reactstrap'
 import Papa from 'papaparse'
-// import Parser from '../Parser'
 
-class ProductUpload extends React.Component {
+class ProductUpload extends Component {
   constructor(props) {
     super(props)
     this.state = { itemList: [] }
     this.uploadHandler = this.uploadHandler.bind(this)
   }
-
   uploadHandler = (e) => {
     e.preventDefault();
     const inventory = e.target.files[0]
-
     Papa.parse(inventory, {
       header: true,
       complete: function(results) {
@@ -24,9 +21,8 @@ class ProductUpload extends React.Component {
       } 
     })
   }
-
   render() {
-    console.log(this.state.itemList) // why cant i render the updated state?
+    console.log(this.state.itemList) 
 
     return (
       <div>
@@ -40,8 +36,6 @@ class ProductUpload extends React.Component {
       </div>
     )
   }
-
 } // END
-
 export default ProductUpload
 

@@ -1,21 +1,9 @@
-
 import React, { Component } from 'react'
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    Container,
-    Row,
-    Col,
-    Jumbotron,
-} from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import ProductUpload from './components/ProductUpload'
+import ProductGrid from './components/ProductGrid'
 
 class App extends Component {
     render() {
@@ -46,7 +34,7 @@ class App extends Component {
                         <Row>
                             <Col>
                                 <h1>The Grid</h1>  
-                                {/* <UploadHandler  /> */}
+                                <ProductGrid />
                             </Col>
                         </Row>
                     </Container>
