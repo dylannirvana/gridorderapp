@@ -22,16 +22,15 @@ renderer.render( <App  />)
 //Get the App instance
 const APP_INSTANCE = renderer._instance;
 
-//Set the initial App state
-APP_INSTANCE.container.setState({
-    feed: Array.from(DATA),
-    filteredProducts: DATA,
-    packeryRefresh: false
-});
+
 
 
 const FILTER_FACTORY = APP_INSTANCE.container.getFilterFactory(); //Filter Factory
-const FEED = FILTER_FACTORY.getFeed();
+
+FILTER_FACTORY.init(DATA);
+
+
+
 const EXPECTED_PRODUCT_COUNT = {category: 15, function: 7, family: 7}; //Expected product count for each filter
 
 
@@ -60,12 +59,11 @@ function toggleFilterOption(filterName, selectedOption, deselect = false){
 
 
 
-describe('Initial check of <ProductGrid /> Component',()=>{
+describe('Initial check',()=>{
 
 
-    it(`Product grid populated with ${DATA.length} products`, () => {
-
-        expect(FEED).toHaveLength(DATA.length);
+    it(`Filter Factory populated with ${DATA.length} products`, () => {
+        expect(FILTER_FACTORY.getFeed()).toHaveLength(DATA.length);
     });
 
 

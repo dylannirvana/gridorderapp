@@ -48,11 +48,9 @@ export default class Filter extends React.Component {
          *  Click event handler, triggered when filter button is clicked
          */
         this.filterOptionClick = (event) => {
+
             const FILTER_FACTORY = this.props.container.getFilterFactory();
-
-
            const FILTERED_PRODUCTS = FILTER_FACTORY.toggleFilterOption(this.props.filterName, event.target.textContent);
-
 
             this.props.container.setState({
                 packeryRefresh: true,

@@ -13,7 +13,7 @@ import {
 import Packery from 'packery';
 import Draggabilly from 'draggabilly';
 
-import FileUploader from '../GridControls/FileUploader';
+
 
 
 class ProductGrid extends React.Component {
@@ -21,35 +21,36 @@ class ProductGrid extends React.Component {
     render() {
 
         const FILTER_FACTORY = this.props.container.getFilterFactory();
-        console.log(FILTER_FACTORY)
-        return (
-            <Jumbotron fluid={true} id={"page-content"}>
-                <Row className="grid">
+
+        if(FILTER_FACTORY.productsAvailable()){
+            return (
+                <Jumbotron fluid={true} id={"page-content"}>
+                    <Row className="grid">
 
 
-                    <Col className="product-grid">
-                        {
-                            //Loop through the products
-                            Object.values(FILTER_FACTORY.getFilteredProducts()).map(product =>
-                                //Invokes and renders the Product Component
-                                <Product
-                                    key={product.sku}
-                                    product={product}
-                                    container={this.props.container}
-                                />
-                            )
+                        <Col className="product-grid">
+                            {
+                                //Loop through the products
+                                Object.values(FILTER_FACTORY.getFilteredProducts()).map(product =>
+                                    //Invokes and renders the Product Component
+                                    <Product
+                                        key={product.sku}
+                                        product={product}
+                                        container={this.props.container}
+                                    />
+                                )
 
-                        }
-                        {
-                            //If there are no products uploaded via CSV, display the FileUploader component
-                            !this.props.container.gridPopulated() &&
-                            <FileUploader container={this.props.container}/>
-                        }
-                    </Col>
+                            }
 
-                </Row>
-            </Jumbotron>
-        )
+                        </Col>
+
+                    </Row>
+                </Jumbotron>
+            )
+        }else{
+            return null;
+        }
+
     }
 
     //Initialize packery on the product filteredProducts and make the Bootstrap cards draggable

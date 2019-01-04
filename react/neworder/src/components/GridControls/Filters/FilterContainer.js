@@ -38,10 +38,11 @@ export default class FilterContainer extends React.Component {
     render() {
 
         //  if(this.props.container.gridPopulated() && this.props.container.getState().reloadFilters){
+        const FILTER_FACTORY = this.props.container.getFilterFactory();
+        if (FILTER_FACTORY.productsAvailable()) {
 
-        if (this.props.container.gridPopulated()) {
-            const FILTER_FACTORY = this.props.container.getFilterFactory();
 
+            console.log('FILTER CONTAINER')
 
             return (
                 <Container className={"text-center"}>

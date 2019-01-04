@@ -12,6 +12,7 @@ import FilterFactory from "./components/GridControls/Filters/FilterFactory";
 import GridControls from "./components/GridControls";
 import {Container, Jumbotron} from 'reactstrap';
 import loaderIcon from './images/loader.gif';
+import FileUploader from "./components/GridControls/FileUploader/FileUploader";
 
 
 class App extends Component {
@@ -23,10 +24,10 @@ class App extends Component {
         this.state = {
             feed: [], //The  parsed JSON obtained from PapaParse
             filteredProducts: [], // filtered filteredProducts
-            filterFactory: undefined,
+            filterFactory: new FilterFactory(),
 
 
-            packeryRefresh: false, /// whether packery should be refreshed
+            packeryRefresh: true, /// whether packery should be refreshed
             packery: false, //Reference to the Packery Instance
             dragableComponents: [] //Array of dragable product components
         };
@@ -41,28 +42,24 @@ class App extends Component {
 
             setState: function (state) {
 
-                if(component.state.filterFactory === undefined){
-                    component.state.filterFactory = new FilterFactory(state.feed,state.filteredProducts);
-                    component.state.filterFactory.updateVisibleFilters();
-                }
-
-
                 component.setState(state);
             },
 
+            initFilterFactory(feed){
+                component.state.filterFactory.init(feed);
+                component.forceUpdate();
 
-            //Indicates if the filteredProducts has been populated with data
+            },
+
+
+            //Indicates if the product grid has been populated with data
             gridPopulated: function () {
                 return Boolean(component.state.feed.length);
             },
 
             getFilterFactory: function () {
-             //   console.log(component.state.filterFactory)
+
                 return component.state.filterFactory;
-            },
-            getFilteredProducts: function(){
-                //console.log(component.state.filteredProducts)
-                return component.state.filteredProducts;
             }
 
 
@@ -89,7 +86,13 @@ class App extends Component {
                     </Container>
                 </Jumbotron>
 
-                {/*Render the controls for controlling the product filteredProducts*/}
+                {
+                    //If there are no products uploaded via CSV, display the FileUploader component
+                    !this.state.filterFactory.productsAvailable() &&
+                     <FileUploader container={this.container}/>
+                }
+
+                {/*Render the controls for controlling the product grid*/}
                 <GridControls container={this.container}/>
 
                 <ProductGrid container={this.container}/>

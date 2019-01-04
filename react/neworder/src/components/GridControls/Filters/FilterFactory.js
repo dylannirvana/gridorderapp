@@ -4,7 +4,7 @@ const FILTER_LIST = ['category', 'function', 'family'];
 export default class FilterFactory {
 
 
-    constructor(feed,grid) {
+    constructor() {
 
         this.filters = {}; // List of filters, created once the product feed is parsed
 
@@ -86,11 +86,21 @@ export default class FilterFactory {
         }
 
 
-        this.feed = feed;
-        this.filteredProducts = grid;
+        this.feed = [];
+        this.filteredProducts = [];
 
     }
 
+
+    /*
+    * Initialize Filter Factory with product feed
+     */
+    init(feed){
+        this.feed = feed;
+        this.filteredProducts = Array.from(feed);
+
+        this.updateVisibleFilters()
+    }
 
 
     /*
@@ -348,6 +358,12 @@ export default class FilterFactory {
         return this.filteredProducts;
     }
 
+    /*
+    * Returns if products are available
+     */
+    productsAvailable () {
+        return Boolean(this.feed.length);
+    }
 
 
 

@@ -13,7 +13,7 @@ class GridControls extends React.Component {
     render() {
         return (
 
-            <ul id="product-grid-controls" className={"ml-auto navbar-nav"}>
+            <ul id="product-grid-controls" className={" navbar-nav"}>
 
                 <li className={"grid-control"}>
                     {

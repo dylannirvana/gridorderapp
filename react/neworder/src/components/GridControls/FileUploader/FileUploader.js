@@ -23,11 +23,7 @@ export default class FileUploader extends React.Component {
 
                 console.log('Total Products : ' + results.data.length);
 
-                component.props.container.setState({
-                    feed: Array.from(results.data),
-                    filteredProducts: results.data,
-                    packeryRefresh: true
-                });
+                component.props.container.initFilterFactory(results.data);
 
                 document.body.classList.remove('loading');
 
