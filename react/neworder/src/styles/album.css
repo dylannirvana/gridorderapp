@@ -33,9 +33,9 @@
     height: 400px;
 }
 .card-img-top {
-    height: 220px;
-    /* width: 150px; */
-    width: auto;
+    height: auto;
+    width: 100%;
+    padding: 10px;
 }
 .card-body {
     text-align: center;

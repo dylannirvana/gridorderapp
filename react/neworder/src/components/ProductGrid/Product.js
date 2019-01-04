@@ -10,7 +10,7 @@ import {
     CardBody,
     CardTitle
 } from 'reactstrap';
-
+import circaLogo from '../../images/circa-logo.png';
 
 
 const Product = (props) => {
@@ -32,7 +32,7 @@ const Product = (props) => {
 
                 <CardImg top
                          width="100%"
-                         src={props.product.image}
+                         src={circaLogo}
                          alt="Card image cap"/>
                 <CardBody>
                     <CardText>

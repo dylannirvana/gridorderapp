@@ -14,10 +14,7 @@
     border-radius: 0;
     height: 100%;
   }
-  .card-img-top {
-    height: 220px;
-    width: auto;
-  }
+
   .card-body {
     text-align: center;
     padding: 1rem;
@@ -57,9 +54,12 @@
 
   /* CSS for Drag interaction */
 
-  .grid-item:hover {
+  .grid-item{
+    &:hover {
 
-    cursor: move;
+      cursor: move;
+    }
+    min-height: 446px;
   }
 
   .grid-item.is-dragging,
