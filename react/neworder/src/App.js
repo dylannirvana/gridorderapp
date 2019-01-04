@@ -1,9 +1,32 @@
 import React, { Component } from 'react'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import ProductUpload from './components/ProductUpload'
-import ProductGrid from './components/ProductGrid'
+import { Input, InputGroup, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Container, Row, Col, Jumbotron } from 'reactstrap';
+import Papa from 'papaparse'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
+
+
+
+const ProductUpload = () => {
+    const uploadHandler = (e) => {
+        e.preventDefault();
+        const inventory = e.target.files[0]
+        Papa.parse(inventory, {
+          header: true,
+          complete: function(results) {
+            const items = results.data;
+            console.log(items)
+          } 
+        })
+      }
+    
+    return (
+        <div>
+          <InputGroup>
+            <Input type="file" name="inputCSV" onChange={uploadHandler} />
+          </InputGroup>
+        </div>
+      )
+}
 
 class App extends Component {
     render() {
@@ -28,13 +51,13 @@ class App extends Component {
                         <Row>
                             <Col>
                                 <h1>Import</h1>                    
-                                    <ProductUpload />                          
+                                <ProductUpload />                          
                             </Col>
                         </Row>
                         <Row>
                             <Col>
                                 <h1>The Grid</h1>  
-                                <ProductGrid />
+                                {/* <ProductGrid /> */}
                             </Col>
                         </Row>
                     </Container>
