@@ -11,6 +11,9 @@ class GridControls extends React.Component {
 
 
     render() {
+
+        const FILTER_FACTORY = this.props.container.getFilterFactory();
+
         return (
 
             <ul id="product-grid-controls" className={" navbar-nav"}>
@@ -24,7 +27,7 @@ class GridControls extends React.Component {
                 </li>
 
 
-                <li className={"text-center grid-control"} style={{display: this.props.container.gridPopulated() ? '' : 'none'}}>
+                <li className={"text-center grid-control"} style={{display: FILTER_FACTORY.productsAvailable() ? '' : 'none'}}>
                     {/*SaveGrid is a component for generating a CSV file from the filteredProducts tiles */}
                     <SaveGrid container={this.props.container}/>
 

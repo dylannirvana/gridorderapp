@@ -22,8 +22,7 @@ class App extends Component {
         const component = this;
 
         this.state = {
-            feed: [], //The  parsed JSON obtained from PapaParse
-            filteredProducts: [], // filtered filteredProducts
+
             filterFactory: new FilterFactory(),
 
 
@@ -72,7 +71,7 @@ class App extends Component {
     render() {
 
         return (
-            <div id={"page"} className={!this.container.getState('feed').length ? 'no-grid' : 'product-grid-loaded'}>
+            <div id={"page"} >
 
                 <img src={loaderIcon} id="loader-icon" style={{display: 'none'}} alt="Loading"/>
                 <Header container={this.container}/>

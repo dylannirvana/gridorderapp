@@ -12,9 +12,10 @@ body.loading{
     }
 }
 
-.file-upload-wrapper{
+.btn.file-upload-wrapper{
     max-width: 730px;
-
+    margin: 0 auto;
+    display: block;
 
     .file-upload-button{
         position:absolute;

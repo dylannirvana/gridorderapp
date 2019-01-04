@@ -4,9 +4,14 @@
         margin-top: 10px;
 
         .btn-group{
-            .filter-option:not(:last-of-type){
-                margin-right: 5px;
-                font-style: initial;
+
+            .filter-option{
+                margin-top: 5px;
+                &:not(:last-of-type){
+                    margin-right: 5px;
+
+                    font-style: initial;
+                }
             }
         }
 
