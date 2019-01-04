@@ -341,13 +341,14 @@ export default class FilterFactory {
         return this.feed;
     }
 
-
-
     /*
     * Returns filtered products
      */
-    getFilteredProducts = () =>{
+    getFilteredProducts(){
         return this.filteredProducts;
     }
+
+
+
 
 }

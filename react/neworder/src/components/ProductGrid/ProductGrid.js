@@ -20,7 +20,8 @@ class ProductGrid extends React.Component {
 
     render() {
 
-
+        const FILTER_FACTORY = this.props.container.getFilterFactory();
+        console.log(FILTER_FACTORY)
         return (
             <Jumbotron fluid={true} id={"page-content"}>
                 <Row className="grid">
@@ -29,7 +30,7 @@ class ProductGrid extends React.Component {
                     <Col className="product-grid">
                         {
                             //Loop through the products
-                            Object.values(this.props.container.getFilteredProducts()).map(product =>
+                            Object.values(FILTER_FACTORY.getFilteredProducts()).map(product =>
                                 //Invokes and renders the Product Component
                                 <Product
                                     key={product.sku}
