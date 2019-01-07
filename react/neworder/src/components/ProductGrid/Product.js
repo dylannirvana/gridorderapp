@@ -32,7 +32,7 @@ const Product = (props) => {
 
                 <CardImg top
                          width="100%"
-                         src={circaLogo}
+                         src={props.product.image }
                          alt="Card image cap"/>
                 <CardBody>
                     <CardText>
