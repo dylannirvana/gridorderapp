@@ -30,10 +30,10 @@ const ItemCard = (props) => {
     return (
         <Row>
             <Col>
-                <Card>
+                <Card  >
                     <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
                     <CardBody>
-                        <CardTitle> {props.name} </CardTitle>
+                        <CardTitle>Card title </CardTitle>
                         <CardSubtitle>Card subtitle</CardSubtitle>
                         <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
                         <Button>Button</Button>
@@ -73,9 +73,9 @@ class App extends Component {
         Papa.parse(inventory, {
           header: true,
           complete: function(results) {
-            const items = results.data;
+            const items = results.data
             console.log(items)
-            
+            return items; // here's the array that I want to map over in a Card template
           } 
         })
       }
@@ -111,9 +111,7 @@ class App extends Component {
                             <Col>
                                 <h1>The Grid</h1>  
                                 <ItemCard
-                                    name={props.name} 
                                     
-
                                 />
                             </Col>
                         </Row>
