@@ -114,8 +114,8 @@ class ProductGrid extends React.Component {
     //This function is executed every time this component is updated
     componentDidUpdate() {
 
-
-        if (this.props.container.getState('packeryRefresh')) {
+        const FILTER_FACTORY = this.props.container.getFilterFactory();
+        if (this.props.container.getState('packeryRefresh') && FILTER_FACTORY.productsAvailable()) {
 
             this.destroyPackery();
 

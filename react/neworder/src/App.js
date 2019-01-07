@@ -11,7 +11,7 @@ import './App.scss';
 import FilterFactory from "./components/GridControls/Filters/FilterFactory";
 import GridControls from "./components/GridControls";
 import {Container, Jumbotron} from 'reactstrap';
-import loaderIcon from './images/loader.gif';
+import Spinner from './components/Spinner';
 import FileUploader from "./components/GridControls/FileUploader/FileUploader";
 
 
@@ -25,6 +25,7 @@ class App extends Component {
 
             filterFactory: new FilterFactory(),
 
+            spinnerVisibility: 'none',
 
             packeryRefresh: true, /// whether packery should be refreshed
             packery: false, //Reference to the Packery Instance
@@ -59,6 +60,14 @@ class App extends Component {
             getFilterFactory: function () {
 
                 return component.state.filterFactory;
+            },
+
+            showSpinner: () => {
+                component.setState({spinnerVisibility: 'block'});
+            },
+
+            hideSpinner: () => {
+                component.setState({spinnerVisibility: 'none'});
             }
 
 
@@ -73,7 +82,7 @@ class App extends Component {
         return (
             <div id={"page"} >
 
-                <img src={loaderIcon} id="loader-icon" style={{display: 'none'}} alt="Loading"/>
+                <Spinner spinnerVisibility={this.state.spinnerVisibility}/>
                 <Header container={this.container}/>
 
                 <Jumbotron  id="app-intro" className={"text-center"}>

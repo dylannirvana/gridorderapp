@@ -42,7 +42,6 @@ export default class FilterContainer extends React.Component {
         if (FILTER_FACTORY.productsAvailable()) {
 
 
-            console.log('FILTER CONTAINER')
 
             return (
                 <Container className={"text-center"}>

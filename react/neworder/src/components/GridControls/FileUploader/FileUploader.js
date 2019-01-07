@@ -16,7 +16,8 @@ export default class FileUploader extends React.Component {
     uploadFile(event) {
         const inventory = event.target.files[0],
             component = this;
-        document.body.classList.add('loading');
+        this.props.container.showSpinner();
+
         Papa.parse(inventory, {
             header: true,
             complete: function (results) {
@@ -25,7 +26,7 @@ export default class FileUploader extends React.Component {
 
                 component.props.container.initFilterFactory(results.data);
 
-                document.body.classList.remove('loading');
+               component.props.container.hideSpinner();
 
 
             }

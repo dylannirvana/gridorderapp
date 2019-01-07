@@ -1,3 +1,5 @@
+
+
 const FILTER_LIST = ['category', 'function', 'family'];
 
 
@@ -361,7 +363,7 @@ export default class FilterFactory {
     /*
     * Returns if products are available
      */
-    productsAvailable () {
+    productsAvailable() {
         return Boolean(this.feed.length);
     }
 
