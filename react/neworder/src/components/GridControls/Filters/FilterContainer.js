@@ -2,46 +2,13 @@ import React from "react";
 import Filter from "./Filter";
 import {ButtonGroup, Container} from 'reactstrap';
 
-export default class FilterContainer extends React.Component {
-
-    constructor(props) {
-        super(props);
+ const FilterContainer = (props) => {
 
 
-        this.state = {
-            collapse: false
-        };
+        const FILTER_FACTORY = props.container.getFilterFactory();
 
-
-        this.toggle = this.toggle.bind(this);
-    }
-
-    /* shouldComponentUpdate() {
-
-
-         if (!this.props.container.gridPopulated()) {
-             return false;
-         }
-         return (!this.state.reload && !this.container.getAppliedFiltersCount()) ? true : this.state.reload;
-     }*/
-
-
-    //Toggle the accordion
-    toggle(event) {
-
-        this.setState({
-            collapse: !this.state.collapse
-        });
-    }
-
-
-    render() {
-
-        //  if(this.props.container.gridPopulated() && this.props.container.getState().reloadFilters){
-        const FILTER_FACTORY = this.props.container.getFilterFactory();
+        //If products are available, then extract the filters from the products and render
         if (FILTER_FACTORY.productsAvailable()) {
-
-
 
             return (
                 <Container className={"text-center"}>
@@ -54,12 +21,12 @@ export default class FilterContainer extends React.Component {
                                     {
                                         <Filter
 
-                                            isOpen={this.state.collapse}
+
                                             filter={filter}
                                             filterName={filter.filterName}
                                             filterOptions={filter.filterOptions}
                                             selectedOption={filter.selectedOption}
-                                            container={this.props.container}
+                                            container={props.container}
 
                                         />
                                     }
@@ -75,6 +42,7 @@ export default class FilterContainer extends React.Component {
         return null;
 
 
-    }
+
 }
 
+export default FilterContainer;

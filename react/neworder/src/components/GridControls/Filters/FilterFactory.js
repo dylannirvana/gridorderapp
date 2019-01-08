@@ -101,7 +101,7 @@ export default class FilterFactory {
         this.feed = feed;
         this.filteredProducts = Array.from(feed);
 
-        this.updateVisibleFilters()
+        //this.updateVisibleFilters()
     }
 
 
