@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { 
-    Card, 
-    CardImg, 
-    CardText, 
-    CardBody,
-    CardTitle, 
-    CardSubtitle, 
-    Button, 
+    // Card, 
+    // CardImg, 
+    // CardText, 
+    // CardBody,
+    // CardTitle, 
+    // CardSubtitle, 
+    // Button, 
     Input, 
     InputGroup, 
     Collapse, 
@@ -26,57 +26,71 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
 
-const ItemCard = (props) => {
-    return (
-        <Row>
-            <Col>
-                <Card  >
-                    <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-                    <CardBody>
-                        <CardTitle>Card title </CardTitle>
-                        <CardSubtitle>Card subtitle</CardSubtitle>
-                        <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                        <Button>Button</Button>
-                    </CardBody>
-                </Card>
-            </Col>
-            <Col>
-                <Card>
-                    <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-                    <CardBody>
-                        <CardTitle>Card title</CardTitle>
-                        <CardSubtitle>Card subtitle</CardSubtitle>
-                        <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                        <Button>Button</Button>
-                    </CardBody>
-                </Card>
-            </Col>
-            <Col>
-                <Card>
-                    <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-                    <CardBody>
-                        <CardTitle>Card title</CardTitle>
-                        <CardSubtitle>Card subtitle</CardSubtitle>
-                        <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                        <Button>Button</Button>
-                    </CardBody>
-                </Card>
-            </Col>
-        </Row>
-    );
-  };
+// const ItemCard = (props) => {
+//     return (
+//         <Row>
+//             <Col>
+//                 <Card  >
+//                     <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+//                     <CardBody>
+//                         <CardTitle>Card title </CardTitle>
+//                         <CardSubtitle>Card subtitle</CardSubtitle>
+//                         <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+//                         <Button>Button</Button>
+//                     </CardBody>
+//                 </Card>
+//             </Col>
+//             {/* <Col>
+//                 <Card>
+//                     <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+//                     <CardBody>
+//                         <CardTitle>Card title</CardTitle>
+//                         <CardSubtitle>Card subtitle</CardSubtitle>
+//                         <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+//                         <Button>Button</Button>
+//                     </CardBody>
+//                 </Card>
+//             </Col>
+//             <Col>
+//                 <Card>
+//                     <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+//                     <CardBody>
+//                         <CardTitle>Card title</CardTitle>
+//                         <CardSubtitle>Card subtitle</CardSubtitle>
+//                         <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+//                         <Button>Button</Button>
+//                     </CardBody>
+//                 </Card>
+//             </Col> */}
+//         </Row>
+//     );
+//   };
+
+const Grid = (props) => (
+    <div>
+        {props.someValue}
+    </div>
+)
     
 class App extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            itemList: []
+        }
+    }
+
     uploadHandler = (e) => {
         e.preventDefault();
         const inventory = e.target.files[0]
         Papa.parse(inventory, {
           header: true,
           complete: function(results) {
-            const items = results.data
-            console.log(items)
-            return items; // here's the array that I want to map over in a Card template
-          } 
+            let items = results.data
+            console.log(items) // I have access to the data
+        
+            this.setState({itemList: items}) // TypeError: this.setState is not a function
+          }
         })
       }
 
@@ -110,9 +124,7 @@ class App extends Component {
                         <Row>
                             <Col>
                                 <h1>The Grid</h1>  
-                                <ItemCard
-                                    
-                                />
+                                {this.state.itemList.map(item => <Grid someValue={item} />)}
                             </Col>
                         </Row>
                     </Container>
