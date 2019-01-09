@@ -25,6 +25,18 @@ import Papa from 'papaparse'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
+// stashing this here
+// handleChange(event) {
+//     event.preventDefault()
+//     const inventory = event.target.files[0]
+//     Papa.parse(inventory, {
+//         header: true,
+//         complete: function(results) {
+//             this.setState({value: results.data})
+//         }
+//     })
+// }
+
 
 // const ItemCard = (props) => {
 //     return (
@@ -68,7 +80,7 @@ import './App.css'
 
 const Grid = (props) => (
     <div>
-        {props.someValue}
+        {this.state.value}
     </div>
 )
     
@@ -76,7 +88,7 @@ class App extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            itemList: []
+            value: []
         }
     }
 
@@ -89,7 +101,7 @@ class App extends Component {
             let items = results.data
             console.log(items) // I have access to the data
         
-            this.setState({itemList: items}) // TypeError: this.setState is not a function
+            // this.setState({itemList: items}) // TypeError: this.setState is not a function
           }
         })
       }
@@ -117,14 +129,14 @@ class App extends Component {
                             <Col>
                                 <h1>Import</h1>                    
                                 <InputGroup>
-                                    <Input type="file" name="inputCSV" onChange={this.uploadHandler} />
+                                    <Input type="file" value={this.state.value} name="inputCSV" onChange={this.uploadHandler} />
                                 </InputGroup>                          
                             </Col>
                         </Row>
                         <Row>
                             <Col>
                                 <h1>The Grid</h1>  
-                                {this.state.itemList.map(item => <Grid someValue={item} />)}
+                                <Grid />
                             </Col>
                         </Row>
                     </Container>
