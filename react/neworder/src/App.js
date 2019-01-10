@@ -63,6 +63,7 @@ class App extends Component {
             },
 
             showSpinner: () => {
+                console.log('SHOW SPINNER')
                 component.setState({spinnerVisibility: 'block'});
             },
 

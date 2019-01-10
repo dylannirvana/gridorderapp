@@ -7,12 +7,9 @@ import SaveGrid from "./SaveGrid";
 import FilterContainer from "./Filters/FilterContainer";
 
 
-class GridControls extends React.Component {
+const GridControls = (props) => {
 
-
-    render() {
-
-        const FILTER_FACTORY = this.props.container.getFilterFactory();
+        const FILTER_FACTORY = props.container.getFilterFactory();
 
         return (
 
@@ -21,7 +18,7 @@ class GridControls extends React.Component {
                 <li className={"grid-control"}>
                     {
                         <FilterContainer
-                            container={this.props.container}
+                            container={props.container}
                         />
                     }
                 </li>
@@ -29,14 +26,14 @@ class GridControls extends React.Component {
 
                 <li className={"text-center grid-control"} style={{display: FILTER_FACTORY.productsAvailable() ? '' : 'none'}}>
                     {/*SaveGrid is a component for generating a CSV file from the filteredProducts tiles */}
-                    <SaveGrid container={this.props.container}/>
+                    <SaveGrid container={props.container}/>
 
                 </li>
 
 
             </ul>
         )
-    }
+
 }
 
 export default GridControls;

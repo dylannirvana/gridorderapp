@@ -7,18 +7,13 @@ import {Button} from 'reactstrap';
 import Papa from "papaparse";
 
 
-export default class SaveGrid extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.saveNewGrid = this.saveNewGrid.bind(this);
-    }
+const SaveGrid = (props) => {
 
 
     //Generates a new CSV file, based on new order of the filteredProducts tiles
-    saveNewGrid() {
+    function saveHandler(){
 
-        const newGridHTML = this.props.container.getState('packery').getItemElements();
+        const newGridHTML = props.container.getState('packery').getItemElements();
         let newGridJSON = [];
 
         newGridHTML.forEach(function (product, index) {
@@ -40,16 +35,15 @@ export default class SaveGrid extends React.Component {
 
     }
 
-    render() {
 
-        return (
-            <Button color="primary" className={"nav-btn"} onClick={this.saveNewGrid}>
-                Save
-            </Button>
+    return (
+        <Button color="primary" className={"nav-btn"} onClick={saveHandler}>
+            Save
+        </Button>
 
-        )
-    }
+    )
+
 }
 
 
-
+export default SaveGrid;

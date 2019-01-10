@@ -3,20 +3,14 @@ import React from 'react';
 import Papa from "papaparse";
 
 // Render the necessary HTML for user to upload CSV file
-export default class FileUploader extends React.Component {
+const FileUploader =  (props) => {
 
-    constructor(props) {
-        super(props);
-
-        this.uploadFile = this.uploadFile.bind(this);
-
-    }
 
     //Takes the parsed JSON from PapaParse and updates the product filteredProducts
-    uploadFile(event) {
-        const inventory = event.target.files[0],
-            component = this;
-        this.props.container.showSpinner();
+    function uploadHandler(event){
+        const inventory = event.target.files[0];
+
+        props.container.showSpinner();
 
         Papa.parse(inventory, {
             header: true,
@@ -24,9 +18,9 @@ export default class FileUploader extends React.Component {
 
                 console.log('Total Products : ' + results.data.length);
 
-                component.props.container.initFilterFactory(results.data);
+                props.container.initFilterFactory(results.data);
 
-               component.props.container.hideSpinner();
+               props.container.hideSpinner();
 
 
             }
@@ -41,18 +35,17 @@ export default class FileUploader extends React.Component {
 
 
 
-    render() {
 
         return (
 
             <label className="file-upload-wrapper white-button btn">
-                <input className={"file-upload-button"} onChange={this.uploadFile} type="file" required/>
+                <input className={"file-upload-button"} onChange={uploadHandler} type="file" required/>
                 <span className={"file-upload-label"}>Select a CSV</span>
             </label>
 
         )
-    }
+
 }
 
-
+export default FileUploader;
 
