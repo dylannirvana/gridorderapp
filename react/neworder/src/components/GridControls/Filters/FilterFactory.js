@@ -1,5 +1,3 @@
-
-
 const FILTER_LIST = ['category', 'function', 'family'];
 
 
@@ -51,7 +49,7 @@ export default class FilterFactory {
                     const FILTER_NAME = FILTER_LIST[this.iterator.index];
 
                     if (!this.filters[FILTER_NAME]) {
-                        this.addNewFilter(FILTER_NAME, true);
+                        this.addNewFilter(FILTER_NAME);
 
                     }
 
@@ -97,7 +95,7 @@ export default class FilterFactory {
     /*
     * Initialize Filter Factory with product feed
      */
-    init(feed){
+    init(feed) {
         this.feed = feed;
         this.filteredProducts = Array.from(feed);
 
@@ -108,17 +106,17 @@ export default class FilterFactory {
     /*
     * Adds new filter to this.filters
      */
-    addNewFilter = (filterName, isVisible) => {
+    addNewFilter = (filterName) => {
 
+        let filterOptions = this.getFilterOptions(filterName)
         this.filters[filterName] = {
             filterName,
-            isVisible,
+            isVisible: Boolean(filterOptions.length),
             index: FILTER_LIST[filterName],
-            filterOptions: this.getFilterOptions(filterName),
+            filterOptions: filterOptions,
             selectedOption: ''
         }
     }
-
 
 
     /*
@@ -142,7 +140,6 @@ export default class FilterFactory {
     };
 
 
-
     /*
     * Marks the filter option as selected / unselected
     * and then toggles visibility of the other filters
@@ -158,7 +155,6 @@ export default class FilterFactory {
         //Toggles visibility of the other filters
         return this.updateVisibleFilters(filterName, option)
     }
-
 
 
     /*
@@ -189,7 +185,6 @@ export default class FilterFactory {
     };
 
 
-
     /*
     * Returns all visible filters
      */
@@ -197,11 +192,11 @@ export default class FilterFactory {
 
 
         let result = {};
-        let obj = this.filters;
 
-        Object.keys(obj).forEach(function (key) {
 
-            const FILTER = obj[key];
+        Object.keys(this.filters).forEach((key) => {
+
+            const FILTER = this.filters[key];
 
             if (FILTER.isVisible) {
                 result[key] = FILTER;
@@ -209,15 +204,15 @@ export default class FilterFactory {
         })
 
 
-        return Object.keys(obj).length ? result : [];
+        return Object.keys(this.filters).length ? result : [];
     }
-
 
 
     /*
     * Returns an Array of all the selected filter options
      */
     getAllSelectedOptions = () => {
+
         let selectedOptionsList = [];
 
         const VISIBLE_FILTERS = this.getVisibleFilters();
@@ -244,7 +239,6 @@ export default class FilterFactory {
     };
 
 
-
     /*
     * Filters the products, based on the filter options selected
      */
@@ -252,38 +246,36 @@ export default class FilterFactory {
 
         let selectedOptionsList = this.getAllSelectedOptions();
 
-
+        //If no filters have been selected, then return the product feed itself
         if (!selectedOptionsList.length) {
             this.filteredProducts = Array.from(this.feed);
             return this.filteredProducts;
         }
 
-        this.filteredProducts = Array.from(this.feed);
+        this.filteredProducts = new Array();
 
-        this.filteredProducts = this.filteredProducts.filter(function (product, index) { //Loop through each product in the product feed
-            let result = true;
-            selectedOptionsList.some((filter) => { //Loop through the applied filters
+        let i = this.feed.length;
 
-                //Check if the product matches atleast one of the the selected filters
-                if (result && product[filter.name] !== undefined && product[filter.name].toLowerCase().indexOf(filter.selectedOption.toLowerCase()) !== -1) {
 
-                    //If there is a match, return true and exit the loop
-                    return false;
-                } else {
-                    result = false;
+        while (i--) {
+
+            let product = this.feed[i];
+            let j = selectedOptionsList.length;
+            while(j--){
+                let filter = selectedOptionsList[j];
+
+                if (product[filter.name] !== undefined && product[filter.name].toLowerCase().indexOf(filter.selectedOption.toLowerCase()) !== -1) {
+
+                    this.filteredProducts.push(product);
+                    break;
                 }
+            }
 
-                //If there is no match, return false and continue with the loop
-                return false;
-            })
-
-            return result;
-        });
+        }
 
         return this.filteredProducts;
 
     };
-
 
 
     /*
@@ -309,14 +301,12 @@ export default class FilterFactory {
     };
 
 
-
     /*
     * Determines if sorting should happen
      */
     shouldSort(filterName) {
         return FILTER_LIST[FILTER_LIST.length - 1] === filterName && FILTER_LIST.length >= 3;
     }
-
 
 
     /*
@@ -336,7 +326,6 @@ export default class FilterFactory {
     };
 
 
-
     /*
     * Gets the index of a product in the product feed
      */
@@ -345,18 +334,17 @@ export default class FilterFactory {
     }
 
 
-
     /*
     * Gets the product feed
      */
-    getFeed(){
+    getFeed() {
         return this.feed;
     }
 
     /*
     * Returns filtered products
      */
-    getFilteredProducts(){
+    getFilteredProducts() {
         return this.filteredProducts;
     }
 
@@ -366,7 +354,6 @@ export default class FilterFactory {
     productsAvailable() {
         return Boolean(this.feed.length);
     }
-
 
 
 }
