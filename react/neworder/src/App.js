@@ -1,34 +1,23 @@
     import React, { Component } from 'react'
     import { 
         Card, 
-        // CardImg, 
-        // CardText, 
+        CardImg, 
         CardBody,
         CardTitle, 
-        // CardSubtitle, 
-        // Button, 
         Input, 
         InputGroup, 
-        // Collapse, 
-        // Navbar, 
-        // NavbarToggler, 
-        // NavbarBrand, 
-        // Nav, 
-        // NavItem, 
-        // NavLink, 
         Container, 
         Row, 
-        Col, 
         Jumbotron 
         } from 'reactstrap';
     import Papa from 'papaparse'
     import 'bootstrap/dist/css/bootstrap.min.css'
     import './App.css'
-
+        
     class App extends Component {
         constructor(props) {
             super(props);
-            this.state = {data: [] };   
+            this.state = {data: [] };  // State holds gridorder / neworder
             this.handleChange = this.handleChange.bind(this);
             this.updateData = this.updateData.bind(this)
         }
@@ -45,21 +34,23 @@
         updateData(results) {
             const data = results.data
             console.log(data)
-            this.setState({data}) // I have it in state. How to get it in UI?
+            this.setState({data}) // {data:data}
         }
         
         renderData() {
             return  this.state.data.length > 1 
-               ? this.state.data.map((item) => (
-                   // this is where to put the Card
-                   <Card key={item.sku} >  
-                        <CardTitle> {item.sku} </CardTitle>
-                        <CardBody> {item.name} </CardBody>
-                   </Card>
+               ? this.state.data.map((item) => (  // Object in return 
+                    <div className="grid-item" key={item.sku}>
+                        <Card  >
+                            <CardImg src={item.image} />
+                            <CardTitle> {item.sku} </CardTitle>
+                            <CardBody> {item.name} </CardBody>
+                        </Card>  
+                    </div>                                        
                )) 
-               : null
-            
+               : null         
         }
+
         render() {
             return (
                 <div>
@@ -72,19 +63,14 @@
                         </form>
                     </Jumbotron>
                     
-                    <div className="album">
-                        <Container>
-                            <Row>
-                                <Col xs="3"> {this.renderData()} </Col> 
-                            </Row>                            
-                        </Container>
+                    <div className="album">  
+                        <Container>           
+                            <Row className="grid" > {this.renderData()} </Row> 
+                        </Container>                        
                     </div>
-                   
-
                 </div>          
             );
         }
-
     } // END
 
     export default App

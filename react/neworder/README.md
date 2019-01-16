@@ -27,3 +27,35 @@ Props and state needs to be added to do the following. Please refer to Issue #38
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Regarding Packery
+
+### David Desandro
+This approach requires React with jQuery via lifecycles https://reactjs.org/docs/integrating-with-other-libraries.html 
+
+- https://draggabilly.desandro.com/  the original draggabilly
+- https://packery.metafizzy.co/draggable.html  original packers draggable
+- https://masonry.desandro.com/  original masonry 
+
+### React Packery
+This presents a TypeError. Rewrite component to refer to a fn rather than call it
+
+- https://www.npmjs.com/package/react-packery-component  react-packers-component
+- https://github.com/mzabriskie/react-draggable/  react-draggable
+- https://www.npmjs.com/package/react-drag  react-drag
+- https://www.npmjs.com/package/react-masonry-component  react-masonry-component
+- 
+- 
+
+### React DnD
+Too verbose
+- https://medium.com/@dan_abramov/the-future-of-drag-and-drop-apis-249dfea7a15f  Dan Abramov
+- http://react-dnd.github.io/react-dnd/about  react DnD 
+- 
+
+### Chris Coyier
+Not verbose enough
+- https://css-tricks.com/draggable-elements-push-others-way/  CSS tricks 
+
+
+## Getting Support
